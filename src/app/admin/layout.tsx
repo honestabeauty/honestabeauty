@@ -4,6 +4,9 @@ import { AdminThemeProvider } from "@/app/admin/components/AdminThemeProvider";
 import "./admin.css";
 import "./admin-dark.css";
 
+/** Admin needs Supabase session; skip static prerender so builds work without CMS env. */
+export const dynamic = "force-dynamic";
+
 export default function AdminLayout({ children }: { children: ReactNode }) {
   return (
     <>
