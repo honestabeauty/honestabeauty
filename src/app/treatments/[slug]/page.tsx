@@ -4,12 +4,15 @@ import { notFound } from "next/navigation";
 import { BookingCTA } from "@/components/BookingCTA";
 import { InstagramCta, WhatsAppCta } from "@/components/conversion/CtaLinks";
 import { EditorialImage } from "@/components/EditorialImage";
+import { JsonLd } from "@/components/JsonLd";
 import {
   getTreatment,
   getTreatmentDetail,
   getTreatments,
 } from "@/lib/cms/queries";
+import { getSite } from "@/lib/cms/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { getSiteUrl } from "@/lib/site-url";
 import { whatsappMessages } from "@/lib/whatsapp-messages";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -29,10 +32,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/treatments/${slug}`,
     image: treatment.image,
   });
-  // 男賓療程不主動 SEO 推廣（女賓優先）；仍可由 /men 進入
-  if (treatment.forMen) {
-    return { ...meta, robots: { index: false, follow: true } };
-  }
   return meta;
 }
 
@@ -41,11 +40,50 @@ export default async function TreatmentDetailPage({ params }: Props) {
   const treatment = await getTreatment(slug);
   if (!treatment) notFound();
 
-  const details = await getTreatmentDetail(slug);
+  const [details, site] = await Promise.all([
+    getTreatmentDetail(slug),
+    getSite(),
+  ]);
   const bookMessage = whatsappMessages.treatment(treatment.name);
+  const siteUrl = getSiteUrl();
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: treatment.name,
+          description: treatment.tagline,
+          url: `${siteUrl}/treatments/${slug}`,
+          image: treatment.image
+            ? treatment.image.startsWith("http")
+              ? treatment.image
+              : `${siteUrl}${treatment.image}`
+            : undefined,
+          provider: {
+            "@type": "BeautySalon",
+            "@id": `${siteUrl}/#business`,
+            name: site.name,
+          },
+          areaServed: {
+            "@type": "City",
+            name: "屯門",
+          },
+          offers: treatment.priceType === "fixed" && treatment.price
+            ? {
+                "@type": "Offer",
+                priceCurrency: "HKD",
+                price: treatment.price.replace(/[^\d.]/g, ""),
+                availability: "https://schema.org/InStock",
+              }
+            : {
+                "@type": "Offer",
+                priceCurrency: "HKD",
+                description: treatment.priceNote ?? "諮詢報價",
+              },
+        }}
+      />
       <section className="moana-page">
         <div className="container-kz max-w-2xl">
           <Link
@@ -110,7 +148,8 @@ export default async function TreatmentDetailPage({ params }: Props) {
               src={treatment.image}
               alt={treatment.imageAlt ?? treatment.name}
               aspect="promo"
-              posterSize="sm"
+              posterSize="lg"
+              sizes="(max-width: 768px) 92vw, 416px"
             />
           )}
           <div>

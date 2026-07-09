@@ -65,7 +65,6 @@ export function telUrl() {
 export const navItems = [
   { label: "療程", href: "/treatments" },
   { label: "量膚定制", href: "/skin-analysis" },
-  { label: "男賓（只限預約）", href: "/men" },
   { label: "痛症理療", href: "/wellness" },
   { label: "醫美知識", href: "/journal" },
   { label: "常見問題", href: "/faq" },
@@ -85,12 +84,6 @@ export const sitePages = [
     href: "/skin-analysis",
     eyebrow: "Skin Analysis",
     desc: "西班牙 TEGODER 果酸 — 先分析膚況，再建議專屬配方。",
-  },
-  {
-    label: "男賓（只限預約）",
-    href: "/men",
-    eyebrow: "Men's Care",
-    desc: "針清、激光護理、深層清潔 — 獨立入口，私密舒適。",
   },
   {
     label: "醫美知識",

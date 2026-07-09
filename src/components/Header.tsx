@@ -106,7 +106,7 @@ export function Header({ socialUrls }: Props) {
         <div className="flex items-center gap-2 sm:gap-3 lg:hidden shrink-0">
           <Link
             href="/book"
-            className="conversion-touch-target font-ui text-[11px] uppercase tracking-widest text-kz-brand-navy no-underline px-2 py-2"
+            className="conversion-touch-target font-ui text-base uppercase tracking-widest text-kz-brand-navy no-underline inline-flex items-center px-3 py-2"
             data-cta-id="cta_header_book_mobile"
           >
             預約
@@ -137,7 +137,7 @@ export function Header({ socialUrls }: Props) {
               <li key={item.href} className="border-b border-kz-plum/10">
                 <Link
                   href={item.href}
-                  className="conversion-touch-target block py-4 font-ui text-xs uppercase tracking-widest text-kz-plum no-underline"
+                  className="conversion-touch-target block py-4 font-ui text-lg tracking-wide text-kz-plum no-underline"
                   data-cta-id={`cta_mobile_nav_${item.href.replace(/\//g, "")}`}
                   onClick={closeMenu}
                 >

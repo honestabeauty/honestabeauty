@@ -82,7 +82,7 @@ function renderSection(
       return <SkinAnalysisTeaser content={content} />;
     case "featured-treatment":
       return <FeaturedTreatmentTeaser content={content} />;
-    case "men-care":
+    case "women-care":
       return <WomenCareTeaser content={content} />;
     case "wellness":
       return <WellnessTeaser content={content} />;

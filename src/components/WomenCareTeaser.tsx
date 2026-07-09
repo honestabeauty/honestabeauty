@@ -3,9 +3,9 @@ import { EditorialImage } from "@/components/EditorialImage";
 import { SectionBodyText, resolveSectionContent, type SectionContentProps } from "@/components/home/section-content";
 import { IconArrowRight } from "@/components/icons/KzIconsServer";
 
-/** 首頁女賓護理 teaser（home-sections id: men-care，歷史 id 保留相容） */
+/** 首頁女賓護理 teaser（home-sections id: women-care） */
 export function WomenCareTeaser({ content }: SectionContentProps) {
-  const c = resolveSectionContent("men-care", content);
+  const c = resolveSectionContent("women-care", content);
   return (
     <section className="moana-home__chapter moana-home__chapter--split">
       {c.image ? (
@@ -42,6 +42,3 @@ export function WomenCareTeaser({ content }: SectionContentProps) {
     </section>
   );
 }
-
-/** @deprecated 使用 WomenCareTeaser */
-export const MenCareTeaser = WomenCareTeaser;

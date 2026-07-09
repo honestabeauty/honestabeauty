@@ -42,7 +42,6 @@ export const social = {
   microneedleAlt: pickByKeywords(["微針射頻膠原修復"], "微針射頻"),
   collazen: pickByKeywords(["膠原小旋風"], "COLLAZEN 膠原美肌小旋風"),
   plasmaAcne: pickByKeywords(["等離子微針射頻", "暗瘡"], "等離子抗痘煥膚"),
-  menWart: pickByKeywords(["無痕脫疣"], "男賓激光護理"),
   trust: pickByKeywords(["無壓力美容", "零硬銷"], "單次收費 · 無硬銷"),
 } as const;
 

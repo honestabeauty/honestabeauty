@@ -27,6 +27,20 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: getSupabaseImagePatterns(),
   },
+  async redirects() {
+    return [
+      {
+        source: "/men",
+        destination: "/treatments",
+        permanent: true,
+      },
+      {
+        source: "/men/:path*",
+        destination: "/treatments",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

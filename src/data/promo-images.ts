@@ -28,14 +28,14 @@ export const promo = {
     "康姿健 — 手法美容 · 皮膚管理 · 痛症理療",
   ),
 
-  meTime: file("/images/promo/men-facial.png", "享受寧靜、無壓力的護理時光"),
+  meTime: file("/images/promo/me-time.png", "享受寧靜、無壓力的護理時光"),
   meTimeSpa: file(
     "/images/promo/plaser-rf.png",
     "專注享受 60 分鐘寧靜護理",
   ),
 
   spanishFacial: file("/images/promo/dr-face.png", "西班牙醫學級人手 Facial"),
-  tegoder: file("/images/promo/tegoder-peel.png", "TEGODER 量膚定制果酸"),
+  tegoder: file("/images/promo/tegoder-peel.png", "TEGODER 玫瑰亮白果酸 · 敏感肌適用"),
   sensitiveRepair: file("/images/promo/me-time.png", "脆弱肌修護方案"),
 
   seasonal: file("/images/promo/spanish-facial.png", "轉季護膚小貼士"),
@@ -53,7 +53,7 @@ export const promo = {
   plaserRf: file("/images/promo/collazen-atoz.png", "Air Plaser 等離子"),
   laserSpot: file("/images/promo/air-plaser.png", "Ruikd Genelux Lite 納秒激光"),
 
-  microneedle: file("/images/promo/collazen-triple.png", "m.pen 微針煥膚"),
+  microneedle: file("/images/promo/microneedle-rf.png", "PLASER RF 微針射頻 · 單次 $880"),
   plasmaAcne: file("/images/promo/plasma-acne.png", "寒流襲港 · 爆拆護膚提示"),
   plasmaPeel: file("/images/promo/plasma-peel.png", "藍光煥膚黑科技"),
 
@@ -80,11 +80,8 @@ export const promo = {
 
   exosome: file("/images/promo/exosome.png", "BSK9 EXOSOMES 爆髮療程"),
 
-  menFacial: file("/images/promo/men-facial.png", "男賓深層清潔護理"),
-  menLaser: file("/images/promo/men-laser.png", "男賓激光護理"),
-
   brandOpening: file("/images/promo/collazen-hifu-rf.png", "康姿健開工大吉"),
-  cnyPrep: file("/images/promo/men-laser.png", "過年毛孔大掃除"),
+  cnyPrep: file("/images/promo/seasonal-skincare.png", "過年毛孔大掃除"),
   holidayGreeting: file("/images/promo/microneedle-rf.png", "馬年迎春接福"),
 } as const;
 

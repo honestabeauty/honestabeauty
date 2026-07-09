@@ -33,7 +33,6 @@ export type CmsTreatmentRow = {
   image: string | null;
   image_alt: string | null;
   featured: boolean;
-  for_men: boolean;
   sort_order: number;
   details: TreatmentDetailContent;
   status: ContentStatus;

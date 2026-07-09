@@ -25,7 +25,7 @@ export default async function AdminInnerPagesPage() {
     <>
       <AdminPageHeader
         title="各頁標題與 SEO"
-        lead="編輯量膚、男賓、痛症、關於等內頁的標題區、說明面板與搜尋關鍵字。"
+        lead="編輯量膚、痛症、關於等內頁的標題區、說明面板與搜尋關鍵字。"
         breadcrumbs={[
           { label: "儀表板", href: "/admin" },
           { label: "各頁標題與 SEO" },

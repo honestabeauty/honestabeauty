@@ -15,7 +15,6 @@ export type Treatment = {
   image?: string;
   imageAlt?: string;
   featured?: boolean;
-  forMen?: boolean;
 };
 
 const treatmentImages: Record<string, { src: string; alt: string }> = {
@@ -28,8 +27,6 @@ const treatmentImages: Record<string, { src: string; alt: string }> = {
   hifu: promo.hifu,
   "laser-spot": promo.laserSpot,
   exosome: promo.exosome,
-  "men-facial": promo.menFacial,
-  "men-laser": promo.menLaser,
 };
 
 function withImage(t: Omit<Treatment, "image" | "imageAlt">): Treatment {
@@ -126,32 +123,10 @@ export const treatments: Treatment[] = [
     priceType: "consult",
     priceNote: "諮詢報價 · 單次收費",
   }),
-  withImage({
-    slug: "men-facial",
-    name: "男賓深層清潔護理",
-    tagline: "針清、深層清潔，改善毛孔堵塞與油脂問題。",
-    problems: ["暗瘡", "毛孔", "油脂"],
-    category: "男賓護理",
-    priceType: "consult",
-    priceNote: "諮詢報價 · 單次收費",
-    forMen: true,
-    featured: true,
-  }),
-  withImage({
-    slug: "men-laser",
-    name: "男賓激光護理",
-    tagline: "激光脫墨、脫疣、嫩膚等，獨立男賓私密空間。",
-    problems: ["色斑", "脫疣"],
-    category: "男賓護理",
-    priceType: "consult",
-    priceNote: "諮詢報價 · 單次收費",
-    forMen: true,
-  }),
 ];
 
 export function getTreatment(slug: string) {
   return treatments.find((t) => t.slug === slug);
 }
 
-export const featuredTreatments = treatments.filter((t) => t.featured && !t.forMen);
-export const menTreatments = treatments.filter((t) => t.forMen);
+export const featuredTreatments = treatments.filter((t) => t.featured);

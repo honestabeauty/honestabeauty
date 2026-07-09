@@ -32,7 +32,6 @@ export function mapTreatmentRow(row: CmsTreatmentRow): Treatment {
     image: row.image ?? undefined,
     imageAlt: row.image_alt ?? undefined,
     featured: row.featured,
-    forMen: row.for_men,
   };
 }
 

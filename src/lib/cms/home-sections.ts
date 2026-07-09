@@ -29,13 +29,18 @@ function pickContent(
   return merged;
 }
 
+function migrateSectionId(raw: string): string {
+  return raw === "men-care" ? "women-care" : raw;
+}
+
 function normalizeOrder(order?: string[]): HomeSectionId[] {
   const seen = new Set<HomeSectionId>();
   const result: HomeSectionId[] = [];
 
   for (const raw of order ?? DEFAULT_HOME_SECTION_ORDER) {
-    if (!HOME_SECTION_IDS.includes(raw as HomeSectionId)) continue;
-    const id = raw as HomeSectionId;
+    const migrated = migrateSectionId(raw);
+    if (!HOME_SECTION_IDS.includes(migrated as HomeSectionId)) continue;
+    const id = migrated as HomeSectionId;
     if (seen.has(id)) continue;
     seen.add(id);
     result.push(id);
@@ -54,7 +59,7 @@ export function mergeHomeSections(config?: HomeSectionsConfig | null): ResolvedH
 
   return order.map((id) => {
     const def = HOME_SECTION_REGISTRY[id];
-    const saved = sectionMap[id];
+    const saved = sectionMap[id] ?? (id === "women-care" ? sectionMap["men-care"] : undefined);
     return {
       id,
       enabled: saved?.enabled ?? def.defaultEnabled,

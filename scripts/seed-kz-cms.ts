@@ -93,7 +93,7 @@ function buildTreatmentInserts(): string {
       const details = treatmentDetails[t.slug] ?? {};
       const detailsJson = JSON.stringify(details).replace(/'/g, "''");
       return `insert into public.kz_cms_treatments (slug, name, name_en, tagline, problems, category, price_type, price, price_note, image, image_alt, featured, for_men, sort_order, details, status)
-values (${sqlStr(t.slug)}, ${sqlStr(t.name)}, ${sqlStr(t.nameEn ?? null)}, ${sqlStr(t.tagline)}, ${sqlArray(t.problems)}, ${sqlStr(t.category)}, ${sqlStr(t.priceType)}, ${sqlStr(t.price ?? null)}, ${sqlStr(t.priceNote ?? null)}, ${sqlStr(t.image ?? null)}, ${sqlStr(t.imageAlt ?? null)}, ${t.featured ? "true" : "false"}, ${t.forMen ? "true" : "false"}, ${i}, '${detailsJson}'::jsonb, 'published')
+values (${sqlStr(t.slug)}, ${sqlStr(t.name)}, ${sqlStr(t.nameEn ?? null)}, ${sqlStr(t.tagline)}, ${sqlArray(t.problems)}, ${sqlStr(t.category)}, ${sqlStr(t.priceType)}, ${sqlStr(t.price ?? null)}, ${sqlStr(t.priceNote ?? null)}, ${sqlStr(t.image ?? null)}, ${sqlStr(t.imageAlt ?? null)}, ${t.featured ? "true" : "false"}, false, ${i}, '${detailsJson}'::jsonb, 'published')
 on conflict (slug) do update set
   name = excluded.name,
   tagline = excluded.tagline,
@@ -105,7 +105,7 @@ on conflict (slug) do update set
   image = excluded.image,
   image_alt = excluded.image_alt,
   featured = excluded.featured,
-  for_men = excluded.for_men,
+  for_men = false,
   details = excluded.details,
   updated_at = now();`;
     })
@@ -206,7 +206,7 @@ async function seedWithServiceRole() {
       image: t.image ?? null,
       image_alt: t.imageAlt ?? null,
       featured: t.featured ?? false,
-      for_men: t.forMen ?? false,
+      for_men: false,
       sort_order: i,
       details: treatmentDetails[t.slug] ?? {},
       status: "published",

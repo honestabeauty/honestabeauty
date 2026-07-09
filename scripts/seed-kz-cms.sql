@@ -147,38 +147,6 @@ on conflict (slug) do update set
   for_men = excluded.for_men,
   details = excluded.details,
   updated_at = now();
-insert into public.kz_cms_treatments (slug, name, name_en, tagline, problems, category, price_type, price, price_note, image, image_alt, featured, for_men, sort_order, details, status)
-values ('men-facial', '男賓深層清潔護理', null, '針清、深層清潔，改善毛孔堵塞與油脂問題。', array['暗瘡','毛孔','油脂'], '男賓護理', 'consult', null, '諮詢報價 · 單次收費', '/images/promo/men-facial.png', '男賓深層清潔護理', true, true, 9, '{"suitableFor":"男士毛孔堵塞、黑頭粉刺、油脂旺盛、背痘延伸面部問題。需要私密舒適環境的男賓。","features":["獨立男賓護理空間","針清 + 深層清潔，改善堵塞","單次收費，量膚後建議","可配合激光等進階護理"],"processSteps":["清潔與毛孔狀況評估","針清與深層清潔","鎮靜修復與控油建議"],"aftercare":["避免用手擠壓","使用建議清爽護膚品"]}'::jsonb, 'published')
-on conflict (slug) do update set
-  name = excluded.name,
-  tagline = excluded.tagline,
-  problems = excluded.problems,
-  category = excluded.category,
-  price_type = excluded.price_type,
-  price = excluded.price,
-  price_note = excluded.price_note,
-  image = excluded.image,
-  image_alt = excluded.image_alt,
-  featured = excluded.featured,
-  for_men = excluded.for_men,
-  details = excluded.details,
-  updated_at = now();
-insert into public.kz_cms_treatments (slug, name, name_en, tagline, problems, category, price_type, price, price_note, image, image_alt, featured, for_men, sort_order, details, status)
-values ('men-laser', '男賓激光護理', null, '激光脫墨、脫疣、嫩膚等，獨立男賓私密空間。', array['色斑','脫疣'], '男賓護理', 'consult', null, '諮詢報價 · 單次收費', '/images/promo/men-laser.png', '男賓激光護理', false, true, 10, '{"suitableFor":"男士色斑、脫墨、脫疣、膚色不均。想在私密環境進行激光護理的男賓。","features":["男賓專屬空間，私隱度高","ITEC LV4 激光專業操作","脫墨、脫疣、嫩膚等按需求評估","單次收費，先諮詢後建議"],"processSteps":["諮詢與患處評估","清潔後進行激光護理","修復與防曬提醒"],"aftercare":["嚴格防曬","患處結痂勿自行剝落"]}'::jsonb, 'published')
-on conflict (slug) do update set
-  name = excluded.name,
-  tagline = excluded.tagline,
-  problems = excluded.problems,
-  category = excluded.category,
-  price_type = excluded.price_type,
-  price = excluded.price,
-  price_note = excluded.price_note,
-  image = excluded.image,
-  image_alt = excluded.image_alt,
-  featured = excluded.featured,
-  for_men = excluded.for_men,
-  details = excluded.details,
-  updated_at = now();
 insert into public.kz_cms_journal_posts (slug, title, excerpt, body, category, published_at, image, image_alt, social_id, slug_aliases, status, sort_order)
 values ('tegoder-custom-peel', '美容唔止靠儀器！西班牙醫學級「量膚定制」果酸療程', '好多客人以為黎康姿健淨係做儀器？其實我哋嘅人手護膚品療程一樣係皇牌！', '好多客人以為黎康姿健淨係做儀器？其實我哋嘅人手護膚品療程一樣係皇牌！💆🏻‍♀️
 
@@ -1300,9 +1268,7 @@ values ('點樣預約？', '主要用 WhatsApp 或 Instagram DM，亦可以用�
 insert into public.kz_cms_faqs (question, answer, sort_order, status)
 values ('第一次應該預約咩？', '建議先約「量膚分析」，了解膚質之後再揀啱嘅療程。', 3, 'published');
 insert into public.kz_cms_faqs (question, answer, sort_order, status)
-values ('有男賓服務嗎？', '有。官網有獨立「男賓護理」專區，針清、激光護理等都有。', 4, 'published');
-insert into public.kz_cms_faqs (question, answer, sort_order, status)
-values ('療程會唔會痛？', '睇療程而定。微針射頻可能有少少感覺，等離子煥膚就溫和啲。預約時可以問清楚。', 5, 'published');
+values ('療程會唔會痛？', '睇療程而定。微針射頻可能有少少感覺，等離子煥膚就溫和啲。預約時可以問清楚。', 4, 'published');
 insert into public.kz_cms_faqs (question, answer, sort_order, status)
 values ('喺邊度？', '屯門紅橋菁菱徑9號華利大廈12號（地舖）。', 6, 'published');
 insert into public.kz_cms_faqs (question, answer, sort_order, status)

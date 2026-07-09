@@ -82,10 +82,6 @@ export default async function AdminTreatmentEditPage({ params }: Props) {
             <input type="checkbox" name="featured" defaultChecked={item.featured} />
             首頁精選
           </label>
-          <label className="flex items-center gap-2">
-            <input type="checkbox" name="for_men" defaultChecked={item.for_men} />
-            男賓療程
-          </label>
         </div>
         <div className="kz-admin__field">
           <label htmlFor="sort_order">排序</label>

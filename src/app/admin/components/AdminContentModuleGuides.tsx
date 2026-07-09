@@ -80,7 +80,7 @@ export function TrustPetalFieldGuide() {
 export function ProcessStepsFieldGuide() {
   return (
     <GuideShell
-      location="前台位置 · 首頁量膚區、/skin-analysis、/men、/wellness 底部"
+      location="前台位置 · 首頁量膚區、/skin-analysis、/wellness 底部"
       note="每個步驟左側顯示編號，右側為標題 + 說明。"
     >
       <div className="kz-admin__module-guide__stack kz-admin__module-guide__stack--wide" aria-hidden>

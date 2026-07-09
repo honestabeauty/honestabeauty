@@ -60,3 +60,5 @@ scripts/_tmp*
 next-env.d.ts
 
 .vercel
+
+.vercel

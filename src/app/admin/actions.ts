@@ -313,7 +313,6 @@ export async function saveTreatment(formData: FormData) {
   const image = String(formData.get("image") ?? "").trim() || null;
   const imageAlt = String(formData.get("image_alt") ?? "").trim() || null;
   const featured = formData.get("featured") === "on";
-  const forMen = formData.get("for_men") === "on";
   const sortOrder = Number(formData.get("sort_order") ?? 0);
   const problems = String(formData.get("problems") ?? "")
     .split(/[,，、]/)
@@ -354,7 +353,7 @@ export async function saveTreatment(formData: FormData) {
     image,
     image_alt: imageAlt,
     featured,
-    for_men: forMen,
+    for_men: false,
     sort_order: sortOrder,
     problems,
     details,
@@ -384,7 +383,6 @@ export async function createTreatment(formData: FormData) {
   const image = String(formData.get("image") ?? "").trim() || null;
   const imageAlt = String(formData.get("image_alt") ?? "").trim() || null;
   const featured = formData.get("featured") === "on";
-  const forMen = formData.get("for_men") === "on";
   const problems = String(formData.get("problems") ?? "")
     .split(/[,，、]/)
     .map((p) => p.trim())
@@ -424,7 +422,7 @@ export async function createTreatment(formData: FormData) {
     image,
     image_alt: imageAlt,
     featured,
-    for_men: forMen,
+    for_men: false,
     sort_order: (maxRow?.sort_order ?? 0) + 1,
     problems,
     details: { suitableFor, features, processSteps, aftercare },

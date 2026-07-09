@@ -292,7 +292,6 @@ export default function AdminGuidePage() {
             </thead>
             <tbody>
               <tr><td>量膚定制</td><td><code>/skin-analysis</code></td><td>頁首、面板、SEO</td></tr>
-              <tr><td>男賓護理</td><td><code>/men</code></td><td>頁首、面板、SEO</td></tr>
               <tr><td>痛症理療</td><td><code>/wellness</code></td><td>頁首、面板、SEO（服務列表見共用文案區塊）</td></tr>
               <tr><td>關於我們</td><td><code>/about</code></td><td>頁首、面板、SEO</td></tr>
               <tr><td>醫美知識</td><td><code>/journal</code></td><td>頁首、SEO（文章列表來自醫美知識模組）</td></tr>
@@ -417,7 +416,6 @@ export default function AdminGuidePage() {
               <tr><td>problems</td><td>逗號、頓號或「、」分隔多個標籤</td></tr>
               <tr><td>圖片</td><td>內頁 3:4、列表縮圖 4:5</td></tr>
               <tr><td>featured</td><td>勾選出現在首頁療程輪播</td></tr>
-              <tr><td>for_men</td><td>勾選出現在 <code>/men</code></td></tr>
               <tr><td>price_type / price</td><td>consult 諮詢報價｜fixed 固定價格</td></tr>
               <tr><td>features</td><td>每行一項，變成列表</td></tr>
               <tr><td>status</td><td>published｜draft</td></tr>
@@ -529,10 +527,9 @@ export default function AdminGuidePage() {
               <tr><td>首頁主視覺</td><td>/admin/hero</td></tr>
               <tr><td>首頁各區塊</td><td>/admin/home-sections + 列表模組（療程、文章、短片）</td></tr>
               <tr><td>信任花瓣、流程、敘事、評價</td><td>/admin/content</td></tr>
-              <tr><td>/skin-analysis、/men、/wellness、/about 等</td><td>/admin/pages + /admin/content（痛症服務）</td></tr>
+              <tr><td>/skin-analysis、/wellness、/about 等</td><td>/admin/pages + /admin/content（痛症服務）</td></tr>
               <tr><td>/journal、/journal/[slug]</td><td>/admin/journal</td></tr>
               <tr><td>/treatments、/treatments/[slug]</td><td>/admin/treatments</td></tr>
-              <tr><td>/men 療程列表</td><td>for_men 療程</td></tr>
               <tr><td>/faq</td><td>/admin/faq + /admin/pages（頁首／SEO）</td></tr>
               <tr><td>頁尾、JSON-LD</td><td>/admin/site</td></tr>
               <tr><td>各內頁 SEO meta</td><td>/admin/pages → SEO 區塊</td></tr>

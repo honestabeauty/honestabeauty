@@ -12,7 +12,6 @@ import { treatmentDetails as staticTreatmentDetails } from "@/data/treatment-det
 import {
   featuredTreatments as staticFeaturedTreatments,
   getTreatment as staticGetTreatment,
-  menTreatments as staticMenTreatments,
   treatments as staticTreatments,
   type Treatment,
 } from "@/data/treatments";
@@ -224,12 +223,7 @@ export async function getTreatment(slug: string): Promise<Treatment | undefined>
 
 export async function getFeaturedTreatments(): Promise<Treatment[]> {
   const treatments = await getTreatments();
-  return treatments.filter((t) => t.featured && !t.forMen);
-}
-
-export async function getMenTreatments(): Promise<Treatment[]> {
-  const treatments = await getTreatments();
-  return treatments.filter((t) => t.forMen);
+  return treatments.filter((t) => t.featured);
 }
 
 export async function getTreatmentDetails(): Promise<

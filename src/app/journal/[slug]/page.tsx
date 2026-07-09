@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: `/journal/${resolved.canonicalSlug}`,
     image: resolved.post.image,
     type: "article",
+    publishedTime: resolved.post.date,
   });
 }
 

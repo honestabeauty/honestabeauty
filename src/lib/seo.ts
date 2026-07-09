@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { getSiteUrl } from "@/lib/site-url";
 
-export const DEFAULT_OG_IMAGE = "/images/promo/hero-welcome-editorial-v2.png";
+/** Dedicated 1200×630 social share image */
+export const DEFAULT_OG_IMAGE = "/images/promo/og-default.jpg";
 
 type PageMetadataOptions = {
   title?: string;
@@ -10,6 +11,10 @@ type PageMetadataOptions = {
   path?: string;
   image?: string;
   type?: "website" | "article";
+  /** ISO date for article OG */
+  publishedTime?: string;
+  /** When true, omit fixed OG width/height (non-default content images) */
+  omitOgDimensions?: boolean;
 };
 
 export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
@@ -24,10 +29,29 @@ export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
     ? imagePath
     : `${siteUrl}${imagePath}`;
   const pageUrl = options.path ? `${siteUrl}${options.path}` : siteUrl;
+  const isDefaultOg = imagePath === DEFAULT_OG_IMAGE;
+  const omitDims = options.omitOgDimensions ?? !isDefaultOg;
+
+  const ogImage: {
+    url: string;
+    alt: string;
+    width?: number;
+    height?: number;
+  } = {
+    url: imageUrl,
+    alt: pageTitle ? `${pageTitle}｜${site.name}` : site.name,
+  };
+  if (!omitDims) {
+    ogImage.width = 1200;
+    ogImage.height = 630;
+  }
 
   return {
     title: pageTitle,
     description,
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
       title: ogTitle,
       description,
@@ -35,14 +59,10 @@ export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
       type: options.type ?? "website",
       url: pageUrl,
       siteName: site.name,
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: site.name,
-        },
-      ],
+      images: [ogImage],
+      ...(options.type === "article" && options.publishedTime
+        ? { publishedTime: options.publishedTime }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -53,7 +73,7 @@ export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
   };
 }
 
-const defaultSocial = buildPageMetadata();
+const defaultSocial = buildPageMetadata({ path: "/" });
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
@@ -63,9 +83,16 @@ export const rootMetadata: Metadata = {
   },
   description: site.description,
   icons: {
-    icon: "/brand/kzj-icon.png",
-    apple: "/brand/kzj-icon.png",
+    icon: [
+      { url: "/brand/kzj-icon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
   },
   openGraph: defaultSocial.openGraph,
   twitter: defaultSocial.twitter,
+  alternates: {
+    canonical: getSiteUrl(),
+  },
 };

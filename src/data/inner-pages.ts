@@ -1,7 +1,6 @@
 import {
   aboutPanels,
   journalIntroPanels,
-  menCarePanels,
   skinAnalysisPanels,
   treatmentCategoryGuide,
   wellnessPanels,
@@ -11,7 +10,6 @@ import { site } from "@/data/site";
 
 export const INNER_PAGE_IDS = [
   "skin-analysis",
-  "men",
   "wellness",
   "about",
   "journal",
@@ -70,26 +68,6 @@ export const INNER_PAGE_REGISTRY: Record<InnerPageId, InnerPageDefinition> = {
       imageAlt: "TEGODER 量膚果酸 — 康姿健屯門皮膚管理",
     },
     defaultPanels: skinAnalysisPanels,
-  },
-  men: {
-    id: "men",
-    label: "男賓護理",
-    path: "/men",
-    description: "Hero + 三格說明面板",
-    defaultHero: {
-      watermark: "Men",
-      eyebrow: "By Appointment",
-      title: "男賓護理（只限預約）",
-      lead: "屯門男賓皮膚管理 — 針清、激光、深層清潔。須先 WhatsApp 或 IG 預約確認，",
-      leadHighlight: "單次收費、唔綁套票",
-      metaDescription:
-        "康姿健男賓護理只限預約 — 針清、激光護理、深層清潔。請先 WhatsApp 或 IG 預約。",
-      ctaKind: "link",
-      ctaLabel: "預約查詢",
-      ctaHref: "/book",
-      ctaId: "cta_men_hero_book",
-    },
-    defaultPanels: menCarePanels,
   },
   wellness: {
     id: "wellness",

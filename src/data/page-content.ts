@@ -54,29 +54,6 @@ export const skinAnalysisPanels: ContentPanel[] = [
   },
 ];
 
-export const menCarePanels: ContentPanel[] = [
-  {
-    id: "men-zone",
-    title: "男賓護理（只限預約）",
-    body: "男賓皮膚管理 — 針清、激光、深層清潔等，須先透過 WhatsApp 或 IG 預約確認時段。流程同女賓一樣專業，環境私密舒服；量膚之後先建議，做唔做由你決定。",
-  },
-  {
-    id: "men-treatments",
-    title: "常見護理方向",
-    list: [
-      "毛孔塞、黑頭粉刺 — 針清 + 深層清潔",
-      "油多、暗瘡 — 控油抗炎護理",
-      "脫墨、脫疣、色斑 — 激光護理（要評估）",
-      "第一次護膚 — 建議先量膚分析",
-    ],
-  },
-  {
-    id: "men-booking",
-    title: "點樣預約",
-    body: "WhatsApp 或 Instagram DM 預約，講聲想約男賓護理就得；亦可以用官網引導式預約。單次收費，唔綁套票。",
-  },
-];
-
 export const wellnessPanels: ContentPanel[] = [
   {
     id: "beauty-wellness",
@@ -118,7 +95,7 @@ export const aboutPanels: ContentPanel[] = [
   {
     id: "philosophy",
     title: "我們的理念",
-    body: "康姿健相信，你塊面就係最好嘅配飾。我哋以量膚定制為核心，結合醫美級儀器、西班牙醫學級護膚同傳統理療，為每位客人度身建議美容同痛症管理。屯門一人工作室，堅持單次收費、明碼實價、唔綁套票 — 喺安靜舒服嘅空間，專心享受屬於自己嘅護理時光。",
+    body: "康姿健以量膚定制為核心，結合西班牙醫學級護膚、儀器療程同傳統理療，為每位客人度身建議。屯門一人工作室，堅持單次收費、明碼實價、唔綁套票 — 喺安靜舒服嘅空間，專心享受屬於自己嘅護理時光。",
   },
   {
     id: "services",
@@ -153,11 +130,6 @@ export const relatedPagesByPath: Record<
   "/skin-analysis": [
     { href: "/treatments/tegoder-peel", label: "TEGODER 果酸療程" },
     { href: "/journal", label: "果酸知識文章" },
-    { href: "/book", label: "引導式預約" },
-  ],
-  "/men": [
-    { href: "/treatments", label: "全站療程" },
-    { href: "/faq", label: "常見問題" },
     { href: "/book", label: "引導式預約" },
   ],
   "/wellness": [

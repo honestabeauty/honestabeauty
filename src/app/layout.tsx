@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { GtmScripts } from "@/components/GtmScripts";
 import { Header } from "@/components/Header";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
+import { WebSiteJsonLd } from "@/components/WebSiteJsonLd";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { SiteChrome } from "@/components/SiteChrome";
 import { getSite } from "@/lib/cms/site";
@@ -62,12 +63,13 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${notoSerif.variable} ${notoSans.variable} ${cormorant.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col pb-16 md:pb-0">
+      <body className="min-h-full flex flex-col pb-[calc(4.25rem+env(safe-area-inset-bottom))] md:pb-0">
         <Script id="kz-datalayer-init" strategy="beforeInteractive">
           {`window.dataLayer=window.dataLayer||[];`}
         </Script>
         <GtmScripts />
         <LocalBusinessJsonLd />
+        <WebSiteJsonLd />
         <a href="#main-content" className="skip-link" suppressHydrationWarning>
           跳至主內容
         </a>

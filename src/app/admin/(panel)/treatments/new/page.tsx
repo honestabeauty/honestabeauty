@@ -55,10 +55,6 @@ export default function AdminTreatmentNewPage() {
             <input type="checkbox" name="featured" />
             首頁精選
           </label>
-          <label className="flex items-center gap-2">
-            <input type="checkbox" name="for_men" />
-            男賓療程
-          </label>
         </div>
         <div className="kz-admin__field">
           <label htmlFor="price_type">價錢類型</label>

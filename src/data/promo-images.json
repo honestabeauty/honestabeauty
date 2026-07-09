@@ -12,7 +12,7 @@
       "id": "tegoder-peel",
       "mediaId": "610682319",
       "file": "/images/promo/tegoder-peel.png",
-      "title": "TEGODER 量膚定制果酸",
+      "title": "TEGODER 玫瑰亮白果酸 · 敏感肌適用",
       "treatment": "tegoder-peel"
     },
     {
@@ -44,13 +44,6 @@
       "treatment": "exosome"
     },
     {
-      "id": "men-laser",
-      "mediaId": "622582177",
-      "file": "/images/promo/men-laser.png",
-      "title": "男賓激光護理",
-      "treatment": "men-laser"
-    },
-    {
       "id": "hifu",
       "mediaId": "655436967",
       "file": "/images/promo/hifu.png",
@@ -61,7 +54,7 @@
       "id": "microneedle-rf",
       "mediaId": "626189000",
       "file": "/images/promo/microneedle-rf.png",
-      "title": "m.pen 微針煥膚",
+      "title": "PLASER RF 微針射頻 · 單次 $880",
       "treatment": "microneedle-rf"
     },
     {
@@ -132,7 +125,7 @@
       "mediaId": "682645805",
       "file": "/images/promo/spanish-facial.png",
       "title": "西班牙醫學級人手 Facial",
-      "treatment": "men-facial"
+      "treatment": null
     },
     {
       "id": "dr-face",
@@ -168,13 +161,6 @@
       "file": "/images/promo/me-time.png",
       "title": "享受 Me Time 無壓力美容",
       "treatment": null
-    },
-    {
-      "id": "men-facial",
-      "mediaId": "705939121",
-      "file": "/images/promo/men-facial.png",
-      "title": "男賓深層清潔護理",
-      "treatment": "men-facial"
     }
   ]
 }

@@ -41,13 +41,6 @@ export const ADMIN_PAGE_HUBS: AdminPageHub[] = [
     links: [{ label: "頁面標題與 SEO", href: "/admin/pages?page=skin-analysis" }],
   },
   {
-    id: "men",
-    title: "男賓（只限預約）",
-    description: "男賓專頁標題與說明。",
-    previewHref: "/men",
-    links: [{ label: "頁面標題與 SEO", href: "/admin/pages?page=men" }],
-  },
-  {
     id: "about",
     title: "關於",
     description: "關於頁標題與說明。",

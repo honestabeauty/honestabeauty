@@ -173,38 +173,6 @@ export const treatmentDetails: Record<string, TreatmentDetailContent> = {
     ],
     aftercare: ["加強保濕", "避免即日刺激性護膚"],
   },
-  "men-facial": {
-    suitableFor:
-      "男士毛孔堵塞、黑頭粉刺、油脂旺盛、背痘延伸面部問題。需要私密舒適環境的男賓。",
-    features: [
-      "獨立男賓護理空間",
-      "針清 + 深層清潔，改善堵塞",
-      "單次收費，量膚後建議",
-      "可配合激光等進階護理",
-    ],
-    processSteps: [
-      "清潔與毛孔狀況評估",
-      "針清與深層清潔",
-      "鎮靜修復與控油建議",
-    ],
-    aftercare: ["避免用手擠壓", "使用建議清爽護膚品"],
-  },
-  "men-laser": {
-    suitableFor:
-      "男士色斑、脫墨、脫疣、膚色不均。想在私密環境進行激光護理的男賓。",
-    features: [
-      "男賓專屬空間，私隱度高",
-      "ITEC LV4 激光專業操作",
-      "脫墨、脫疣、嫩膚等按需求評估",
-      "單次收費，先諮詢後建議",
-    ],
-    processSteps: [
-      "諮詢與患處評估",
-      "清潔後進行激光護理",
-      "修復與防曬提醒",
-    ],
-    aftercare: ["嚴格防曬", "患處結痂勿自行剝落"],
-  },
 };
 
 export function getTreatmentDetails(slug: string) {

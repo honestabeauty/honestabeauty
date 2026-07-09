@@ -56,7 +56,6 @@ function categoryFromItem(item: SocialImageItem): string {
   if (/COLLAZEN|HIFU|微針|等離子|激光|Plasma|Plaser/i.test(haystack)) {
     return "儀器療程";
   }
-  if (/男賓|男士/.test(haystack)) return "男賓護理";
   if (/果酸|暗瘡|敏感|保濕|護膚|轉季|秋冬|精油|撥筋/.test(haystack)) {
     return "護膚知識";
   }

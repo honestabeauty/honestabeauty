@@ -31,7 +31,7 @@ const problemsFromTreatments = (treatments: Treatment[]) => [
 
 const categoriesFromTreatments = (treatments: Treatment[]) => [
   "全部",
-  ...Array.from(new Set(treatments.filter((t) => !t.forMen).map((t) => t.category))),
+  ...Array.from(new Set(treatments.map((t) => t.category))),
 ];
 
 function readFilterParam(
@@ -79,7 +79,6 @@ export default function TreatmentsPageClient({
 
   const filtered = useMemo(() => {
     return treatments.filter((t) => {
-      if (t.forMen) return false;
       if (category !== "全部" && t.category !== category) return false;
       if (problem !== "全部" && !t.problems.includes(problem)) return false;
       return true;

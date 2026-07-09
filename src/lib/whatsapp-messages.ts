@@ -3,7 +3,6 @@ export const whatsappMessages = {
   skinAnalysis: "你好，我想預約量膚分析。",
   firstVisit: "你好，我是首次預約，想了解量膚分析流程。",
   treatmentBooking: "你好，我想預約療程諮詢。",
-  menBooking: "你好，我想預約男賓護理療程。",
   wellness: "你好，我想了解痛症理療 / Dr. Rainbow 遠紅外線焗倉。",
   other: "你好，我有其他查詢，想聯絡康姿健。",
   peelType: (name: string) =>

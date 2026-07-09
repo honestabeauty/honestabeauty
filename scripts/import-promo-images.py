@@ -24,7 +24,6 @@ MAPPING: dict[str, dict[str, str]] = {
     "612421347": {"file": "plasma-peel", "title": "等離子煥膚", "treatment": "plasma-peel"},
     "469641557": {"file": "hero-shop", "title": "康姿健屯門小店", "treatment": ""},
     "654030090": {"file": "exosome", "title": "外泌體細胞修復", "treatment": "exosome"},
-    "622582177": {"file": "men-laser", "title": "男賓激光護理", "treatment": "men-laser"},
     "655436967": {"file": "hifu", "title": "HIFU 緊緻拉提", "treatment": "hifu"},
     "626189000": {"file": "microneedle-rf", "title": "m.pen 微針煥膚", "treatment": "microneedle-rf"},
     "656277400": {"file": "collazen-triple", "title": "COLLAZEN 一打三黑科技", "treatment": "collazen"},
@@ -36,13 +35,12 @@ MAPPING: dict[str, dict[str, str]] = {
     "657711985": {"file": "collazen-atoz", "title": "COLLAZEN 膠原小旋風 A to Z", "treatment": "collazen"},
     "648345329": {"file": "dr-rainbow-fir", "title": "Dr. Rainbow 遠紅外線", "treatment": ""},
     "657461485": {"file": "seasonal-skincare", "title": "轉季護膚小貼士", "treatment": ""},
-    "682645805": {"file": "spanish-facial", "title": "西班牙醫學級人手 Facial", "treatment": "men-facial"},
+    "682645805": {"file": "spanish-facial", "title": "西班牙醫學級人手 Facial", "treatment": ""},
     "700208007": {"file": "dr-face", "title": "Dr. Face 遠紅外線童顏機", "treatment": ""},
     "669601128": {"file": "wellness-detox", "title": "養生排毒 Dr. Rainbow", "treatment": ""},
     "710556540": {"file": "event-prep", "title": "重要日子前大掃除", "treatment": ""},
     "719609596": {"file": "sensitive-repair", "title": "脆弱肌修護方案", "treatment": "tegoder-peel"},
     "719891423": {"file": "me-time", "title": "享受 Me Time 無壓力美容", "treatment": ""},
-    "705939121": {"file": "men-facial", "title": "男賓深層清潔護理", "treatment": "men-facial"},
 }
 
 

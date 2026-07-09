@@ -232,7 +232,7 @@ export const shopVideos: ShopVideo[] = [
   {
     id: 22,
     title: "康姿健地舖門面",
-    excerpt: "屯門紅橋地舖 — 女賓護理為主；痛症推拿只限女賓，男賓只限預約。",
+    excerpt: "屯門紅橋地舖 — 女賓護理為主；痛症推拿只限女賓。",
     category: "門店",
     durationSec: 26.4,
     poster: "/videos/reels/posters/22.jpg",
