@@ -58,8 +58,16 @@ export default async function AdminContentPage() {
   return (
     <>
       <AdminPageHeader
-        title="站點內容"
-        lead="首頁與內頁共用的固定文案模組：信任花瓣、評價、流程、品牌敘事、痛症服務等。"
+        title="共用文案區塊"
+        lead="首頁與內頁共用的固定文案：信任重點、評價、流程、品牌敘事、痛症服務等。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "共用文案區塊" },
+        ]}
+        relatedLinks={[
+          { label: "痛症頁標題與 SEO", href: "/admin/pages?page=wellness" },
+          { label: "首頁主視覺", href: "/admin/hero" },
+        ]}
         previewHref="/"
         guideHref="/admin/guide#site-content"
       />

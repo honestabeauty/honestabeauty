@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/BrandLogo";
+import { SocialLinks } from "@/components/SocialLinks";
 import { footerNavItems } from "@/data/site";
 import { getSite } from "@/lib/cms/site";
 
@@ -61,48 +62,15 @@ export async function Footer() {
             <p className="font-ui text-xs uppercase tracking-widest text-kz-plum-muted">
               追蹤我們
             </p>
-            <ul className="mt-4 space-y-2">
-              <li>
-                <a
-                  href={site.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-kz-plum no-underline hover:text-kz-rose"
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.threads}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-kz-plum no-underline hover:text-kz-rose"
-                >
-                  Threads
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.xiaohongshu}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-kz-plum no-underline hover:text-kz-rose"
-                >
-                  小紅書
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-kz-plum no-underline hover:text-kz-rose"
-                >
-                  Facebook
-                </a>
-              </li>
-            </ul>
+            <SocialLinks
+              variant="footer"
+              urls={{
+                instagram: site.instagram,
+                threads: site.threads,
+                xiaohongshu: site.xiaohongshu,
+                facebook: site.facebook,
+              }}
+            />
           </div>
         </div>
 

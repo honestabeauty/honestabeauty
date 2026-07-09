@@ -35,7 +35,7 @@ export const MEDIA_SPECS = {
     ],
   },
   posters: {
-    title: "Reels 封面規格",
+    title: "短片封面規格",
     items: [
       ...imageUploadBase,
       { label: "顯示比例", value: "9 : 16（直向，與影片一致）" },
@@ -44,7 +44,7 @@ export const MEDIA_SPECS = {
     ],
   },
   hero: {
-    title: "首頁 Hero 圖片規格",
+    title: "首頁主視覺圖片規格",
     items: [
       ...imageUploadBase,
       { label: "顯示方式", value: "橫向全幅編輯照（左圖右文 mirror 版面）" },
@@ -60,7 +60,7 @@ export const MEDIA_SPECS = {
     ],
   },
   reelVideo: {
-    title: "Reels 影片規格（不經 CMS 上傳）",
+    title: "短片影片規格（不經 CMS 上傳）",
     items: [
       { label: "格式", value: "MP4（H.264 視訊 + AAC 音訊）" },
       { label: "顯示比例", value: "9 : 16（直向）" },

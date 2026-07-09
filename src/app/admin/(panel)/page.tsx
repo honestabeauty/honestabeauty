@@ -6,6 +6,7 @@ import {
   TRACKING_EVENT_GROUPS,
   getAnalyticsStatus,
 } from "@/data/tracking-spec";
+import { AdminPageHubs } from "@/app/admin/components/AdminPageHubs";
 
 function formatDateTime(iso: string | null | undefined) {
   if (!iso) return "—";
@@ -19,9 +20,9 @@ export default async function AdminDashboardPage() {
   if (!isCmsConfigured()) {
     return (
       <div className="kz-admin__card kz-admin__card--muted">
-        <h2 className="kz-admin__card-title">尚未連接 CMS</h2>
+        <h2 className="kz-admin__card-title">後台尚未連接</h2>
         <p className="kz-admin__card-lead">
-          請在 <code>.env.local</code> 設定 Supabase 環境變數後重新啟動 dev server。
+          網站內容資料庫尚未設定完成。請聯絡協助建站的同事完成連線後，再重新整理此頁。
         </p>
       </div>
     );
@@ -110,7 +111,7 @@ export default async function AdminDashboardPage() {
       tone: "plum",
     },
     {
-      label: "店內 Reels",
+      label: "店內短片",
       count: videosPub.count ?? 0,
       draft: videosDraft.count ?? 0,
       href: "/admin/videos",
@@ -132,25 +133,35 @@ export default async function AdminDashboardPage() {
     },
   ];
 
-  const quickActions = [
-    { label: "編輯首頁 Hero", href: "/admin/hero" },
-    { label: "首頁區塊", href: "/admin/home-sections" },
-    { label: "站點內容", href: "/admin/content" },
-    { label: "內頁內容", href: "/admin/pages" },
-    { label: "新增文章", href: "/admin/journal/new" },
-    { label: "新增療程", href: "/admin/treatments/new" },
-    { label: "上傳圖片", href: "/admin/media" },
-    { label: "使用說明", href: "/admin/guide" },
+  const gettingStarted = [
+    {
+      step: "1",
+      title: "確認電話與地址",
+      href: "/admin/site",
+      desc: "站點設定：電話、營業時間、社群連結",
+    },
+    {
+      step: "2",
+      title: "更新首頁主圖",
+      href: "/admin/hero",
+      desc: "首頁最上方輪播圖與標題",
+    },
+    {
+      step: "3",
+      title: "發布一篇文章",
+      href: "/admin/journal",
+      desc: "醫美知識：新增或編輯文章",
+    },
   ];
 
   return (
     <>
       <header className="kz-admin__header kz-admin__header--dashboard">
         <div>
-          <p className="kz-admin__eyebrow">Dashboard</p>
+          <p className="kz-admin__eyebrow">內容後台</p>
           <h1 className="kz-admin__title">儀表板</h1>
           <p className="kz-admin__subtitle">
-            內容總覽、最近更新與轉換追蹤參考。站點設定最後更新：
+            在這裡改網站文字與圖片。儲存後前台約 1 分鐘內更新。站點設定最後更新：
             {formatDateTime(siteSettings.data?.updated_at)}
           </p>
         </div>
@@ -162,6 +173,34 @@ export default async function AdminDashboardPage() {
           <div className="kz-admin__alert kz-admin__alert--ok">全部內容已發布</div>
         )}
       </header>
+
+      <section className="kz-admin__card kz-admin__welcome">
+        <h2 className="kz-admin__card-title">歡迎使用康姿健內容後台</h2>
+        <p className="kz-admin__card-lead">
+          左側選單可直接進入各模組；若不知道要改哪，請用下方「依頁面編輯」。完整說明見{" "}
+          <Link href="/admin/guide" className="kz-admin__text-link">
+            使用說明
+          </Link>
+          。
+        </p>
+        <ol className="kz-admin__steps">
+          {gettingStarted.map((item) => (
+            <li key={item.href} className="kz-admin__step">
+              <span className="kz-admin__step-num" aria-hidden>
+                {item.step}
+              </span>
+              <div>
+                <Link href={item.href} className="kz-admin__step-title">
+                  {item.title}
+                </Link>
+                <p className="kz-admin__step-desc">{item.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <AdminPageHubs />
 
       <section className="kz-admin__section">
         <h2 className="kz-admin__section-title">內容數量</h2>
@@ -244,126 +283,117 @@ export default async function AdminDashboardPage() {
         </section>
 
         <section className="kz-admin__card">
-          <h2 className="kz-admin__card-title">快速操作</h2>
+          <h2 className="kz-admin__card-title">常用捷徑</h2>
           <div className="kz-admin__quick-actions">
-            {quickActions.map((action) => (
-              <Link key={action.href} href={action.href} className="kz-admin__quick-btn">
-                {action.label}
-              </Link>
-            ))}
+            <Link href="/admin/site" className="kz-admin__quick-btn">
+              電話／地址
+            </Link>
+            <Link href="/admin/hero" className="kz-admin__quick-btn">
+              首頁主視覺
+            </Link>
+            <Link href="/admin/media" className="kz-admin__quick-btn">
+              上傳圖片
+            </Link>
+            <Link href="/admin/journal/new" className="kz-admin__quick-btn">
+              新增文章
+            </Link>
+            <Link href="/admin/guide" className="kz-admin__quick-btn">
+              使用說明
+            </Link>
           </div>
           <div className="kz-admin__tip-box">
-            <p className="kz-admin__tip-title">快取提示</p>
+            <p className="kz-admin__tip-title">小提示</p>
             <p>
-              儲存後前台約 <strong>1 分鐘</strong>內自動更新。圖片規格請見{" "}
-              <Link href="/admin/guide" className="kz-admin__text-link">
-                使用說明
-              </Link>
-              。
+              儲存後前台約 <strong>1 分鐘</strong>內自動更新。若畫面沒變，重新整理或稍候再看即可。
             </p>
           </div>
         </section>
       </div>
 
       <section className="kz-admin__section" id="analytics">
-        <div className="kz-admin__card-head">
-          <div>
-            <h2 className="kz-admin__section-title">轉換與停留追蹤</h2>
+        <details className="kz-admin__card kz-admin__details">
+          <summary className="kz-admin__details-summary">
+            <span>
+              <strong>進階：網站數據事件（可略過）</strong>
+              <span className="kz-admin__details-meta">
+                {analytics.active
+                  ? analytics.mode === "gtm"
+                    ? `已接 GTM`
+                    : `已接 GA4`
+                  : "未設定追蹤"}
+              </span>
+            </span>
+          </summary>
+          <div className="kz-admin__details-body">
             <p className="kz-admin__section-lead">
-              CMS 內無法顯示 GA4 即時圖表（需 Google 帳號登入）。以下為站內已埋點事件目錄與 GA4
-              查看方式。
+              此區給需要查看 Google Analytics 的同事參考；日常改文案可略過。
             </p>
-          </div>
-          <span
-            className={`kz-admin__status-pill ${
-              analytics.active ? "kz-admin__status-pill--on" : "kz-admin__status-pill--off"
-            }`}
-          >
-            {analytics.active
-              ? analytics.mode === "gtm"
-                ? `GTM ${analytics.gtmId}`
-                : `GA4 ${analytics.gaId}`
-              : "未設定追蹤 ID"}
-          </span>
-        </div>
-
-        <div className="kz-admin__dashboard-grid kz-admin__dashboard-grid--analytics">
-          <div className="kz-admin__card">
-            <h3 className="kz-admin__card-title">GA4 指標在哪看</h3>
-            <ul className="kz-admin__metric-list">
-              {GA4_METRIC_HINTS.map((hint) => (
-                <li key={hint.metric}>
-                  <strong>{hint.metric}</strong>
-                  <span>{hint.ga4Path}</span>
-                  <p>{hint.note}</p>
-                </li>
-              ))}
-            </ul>
-            <div className="kz-admin__external-links">
-              <a
-                href="https://analytics.google.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="kz-admin__quick-btn"
-              >
-                開啟 Google Analytics
-              </a>
-              {analytics.gtmId ? (
-                <a
-                  href="https://tagmanager.google.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="kz-admin__quick-btn kz-admin__quick-btn--ghost"
-                >
-                  開啟 Tag Manager
-                </a>
-              ) : null}
+            <div className="kz-admin__dashboard-grid kz-admin__dashboard-grid--analytics">
+              <div>
+                <h3 className="kz-admin__card-title">GA4 指標在哪看</h3>
+                <ul className="kz-admin__metric-list">
+                  {GA4_METRIC_HINTS.map((hint) => (
+                    <li key={hint.metric}>
+                      <strong>{hint.metric}</strong>
+                      <span>{hint.ga4Path}</span>
+                      <p>{hint.note}</p>
+                    </li>
+                  ))}
+                </ul>
+                <div className="kz-admin__external-links">
+                  <a
+                    href="https://analytics.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="kz-admin__quick-btn"
+                  >
+                    開啟 Google Analytics
+                  </a>
+                </div>
+              </div>
+              <div>
+                <h3 className="kz-admin__card-title">站內按鈕事件目錄</h3>
+                <p className="kz-admin__card-lead">
+                  訪客點擊預約等按鈕時，系統會記錄事件，方便之後在分析工具查看。
+                </p>
+                <div className="kz-admin__tracking-groups">
+                  {TRACKING_EVENT_GROUPS.map((group) => (
+                    <details key={group.title} className="kz-admin__tracking-group">
+                      <summary>
+                        {group.title}
+                        <span>{group.events.length} 項</span>
+                      </summary>
+                      <p className="kz-admin__tracking-desc">{group.description}</p>
+                      <table className="kz-admin__table kz-admin__table--compact">
+                        <thead>
+                          <tr>
+                            <th>事件代碼</th>
+                            <th>說明</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {group.events.map((event) => (
+                            <tr key={event.id}>
+                              <td>
+                                <code>{event.id}</code>
+                              </td>
+                              <td>
+                                {event.label}
+                                {event.page ? (
+                                  <span className="kz-admin__muted"> · {event.page}</span>
+                                ) : null}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </details>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-
-          <div className="kz-admin__card">
-            <h3 className="kz-admin__card-title">站內 CTA 事件目錄</h3>
-            <p className="kz-admin__card-lead">
-              點擊會推送 <code>dataLayer</code>，事件名主要為{" "}
-              <code>generate_lead</code>、<code>funnel_step</code>、
-              <code>page_engagement</code>（停留 ≥3 秒）。
-            </p>
-            <div className="kz-admin__tracking-groups">
-              {TRACKING_EVENT_GROUPS.map((group) => (
-                <details key={group.title} className="kz-admin__tracking-group">
-                  <summary>
-                    {group.title}
-                    <span>{group.events.length} 項</span>
-                  </summary>
-                  <p className="kz-admin__tracking-desc">{group.description}</p>
-                  <table className="kz-admin__table kz-admin__table--compact">
-                    <thead>
-                      <tr>
-                        <th>cta_id</th>
-                        <th>說明</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {group.events.map((event) => (
-                        <tr key={event.id}>
-                          <td>
-                            <code>{event.id}</code>
-                          </td>
-                          <td>
-                            {event.label}
-                            {event.page ? (
-                              <span className="kz-admin__muted"> · {event.page}</span>
-                            ) : null}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </details>
-              ))}
-            </div>
-          </div>
-        </div>
+        </details>
       </section>
     </>
   );

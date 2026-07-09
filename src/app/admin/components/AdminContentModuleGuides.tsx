@@ -174,7 +174,7 @@ export function TestimonialsFieldGuide() {
 export function WellnessServicesFieldGuide() {
   return (
     <GuideShell
-      location="前台位置 · /wellness · Hero 下方 · 三個圖文服務區"
+      location="前台位置 · /wellness · 頁首下方 · 三個圖文服務區"
       note="奇數項圖左文右；偶數項圖右文左。左側數字 01、02、03 為固定排版。"
     >
       <div className="kz-admin__module-guide__split-preview" aria-hidden>
@@ -286,7 +286,7 @@ function ctaGuideLabel(kind: InnerPageCtaKind) {
   return "無按鈕";
 }
 
-/** 內頁 Hero 區 */
+/** 內頁頁首區 */
 export function InnerPageHeroFieldGuide({
   pageLabel,
   pagePath,
@@ -298,11 +298,11 @@ export function InnerPageHeroFieldGuide({
 }) {
   return (
     <GuideShell
-      location={`前台位置 · ${pagePath} · 頁面頂部 Hero`}
+      location={`前台位置 · ${pagePath} · 頁面頂部主視覺`}
       note="SEO 欄位不顯示在頁面上，只影響 Google 搜尋結果同瀏覽器分頁標題。"
     >
       <div className="kz-admin__module-guide__hero-preview" aria-hidden>
-        <span className="kz-admin__module-guide__watermark">WATERMARK</span>
+        <span className="kz-admin__module-guide__watermark">裝飾大字</span>
         <div className="kz-admin__module-guide__hero-body">
           <span className="kz-admin__module-guide__slot kz-admin__module-guide__slot--label">
             ① 英文小標
@@ -328,7 +328,7 @@ export function InnerPageHeroFieldGuide({
 export function InnerPagePanelFieldGuide() {
   return (
     <GuideShell
-      location="前台位置 · Hero 下方 · 灰底說明面板"
+      location="前台位置 · 頁首下方 · 灰底說明面板"
       note="可拖曳排序、隱藏或新增面板；FAQ 頁的問答列表請至「常見問題」模組編輯。"
     >
       <div className="kz-admin__module-guide__panel-preview kz-admin__module-guide__panel-preview--wide" aria-hidden>

@@ -415,3 +415,36 @@ html[data-admin-theme="dark"] .kz-admin .kz-admin__sidebar-top {
 html[data-admin-theme="dark"] .kz-admin .kz-admin__sidebar-top::-webkit-scrollbar-thumb {
   background: #4a4458;
 }
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__mobile-bar {
+  background: color-mix(in srgb, #1a1624 92%, transparent);
+  border-bottom-color: #3d3848;
+}
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__mobile-section,
+html[data-admin-theme="dark"] .kz-admin .kz-admin__mobile-menu-btn {
+  color: #f0dce8;
+}
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__mobile-menu-btn {
+  border-color: #4a4458;
+}
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__mobile-drawer-inner {
+  background: #1a1624;
+}
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__hub-card,
+html[data-admin-theme="dark"] .kz-admin .kz-admin__step {
+  background: #222030;
+  border-color: #3d3848;
+}
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__related--block {
+  background: color-mix(in srgb, var(--kz-color-brand-pink) 12%, #222030);
+}
+
+html[data-admin-theme="dark"] .kz-admin .kz-admin__guide-quick a {
+  border-color: #3d3848;
+  color: #f0dce8;
+}

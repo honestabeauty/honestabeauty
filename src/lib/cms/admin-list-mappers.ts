@@ -21,6 +21,7 @@ export function journalToListRows(
     category: post.category,
     status: post.status === "draft" ? "draft" : "published",
     editHref: `/admin/journal/${post.slug}`,
+    previewHref: `/journal/${post.slug}`,
     searchText: buildSearchText([post.title, post.category, post.slug, post.published_at]),
     sortValues: {
       title: post.title,
@@ -59,6 +60,7 @@ export function treatmentsToListRows(
       category: item.category,
       status: item.status === "draft" ? "draft" : "published",
       editHref: `/admin/treatments/${item.slug}`,
+      previewHref: `/treatments/${item.slug}`,
       searchText: buildSearchText([item.name, item.category, item.slug, price]),
       sortValues: {
         name: item.name,
@@ -89,6 +91,7 @@ export function videosToListRows(
     category: video.category,
     status: video.status === "draft" ? "draft" : "published",
     editHref: `/admin/videos/${video.id}`,
+    previewHref: "/#shop-videos-title",
     deleteId: String(video.id),
     deleteLabel: `確定刪除「${video.title}」？`,
     searchText: buildSearchText([video.title, video.category, String(video.id)]),
@@ -118,6 +121,7 @@ export function faqToListRows(
     id: String(item.id),
     status: item.status === "draft" ? "draft" : "published",
     editHref: `/admin/faq/${item.id}`,
+    previewHref: "/faq",
     searchText: buildSearchText([item.question, String(item.sort_order)]),
     sortValues: {
       order: item.sort_order,

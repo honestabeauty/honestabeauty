@@ -12,7 +12,7 @@ export const TRACKING_EVENT_GROUPS: {
   events: TrackingEventRow[];
 }[] = [
   {
-    title: "首頁 Hero",
+    title: "首頁主視覺",
     description: "主視覺區 CTA 與跑馬燈導覽",
     events: [
       { id: "cta_whatsapp_hero", label: "WhatsApp 預約量膚", page: "/" },

@@ -32,7 +32,7 @@ export default async function AdminSiteSettingsPage() {
           items={[
             "未填欄位會保留靜態預設值。",
             "撥號用電話請填無空格格式（如 85297709300），供 tel: 連結使用。",
-            "Hero 與內頁文案請至「首頁 Hero」「內頁內容」編輯。",
+            "首頁主圖與內頁標題請至「首頁主視覺」「各頁標題與 SEO」編輯。",
           ]}
         />
         <div className="kz-admin__field">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { reorderTreatmentsAction } from "@/app/admin/actions";
 import { AdminListTable } from "@/app/admin/components/AdminListTable";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { treatmentsToListRows } from "@/lib/cms/admin-list-mappers";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -22,12 +23,20 @@ export default async function AdminTreatmentsListPage() {
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">療程</h1>
+      <AdminPageHeader
+        title="療程"
+        lead="管理療程名稱、價錢、圖片與詳情。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "療程" },
+        ]}
+        previewHref="/treatments"
+        guideHref="/admin/guide#treatments"
+      >
         <Link href="/admin/treatments/new" className="moana-pill-btn moana-pill-btn--dark">
           新增療程
         </Link>
-      </div>
+      </AdminPageHeader>
       <div className="kz-admin__card kz-admin__card--list">
         <AdminListTable
           rows={rows}

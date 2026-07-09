@@ -2,6 +2,7 @@ import { site } from "@/data/site";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { Suspense } from "react";
+import { AdminMobileChrome } from "@/app/admin/components/AdminMobileChrome";
 import { AdminNav } from "@/app/admin/components/AdminNav";
 import { AdminSaveNotice } from "@/app/admin/components/AdminSaveNotice";
 import { AdminThemeToggle } from "@/app/admin/components/AdminThemeToggle";
@@ -11,6 +12,7 @@ import { signOutAdmin } from "../auth-actions";
 export default function AdminPanelLayout({ children }: { children: ReactNode }) {
   return (
     <div className="kz-admin">
+      <AdminMobileChrome />
       <div className="kz-admin__shell">
         <aside className="kz-admin__sidebar">
           <div className="kz-admin__sidebar-top">

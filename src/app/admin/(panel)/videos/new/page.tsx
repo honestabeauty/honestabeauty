@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { saveShopVideo } from "@/app/admin/actions";
 import { AdminComboSelect } from "@/app/admin/components/AdminComboSelect";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { MediaFieldPicker } from "@/app/admin/components/MediaFieldPicker";
 import { MediaSpecBox } from "@/app/admin/components/MediaSpecBox";
 import { getCmsPathOptions } from "@/lib/cms/admin-path-options";
@@ -11,12 +12,21 @@ export default async function AdminVideoNewPage() {
   const pathOptions = await getCmsPathOptions();
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">新增 Reels</h1>
+      <AdminPageHeader
+        title="新增短片"
+        lead="先準備好影片檔路徑與封面，再填標題與分類。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "店內短片", href: "/admin/videos" },
+          { label: "新增短片" },
+        ]}
+        previewHref="/#shop-videos-title"
+        guideHref="/admin/guide#videos"
+      >
         <Link href="/admin/videos" className="text-sm text-kz-rose no-underline">
           ← 返回列表
         </Link>
-      </div>
+      </AdminPageHeader>
       <form action={saveShopVideo} className="kz-admin__card kz-admin__form">
         <div className="kz-admin__field">
           <label htmlFor="title">標題</label>

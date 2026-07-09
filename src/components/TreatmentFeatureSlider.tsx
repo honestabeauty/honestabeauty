@@ -61,7 +61,6 @@ function TreatmentCard({
 export function TreatmentFeatureSlider({ treatments }: Props) {
   if (treatments.length === 0) return null;
 
-  const loop = [...treatments, ...treatments];
   const durationSec = Math.max(treatments.length * 18, 72);
 
   return (

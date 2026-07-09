@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { deleteFaqAction, saveFaq } from "@/app/admin/actions";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type Props = { params: Promise<{ id: string }> };
@@ -18,12 +19,24 @@ export default async function AdminFaqEditPage({ params }: Props) {
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">編輯 FAQ</h1>
+      <AdminPageHeader
+        title="編輯常見問題"
+        lead={item.question}
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "常見問題", href: "/admin/faq" },
+          { label: "編輯" },
+        ]}
+        relatedLinks={[
+          { label: "FAQ 頁標題與 SEO", href: "/admin/pages?page=faq" },
+        ]}
+        previewHref="/faq"
+        guideHref="/admin/guide#faq"
+      >
         <Link href="/admin/faq" className="text-sm text-kz-rose no-underline">
           ← 返回列表
         </Link>
-      </div>
+      </AdminPageHeader>
       <form action={saveFaq} className="kz-admin__card kz-admin__form">
         <input type="hidden" name="id" value={item.id} />
         <div className="kz-admin__field">

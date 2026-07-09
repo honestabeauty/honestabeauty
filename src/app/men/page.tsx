@@ -9,6 +9,7 @@ import { getInnerPage, getInnerPageMetadata } from "@/lib/cms/inner-pages";
 import { getMenTreatments } from "@/lib/cms/queries";
 import { getProcessStepsContent } from "@/lib/cms/site-content";
 import { buildPageMetadata } from "@/lib/seo";
+import { whatsappMessages } from "@/lib/whatsapp-messages";
 
 export async function generateMetadata(): Promise<Metadata> {
   const meta = await getInnerPageMetadata("men");
@@ -54,6 +55,8 @@ export default async function MenPage() {
       <BookingCTA
         title="預約男賓護理（只限預約）"
         subtitle="WhatsApp 或 IG DM 預約，講聲想約男賓護理就得。"
+        whatsappMessage={whatsappMessages.menBooking}
+        ctaIdPrefix="cta_men_booking"
       />
     </>
   );

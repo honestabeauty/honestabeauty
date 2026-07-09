@@ -128,10 +128,11 @@ export const HOME_SECTION_REGISTRY: Record<HomeSectionId, HomeSectionDefinition>
       linkHref: "/treatments/microneedle-rf",
     },
   },
+  /** CMS 區塊 ID 仍為 men-care（相容既有覆寫）；前台渲染 WomenCareTeaser */
   "men-care": {
     id: "men-care",
     label: "女賓護理 Teaser",
-    description: "女賓護理為主；男賓只限預約輕帶",
+    description: "女賓護理為主；男賓只限預約輕帶（區塊 ID：men-care）",
     defaultEnabled: true,
     editableFields: ["eyebrow", "title", "body", "highlight", "image", "imageAlt", "linkLabel", "linkHref"],
     defaults: {
@@ -183,8 +184,8 @@ export const HOME_SECTION_REGISTRY: Record<HomeSectionId, HomeSectionDefinition>
   },
   "shop-reels": {
     id: "shop-reels",
-    label: "店內 Reels",
-    description: "來自 CMS 的 Reels 網格",
+    label: "店內短片",
+    description: "來自 CMS 的短片網格",
     defaultEnabled: true,
     editableFields: [],
     defaults: {},

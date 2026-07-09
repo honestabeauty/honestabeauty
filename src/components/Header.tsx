@@ -4,11 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BrandLogo } from "@/components/BrandLogo";
-import { HeaderSocialLinks } from "@/components/HeaderSocialLinks";
+import { SocialLinks, type SocialUrls } from "@/components/SocialLinks";
 import { IconClose, IconMenu } from "@/components/icons/KzIcons";
 import { navItems, site } from "@/data/site";
 
-export function Header() {
+type Props = {
+  socialUrls?: Partial<SocialUrls>;
+};
+
+export function Header({ socialUrls }: Props) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
@@ -27,6 +31,9 @@ export function Header() {
       'a[href], button:not([disabled])',
     );
     focusable?.[0]?.focus();
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -50,43 +57,53 @@ export function Header() {
     };
 
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
   }, [open, closeMenu]);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <header className="header-editorial sticky top-0 z-50">
-      <div className="container-kz flex h-[var(--header-height)] items-center justify-between">
-        <Link href="/" className="brand-logo-link group no-underline">
+      <div className="container-kz flex h-[var(--header-height)] items-center justify-between gap-3">
+        <Link href="/" className="brand-logo-link group no-underline shrink-0">
           <BrandLogo priority />
           <span className="sr-only">{site.name} {site.nameEn}</span>
         </Link>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="主導覽">
+        <nav
+          className="header-editorial__nav hidden items-center lg:flex"
+          aria-label="主導覽"
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               data-cta-id={`cta_nav_${item.href.replace(/\//g, "") || "home"}`}
-              className={`font-ui text-[11px] uppercase tracking-[0.12em] no-underline transition-colors ${
+              className={`header-editorial__link font-ui no-underline transition-colors ${
                 pathname === item.href || pathname.startsWith(item.href + "/")
-                  ? "text-kz-plum border-b border-kz-brand-navy pb-0.5"
-                  : "text-kz-plum-muted hover:text-kz-brand-navy"
+                  ? "header-editorial__link--active"
+                  : "header-editorial__link--muted"
               }`}
             >
               {item.label}
             </Link>
           ))}
-          <HeaderSocialLinks />
+          <SocialLinks variant="header" urls={socialUrls} />
           <Link
             href="/book"
-            className="btn-primary conversion-touch-target"
+            className="btn-primary conversion-touch-target shrink-0"
             data-cta-id="cta_header_book_desktop"
           >
             預約
           </Link>
         </nav>
 
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2 sm:gap-3 lg:hidden shrink-0">
           <Link
             href="/book"
             className="conversion-touch-target font-ui text-[11px] uppercase tracking-widest text-kz-brand-navy no-underline px-2 py-2"
@@ -112,7 +129,7 @@ export function Header() {
         <nav
           ref={mobileNavRef}
           id="mobile-nav"
-          className="border-t border-kz-plum/10 px-5 py-4 lg:hidden"
+          className="header-editorial__drawer border-t border-kz-plum/10 px-5 py-4 lg:hidden"
           aria-label="手機導覽"
         >
           <ul className="flex flex-col">
@@ -128,6 +145,23 @@ export function Header() {
                 </Link>
               </li>
             ))}
+            <li className="border-b border-kz-plum/10 py-4">
+              <SocialLinks
+                variant="header"
+                urls={socialUrls}
+                className="header-social--drawer"
+              />
+            </li>
+            <li className="pt-3">
+              <Link
+                href="/book"
+                className="btn-primary conversion-touch-target inline-flex"
+                data-cta-id="cta_mobile_nav_book"
+                onClick={closeMenu}
+              >
+                預約
+              </Link>
+            </li>
           </ul>
         </nav>
       )}

@@ -10,8 +10,8 @@ type Props = { searchParams: Promise<{ error?: string }> };
 const errors: Record<string, string> = {
   missing: "請輸入電郵同密碼。",
   invalid: "登入失敗，請檢查電郵或密碼。",
-  unauthorized: "此帳戶未獲 CMS 管理權限。請使用已授權的管理員電郵登入。",
-  config: "尚未設定 Supabase 環境變數，請參考 .env.example。",
+  unauthorized: "此帳戶未獲內容後台管理權限。請使用已授權的管理員電郵登入。",
+  config: "後台尚未完成連線設定，請聯絡協助建站的同事。",
 };
 
 export default async function AdminLoginPage({ searchParams }: Props) {
@@ -35,9 +35,7 @@ export default async function AdminLoginPage({ searchParams }: Props) {
 
         {!configured ? (
           <p className="mt-6 text-sm text-kz-plum-muted">
-            請在 <code>.env.local</code> 設定{" "}
-            <code>NEXT_PUBLIC_SUPABASE_URL</code> 同{" "}
-            <code>NEXT_PUBLIC_SUPABASE_ANON_KEY</code>。
+            後台尚未連接資料庫。請聯絡協助建站的同事完成設定後再登入。
           </p>
         ) : (
           <form action={signInAdmin} className="kz-admin__form mt-6">

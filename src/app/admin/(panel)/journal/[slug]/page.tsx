@@ -3,6 +3,7 @@ import Link from "next/link";
 import { deleteJournalPostAction, saveJournalPost } from "@/app/admin/actions";
 import { AdminDeleteButton } from "@/app/admin/components/AdminDeleteButton";
 import { AdminImageFields } from "@/app/admin/components/AdminImageFields";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { AdminPresetSelect } from "@/app/admin/components/AdminPresetSelect";
 import { CMS_JOURNAL_CATEGORIES } from "@/lib/cms/admin-field-options";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -22,12 +23,21 @@ export default async function AdminJournalEditPage({ params }: Props) {
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">編輯文章</h1>
+      <AdminPageHeader
+        title="編輯文章"
+        lead={post.title}
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "醫美知識", href: "/admin/journal" },
+          { label: "編輯文章" },
+        ]}
+        previewHref={`/journal/${post.slug}`}
+        guideHref="/admin/guide#journal"
+      >
         <Link href="/admin/journal" className="text-sm text-kz-rose no-underline">
           ← 返回列表
         </Link>
-      </div>
+      </AdminPageHeader>
       <form action={saveJournalPost} className="kz-admin__card kz-admin__form">
         <input type="hidden" name="slug" value={post.slug} />
         <div className="kz-admin__field">

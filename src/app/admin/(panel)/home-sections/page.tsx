@@ -23,7 +23,16 @@ export default async function AdminHomeSectionsPage() {
             首頁區塊 <AdminOverrideBadge overridden={hasOverrides} />
           </>
         }
-        lead="調整首頁各區塊的顯示順序、開關，以及 Teaser 文案與圖片。"
+        lead="調整首頁各區塊的顯示順序、開關，以及宣傳文案與圖片。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "首頁區塊" },
+        ]}
+        relatedLinks={[
+          { label: "首頁主視覺", href: "/admin/hero" },
+          { label: "共用文案區塊", href: "/admin/content" },
+        ]}
+        relatedLabel="首頁其他可改"
         previewHref="/"
         guideHref="/admin/guide#home-sections"
       >

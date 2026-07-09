@@ -43,7 +43,3 @@ export async function Testimonials({ embedded = false }: { embedded?: boolean })
     </section>
   );
 }
-
-export function MenBanner() {
-  return null;
-}

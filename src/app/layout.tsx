@@ -1,5 +1,4 @@
 import Script from "next/script";
-import { headers } from "next/headers";
 import {
   Cormorant_Garamond,
   DM_Sans,
@@ -11,8 +10,8 @@ import { GtmScripts } from "@/components/GtmScripts";
 import { Header } from "@/components/Header";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
-import { PageEngagementTracker } from "@/components/PageEngagementTracker";
-import { CtaClickTracker } from "@/components/CtaClickTracker";
+import { SiteChrome } from "@/components/SiteChrome";
+import { getSite } from "@/lib/cms/site";
 import { rootMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -48,8 +47,13 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = (await headers()).get("x-pathname") ?? "";
-  const isAdmin = pathname.startsWith("/admin");
+  const site = await getSite();
+  const socialUrls = {
+    instagram: site.instagram,
+    threads: site.threads,
+    xiaohongshu: site.xiaohongshu,
+    facebook: site.facebook,
+  };
 
   return (
     <html
@@ -63,18 +67,17 @@ export default async function RootLayout({
           {`window.dataLayer=window.dataLayer||[];`}
         </Script>
         <GtmScripts />
-        {!isAdmin && <PageEngagementTracker />}
-        {!isAdmin && <CtaClickTracker />}
         <LocalBusinessJsonLd />
         <a href="#main-content" className="skip-link" suppressHydrationWarning>
           跳至主內容
         </a>
-        {!isAdmin && <Header />}
-        <main id="main-content" className="flex-1">
+        <SiteChrome
+          header={<Header socialUrls={socialUrls} />}
+          footer={<Footer />}
+          mobileBar={<MobileBookingBar />}
+        >
           {children}
-        </main>
-        {!isAdmin && <Footer />}
-        {!isAdmin && <MobileBookingBar />}
+        </SiteChrome>
       </body>
     </html>
   );

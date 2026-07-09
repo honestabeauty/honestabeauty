@@ -1,6 +1,9 @@
+import { unstable_cache } from "next/cache";
 import { site as staticSite } from "@/data/site";
 import { isCmsConfigured } from "@/lib/supabase/env";
 import { createSupabasePublicClient } from "@/lib/supabase/server";
+
+const CMS_CACHE_TAG = "kz-cms";
 
 export type HeroSlideOverride = {
   image?: string;
@@ -188,7 +191,7 @@ export type SiteOverrides = {
 
 export type SiteSettingsData = SiteOverrides;
 
-export async function getSiteSettingsData(): Promise<SiteSettingsData | null> {
+async function fetchSiteSettingsData(): Promise<SiteSettingsData | null> {
   if (!isCmsConfigured()) return null;
   const supabase = createSupabasePublicClient();
   if (!supabase) return null;
@@ -201,6 +204,16 @@ export async function getSiteSettingsData(): Promise<SiteSettingsData | null> {
 
   if (!data?.data || typeof data.data !== "object") return null;
   return data.data as SiteSettingsData;
+}
+
+const getCachedSiteSettingsData = unstable_cache(
+  fetchSiteSettingsData,
+  ["kz-cms-site-settings"],
+  { tags: [CMS_CACHE_TAG], revalidate: 60 },
+);
+
+export async function getSiteSettingsData(): Promise<SiteSettingsData | null> {
+  return getCachedSiteSettingsData();
 }
 
 export async function getSiteOverrides(): Promise<SiteOverrides | null> {
@@ -217,6 +230,7 @@ export async function getSite() {
   return {
     ...staticSite,
     ...overrides,
+    // 本店電話與 WhatsApp 同號；CMS 更新 phoneTel 時同步 WhatsApp 連結
     whatsapp: overrides.phoneTel ?? staticSite.whatsapp,
     whatsappMessage: staticSite.whatsappMessage,
   };

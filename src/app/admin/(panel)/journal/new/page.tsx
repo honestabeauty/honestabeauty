@@ -1,25 +1,35 @@
 import Link from "next/link";
 import { createJournalPost } from "@/app/admin/actions";
 import { AdminImageFields } from "@/app/admin/components/AdminImageFields";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { AdminPresetSelect } from "@/app/admin/components/AdminPresetSelect";
 import { CMS_JOURNAL_CATEGORIES } from "@/lib/cms/admin-field-options";
 
 export default function AdminJournalNewPage() {
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">新增文章</h1>
+      <AdminPageHeader
+        title="新增文章"
+        lead="填寫標題與內容後儲存；網址代碼（slug）可留空自動產生。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "醫美知識", href: "/admin/journal" },
+          { label: "新增文章" },
+        ]}
+        previewHref="/journal"
+        guideHref="/admin/guide#journal"
+      >
         <Link href="/admin/journal" className="text-sm text-kz-rose no-underline">
           ← 返回列表
         </Link>
-      </div>
+      </AdminPageHeader>
       <form action={createJournalPost} className="kz-admin__card kz-admin__form">
         <div className="kz-admin__field">
           <label htmlFor="title">標題</label>
           <input id="title" name="title" required />
         </div>
         <div className="kz-admin__field">
-          <label htmlFor="slug">Slug（留空自動產生）</label>
+          <label htmlFor="slug">網址代碼（留空自動產生）</label>
           <input id="slug" name="slug" placeholder="my-article-slug" />
         </div>
         <div className="kz-admin__field">

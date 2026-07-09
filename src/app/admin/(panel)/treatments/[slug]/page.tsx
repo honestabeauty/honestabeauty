@@ -3,6 +3,7 @@ import Link from "next/link";
 import { deleteTreatmentAction, saveTreatment } from "@/app/admin/actions";
 import { AdminDeleteButton } from "@/app/admin/components/AdminDeleteButton";
 import { AdminImageFields } from "@/app/admin/components/AdminImageFields";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { AdminPresetSelect } from "@/app/admin/components/AdminPresetSelect";
 import { CMS_TREATMENT_CATEGORIES } from "@/lib/cms/admin-field-options";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -23,16 +24,27 @@ export default async function AdminTreatmentEditPage({ params }: Props) {
   const details = (item.details ?? {}) as {
     suitableFor?: string;
     features?: string[];
+    processSteps?: string[];
+    aftercare?: string[];
   };
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">編輯療程</h1>
+      <AdminPageHeader
+        title="編輯療程"
+        lead={item.name}
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "療程", href: "/admin/treatments" },
+          { label: "編輯療程" },
+        ]}
+        previewHref={`/treatments/${item.slug}`}
+        guideHref="/admin/guide#treatments"
+      >
         <Link href="/admin/treatments" className="text-sm text-kz-rose no-underline">
           ← 返回列表
         </Link>
-      </div>
+      </AdminPageHeader>
       <form action={saveTreatment} className="kz-admin__card kz-admin__form">
         <input type="hidden" name="slug" value={item.slug} />
         <div className="kz-admin__field">
@@ -113,6 +125,26 @@ export default async function AdminTreatmentEditPage({ params }: Props) {
             id="features"
             name="features"
             defaultValue={(details.features ?? []).join("\n")}
+          />
+        </div>
+        <div className="kz-admin__field">
+          <label htmlFor="process_steps">療程流程（每行一項）</label>
+          <textarea
+            id="process_steps"
+            name="process_steps"
+            rows={4}
+            defaultValue={(details.processSteps ?? []).join("\n")}
+            placeholder="到店諮詢&#10;清潔準備&#10;正式療程&#10;術後護理建議"
+          />
+        </div>
+        <div className="kz-admin__field">
+          <label htmlFor="aftercare">術後注意（每行一項）</label>
+          <textarea
+            id="aftercare"
+            name="aftercare"
+            rows={3}
+            defaultValue={(details.aftercare ?? []).join("\n")}
+            placeholder="加強保濕防曬&#10;避免即日高溫桑拿"
           />
         </div>
         <div className="kz-admin__field">

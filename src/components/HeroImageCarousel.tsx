@@ -42,12 +42,11 @@ export function HeroImageCarousel({ slides }: Props) {
         src={slide.src}
         alt={slide.alt}
         priority
-        unoptimized
         aspect="auto"
         fit="cover"
         bleed
         className="editorial-hero__cover editorial-hero__cover--welcome"
-        sizes="(max-width: 1023px) 92vw, 100vw"
+        sizes="(max-width: 1023px) 100vw, 70vw"
       />
     );
   }
@@ -76,12 +75,11 @@ export function HeroImageCarousel({ slides }: Props) {
               src={slide.src}
               alt={slide.alt}
               priority={i === 0}
-              unoptimized
               aspect="auto"
               fit="cover"
               bleed
               className="editorial-hero__cover editorial-hero__cover--welcome"
-              sizes="(max-width: 1023px) 92vw, 100vw"
+              sizes="(max-width: 1023px) 100vw, 70vw"
             />
           </div>
         ))}

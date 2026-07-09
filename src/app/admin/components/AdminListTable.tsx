@@ -23,6 +23,7 @@ export type AdminListRow = {
   status?: "published" | "draft";
   category?: string | null;
   editHref?: string;
+  previewHref?: string;
   deleteId?: string;
   deleteLabel?: string;
   searchText: string;
@@ -387,6 +388,16 @@ export function AdminListTable({
                         {row.editHref ? (
                           <Link href={row.editHref} className="kz-admin__row-action">
                             編輯
+                          </Link>
+                        ) : null}
+                        {row.previewHref ? (
+                          <Link
+                            href={row.previewHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="kz-admin__row-action kz-admin__row-action--muted"
+                          >
+                            前台 ↗
                           </Link>
                         ) : null}
                         {row.deleteId && deleteAction ? (

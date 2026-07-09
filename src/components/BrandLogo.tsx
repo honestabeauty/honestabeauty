@@ -18,7 +18,6 @@ export function BrandLogo({
       width={48}
       height={48}
       priority={priority}
-      unoptimized
       className={`brand-logo ${className}`.trim()}
     />
   );

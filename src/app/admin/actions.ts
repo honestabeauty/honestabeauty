@@ -324,6 +324,14 @@ export async function saveTreatment(formData: FormData) {
     .split("\n")
     .map((l) => l.trim())
     .filter(Boolean);
+  const processSteps = String(formData.get("process_steps") ?? "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const aftercare = String(formData.get("aftercare") ?? "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
   const status = String(formData.get("status") ?? "published") as
     | "draft"
     | "published";
@@ -331,8 +339,8 @@ export async function saveTreatment(formData: FormData) {
   const details = {
     suitableFor,
     features,
-    processSteps: [],
-    aftercare: [],
+    processSteps,
+    aftercare,
   };
 
   const { error } = await supabase.from("kz_cms_treatments").upsert({
@@ -386,6 +394,14 @@ export async function createTreatment(formData: FormData) {
     .split("\n")
     .map((l) => l.trim())
     .filter(Boolean);
+  const processSteps = String(formData.get("process_steps") ?? "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
+  const aftercare = String(formData.get("aftercare") ?? "")
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(Boolean);
   const status = String(formData.get("status") ?? "draft") as
     | "draft"
     | "published";
@@ -411,7 +427,7 @@ export async function createTreatment(formData: FormData) {
     for_men: forMen,
     sort_order: (maxRow?.sort_order ?? 0) + 1,
     problems,
-    details: { suitableFor, features, processSteps: [], aftercare: [] },
+    details: { suitableFor, features, processSteps, aftercare },
     status,
     updated_at: new Date().toISOString(),
   });

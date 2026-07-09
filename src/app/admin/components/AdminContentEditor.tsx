@@ -164,11 +164,18 @@ export function AdminContentEditor({
       <AdminTips
         items={[
           <>各模組下方有<strong>欄位對照圖</strong>，標示前台顯示位置；可點「在前台查看此區塊」快速確認。</>,
-          <>留空欄位＝使用程式預設；標示「已自訂」代表該模組已有覆寫，可按「還原預設」清除。</>,
-          <>痛症頁「三項圖文服務」在此編輯；Hero 與灰底面板請至 <Link href="/admin/pages?page=wellness">內頁內容 · 痛症理療</Link>。</>,
-          <>詳見 <Link href="/admin/guide#site-content">使用說明 · 站點內容</Link>。</>,
+          <>留空欄位＝使用網站預設文案；標示「已自訂」代表已改過，可按「還原預設」清回預設。</>,
+          <>痛症頁「三項圖文服務」在此編輯；頁面大標題與 SEO 請至 <Link href="/admin/pages?page=wellness">各頁標題與 SEO · 痛症理療</Link>。</>,
+          <>詳見 <Link href="/admin/guide#site-content">使用說明 · 共用文案</Link>。</>,
         ]}
       />
+
+      <p className="kz-admin__related kz-admin__related--block">
+        <span className="kz-admin__related-label">痛症頁還要改：</span>
+        <Link href="/admin/pages?page=wellness" className="kz-admin__related-link">
+          各頁標題與 SEO · 痛症理療
+        </Link>
+      </p>
 
       <input type="hidden" name="testimonial_order" value={JSON.stringify(testimonialOrder)} readOnly />
 
@@ -527,10 +534,10 @@ export function AdminContentEditor({
         </ul>
       </section>
 
-      <section className="kz-admin__content-section">
+      <section className="kz-admin__content-section" id="wellness">
         <SectionHead
           title="痛症頁 · 服務與護理"
-          description="/wellness 痛症理療頁 — 三個圖文服務區 + 下方「傳統痛症護理」區塊。"
+          description="痛症理療頁 — 三個圖文服務區 + 下方「傳統痛症護理」區塊。"
           overridden={overrides.wellness}
           moduleId="wellness"
           moduleLabel="痛症護理"
@@ -646,7 +653,7 @@ export function AdminContentEditor({
 
       <div className="kz-admin__form-actions">
         <button type="submit" className="kz-admin__btn kz-admin__btn--primary">
-          儲存站點內容
+          儲存共用文案
         </button>
       </div>
     </form>

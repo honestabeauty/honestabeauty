@@ -50,18 +50,19 @@ export default async function FAQPage() {
                   </span>
                 </summary>
                 <p className="moana-faq__answer">
-                  {faq.q === "如何預約？" ? (
+                  {faq.q === "點樣預約？" || faq.q === "如何預約？" ? (
                     <>
                       主要透過 WhatsApp 或 Instagram DM 預約，亦可使用
                       <Link
                         href="/book"
                         className="text-kz-rose no-underline hover:underline"
+                        data-cta-id="cta_faq_book_link"
                       >
                         引導式預約
                       </Link>
                       頁面。
                     </>
-                  ) : faq.q === "在哪裡？" ? (
+                  ) : faq.q === "喺邊度？" || faq.q === "在哪裡？" ? (
                     site.address
                   ) : (
                     faq.a

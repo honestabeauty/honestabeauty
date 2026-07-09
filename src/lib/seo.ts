@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { site } from "@/data/site";
 import { getSiteUrl } from "@/lib/site-url";
 
-export const DEFAULT_OG_IMAGE = "/brand/icon-512.png";
+export const DEFAULT_OG_IMAGE = "/images/promo/hero-welcome-editorial-v2.png";
 
 type PageMetadataOptions = {
   title?: string;
@@ -38,8 +38,8 @@ export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
       images: [
         {
           url: imageUrl,
-          width: 512,
-          height: 512,
+          width: 1200,
+          height: 630,
           alt: site.name,
         },
       ],

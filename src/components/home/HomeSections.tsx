@@ -5,7 +5,7 @@ import { FeaturedTreatmentTeaser } from "@/components/home/FeaturedTreatmentTeas
 import { HomePageHub } from "@/components/HomePageHub";
 import { IconArrowRight } from "@/components/icons/KzIconsServer";
 import { JournalMagazineGrid } from "@/components/JournalMagazineGrid";
-import { MenCareTeaser } from "@/components/MenCareTeaser";
+import { WomenCareTeaser } from "@/components/WomenCareTeaser";
 import { RevealOnScroll } from "@/components/RevealOnScroll";
 import { ShopVideoReels } from "@/components/ShopVideoReels";
 import { SkinAnalysisTeaser } from "@/components/SkinAnalysisTeaser";
@@ -83,7 +83,7 @@ function renderSection(
     case "featured-treatment":
       return <FeaturedTreatmentTeaser content={content} />;
     case "men-care":
-      return <MenCareTeaser content={content} />;
+      return <WomenCareTeaser content={content} />;
     case "wellness":
       return <WellnessTeaser content={content} />;
     case "journal":

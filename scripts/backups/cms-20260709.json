@@ -1,0 +1,2067 @@
+{
+  "exportedAt": "2026-07-09T16:59:41.453Z",
+  "tables": {
+    "kz_cms_site_settings": [
+      {
+        "id": "default",
+        "data": {
+          "hero": {
+            "image": "/images/promo/hero-welcome-editorial-v2.png",
+            "kicker": "HONG CHI KIN · Bespoke Skincare",
+            "slides": [
+              {
+                "image": "/images/promo/hero-welcome-editorial-v2.png",
+                "imageAlt": "康姿健歡迎你的蒞臨 — 屯門美容 · 皮膚管理 · 痛症理療"
+              }
+            ],
+            "navNum1": "01",
+            "navNum2": "02",
+            "navNum3": "03",
+            "navNum4": "04",
+            "imageAlt": "康姿健歡迎你的蒞臨 — 屯門美容 · 皮膚管理 · 痛症理療",
+            "navHref1": "/treatments",
+            "navHref2": "/skin-analysis",
+            "navHref3": "/men",
+            "navHref4": "/journal",
+            "navLabel1": "療程目錄",
+            "navLabel2": "量膚定制",
+            "navLabel3": "男賓護理",
+            "navLabel4": "醫美知識",
+            "watermark": "SKIN",
+            "credBadge1": "award",
+            "credBadge2": "device",
+            "credBadge3": "award",
+            "credLabel1": "IBDR 2025 金獎",
+            "credLabel2": "ITEC LV4 激光",
+            "credLabel3": "姊妹美容優秀",
+            "sellLabel1": "單次收費",
+            "sellLabel2": "絕無硬銷",
+            "sellLabel3": "醫美級儀器",
+            "titleLine1": "量膚",
+            "titleLine2": "定制",
+            "titleLine3": "更安心",
+            "taglineAria": "Your Skin is Your Best Accessory",
+            "railTagline1": "西班牙果酸",
+            "railTagline2": "IBDR 金獎",
+            "railTagline3": "屯門地舖",
+            "whatsappLabel": "WhatsApp 預約量膚",
+            "instagramLabel": "Instagram DM",
+            "taglineLine1Em": "Skin",
+            "secondaryLinkHref": "/skin-analysis",
+            "secondaryLinkLabel": "了解量膚流程",
+            "taglineLine1Script": "is Your",
+            "taglineLine2Accent": "Accessory",
+            "taglineLine1Whisper": "Your",
+            "taglineLine2Primary": "Best"
+          },
+          "hours": "每日 09:00 – 21:00",
+          "phone": "9770 9300",
+          "address": "屯門紅橋菁菱徑9號華利大廈12號（地舖）",
+          "threads": "https://www.threads.com/@hong_chi_kin",
+          "facebook": "https://www.facebook.com/profile.php?id=100066932628186",
+          "phoneTel": "85297709300",
+          "subtitle": "屯門美容 · 皮膚管理 · 痛症理療",
+          "instagram": "https://www.instagram.com/hong_chi_kin",
+          "description": "屯門溫馨美容一人工作室。皮膚管理、痛症理療、激光祛斑、膠原提升、等離子淨痘、退背。先量膚再建議，單次收費，唔綁套票。",
+          "xiaohongshu": "https://xhslink.com/m/7zoVvFMANdv"
+        },
+        "updated_at": "2026-06-25T18:19:55.515+00:00"
+      }
+    ],
+    "kz_cms_treatments": [
+      {
+        "slug": "plaser-rf",
+        "name": "PLASER 隔空離子熱能射頻再生儀",
+        "name_en": null,
+        "tagline": "德國 Flyzer 專利，等離子 + 射頻，殺菌、提亮、緊緻一齊做。",
+        "problems": [
+          "鬆弛",
+          "暗沉",
+          "毛孔"
+        ],
+        "category": "射頻緊緻",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "/images/promo/collazen-atoz.png",
+        "image_alt": "Air Plaser 等離子",
+        "featured": true,
+        "for_men": false,
+        "sort_order": 1,
+        "details": {
+          "features": [
+            "德國 Flyzer 專利等離子 + 射頻雙技術",
+            "隔空操作，減少表皮刺激",
+            "殺菌、美白、緊緻多效合一",
+            "非侵入式，恢復期短"
+          ],
+          "aftercare": [
+            "24 小時內避免化妝與高溫環境",
+            "加強保濕防曬，暫停刺激性護膚品"
+          ],
+          "suitableFor": "毛孔粗大、暗沉蠟黃、輕度鬆弛、反覆粉刺等。適合想同時改善膚質與緊緻度的客人。",
+          "processSteps": [
+            "清潔與膚況評估，調校儀器參數",
+            "分區進行等離子射頻護理",
+            "冰導或修復精華鎮靜收尾"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "plasma-acne",
+        "name": "等離子抗痘煥膚療程",
+        "name_en": null,
+        "tagline": "抗炎控油、收細毛孔，針對暗瘡肌、油脂粒、毛囊炎。",
+        "problems": [
+          "暗瘡",
+          "油脂粒",
+          "毛孔"
+        ],
+        "category": "等離子",
+        "price_type": "fixed",
+        "price": "$680",
+        "price_note": "單次（可加 $300 Bioskin 精華）",
+        "image": "/images/promo/plasma-acne.png",
+        "image_alt": "寒流襲港 · 爆拆護膚提示",
+        "featured": true,
+        "for_men": false,
+        "sort_order": 3,
+        "details": {
+          "features": [
+            "等離子技術抗炎控油、收細毛孔",
+            "針對暗瘡菌與過剩油脂",
+            "可加配 Bioskin 精華 ($300)",
+            "明碼單次 $680"
+          ],
+          "aftercare": [
+            "避免用手擠壓痘痘",
+            "使用清爽保濕，避免厚重油分"
+          ],
+          "suitableFor": "暗瘡肌、油脂粒、毛囊炎、毛孔粗大。想控油抗炎又唔想太刺激嘅客人。",
+          "processSteps": [
+            "深層清潔與粉刺清理（視膚況）",
+            "等離子抗痘模式分區護理",
+            "鎮靜修復與控油建議"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "plasma-peel",
+        "name": "等離子煥膚療程",
+        "name_en": null,
+        "tagline": "溫和更新角質、改善粗糙乾紋，熟齡肌同敏感肌都適合。",
+        "problems": [
+          "敏感",
+          "乾燥",
+          "熟齡"
+        ],
+        "category": "等離子",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "/images/promo/plasma-peel.png",
+        "image_alt": "藍光煥膚黑科技",
+        "featured": false,
+        "for_men": false,
+        "sort_order": 4,
+        "details": {
+          "features": [
+            "等離子溫和煥膚，熟齡肌與敏感肌皆可循序進行",
+            "改善粗糙觸感與細紋",
+            "配合修復步驟，減少泛紅",
+            "單次收費，量膚後建議療程間隔"
+          ],
+          "aftercare": [
+            "加強保濕防曬",
+            "暫停家用酸類產品"
+          ],
+          "suitableFor": "敏感肌、乾燥粗糙、熟齡乾紋、膚色不均。想溫和更新角質又不想太刺激。",
+          "processSteps": [
+            "清潔與膚況評估",
+            "等離子煥膚模式操作",
+            "修復精華與防曬提醒"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "collazen",
+        "name": "COLLAZEN 膠原美肌小旋風",
+        "name_en": null,
+        "tagline": "5 合 1 綜合護理：清潔、補濕、HIFU 拉提、RF 膠原、Cryo 修復。",
+        "problems": [
+          "鬆弛",
+          "暗沉",
+          "乾燥"
+        ],
+        "category": "綜合儀器",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "/images/promo/collazen-5in1.png",
+        "image_alt": "COLLAZEN 膠原美肌小旋風 5合1",
+        "featured": true,
+        "for_men": false,
+        "sort_order": 5,
+        "details": {
+          "features": [
+            "COLLAZEN Tornado 五合一：清潔、補濕、HIFU、RF、Cryo",
+            "一機多效，流程緊湊",
+            "針對輪廓與膠原流失",
+            "可按膚況調整探頭組合"
+          ],
+          "aftercare": [
+            "療程後加強保濕",
+            "避免即日高溫桑拿或激烈運動"
+          ],
+          "suitableFor": "鬆弛下垂、暗沉缺水、想一次過完成清潔、補濕、拉提、膠原、冷卻修復的客人。",
+          "processSteps": [
+            "卸妝清潔與膚況分析",
+            "依序使用多探頭進行綜合護理",
+            "Cryo 冷卻修復收尾"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "hifu",
+        "name": "HIFU 緊緻拉提",
+        "name_en": null,
+        "tagline": "非侵入式超聲波拉提，針對輪廓鬆弛、法令紋。",
+        "problems": [
+          "鬆弛",
+          "初老"
+        ],
+        "category": "HIFU",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "/images/promo/collazen-5in1.png",
+        "image_alt": "3-Way HIFU 逆齡 V 面",
+        "featured": false,
+        "for_men": false,
+        "sort_order": 6,
+        "details": {
+          "notes": [
+            "孕婦、金屬植入物或嚴重皮膚病請先告知"
+          ],
+          "features": [
+            "高能聚焦超聲波直達 SMAS 層",
+            "刺激膠原收緊，無開刀恢復期",
+            "針對面部輪廓線條",
+            "效果循序顯現，建議量膚後規劃"
+          ],
+          "aftercare": [
+            "少數人可能有輕微紅腫，一般數小時內消退",
+            "加強防曬與保濕"
+          ],
+          "suitableFor": "輪廓鬆弛、法令紋、下顎線模糊、初老下垂。想非侵入式拉提的客人。",
+          "processSteps": [
+            "清潔與標定拉提區域",
+            "HIFU 探頭分層操作",
+            "修復鎮靜與居家護理建議"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "laser-spot",
+        "name": "激光祛斑嫩膚",
+        "name_en": null,
+        "tagline": "針對色斑、膚色不均，改善整體透亮感。",
+        "problems": [
+          "色斑",
+          "暗沉"
+        ],
+        "category": "激光",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "/images/promo/air-plaser.png",
+        "image_alt": "Ruikd Genelux Lite 納秒激光",
+        "featured": false,
+        "for_men": false,
+        "sort_order": 7,
+        "details": {
+          "notes": [
+            "近期嚴重曬傷或服用感光藥物請先告知"
+          ],
+          "features": [
+            "Genelux Lite 等醫療級激光設備",
+            "針對色素沉澱分層處理",
+            "改善整體透亮感",
+            "療程前需評估膚色與色斑類型"
+          ],
+          "aftercare": [
+            "療程後嚴格防曬，避免紫外線",
+            "結痂期勿自行剝落"
+          ],
+          "suitableFor": "色斑、曬斑、膚色不均、暗沉。持有 ITEC LV4 激光資歷，可安全操作醫療級激光。",
+          "processSteps": [
+            "量膚分析與色斑評估",
+            "清潔後進行激光嫩膚 / 祛斑",
+            "修復面膜與嚴格防曬提醒"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "tegoder-peel",
+        "name": "西班牙 TEGODER 量膚定制果酸療程",
+        "name_en": null,
+        "tagline": "4 款專屬果酸配方，針對油性、敏感、暗沉、熟齡肌，量膚之後對症建議。",
+        "problems": [
+          "暗沉",
+          "敏感",
+          "熟齡",
+          "油性"
+        ],
+        "category": "果酸煥膚",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "量膚分析後報價 · 單次收費",
+        "image": "/images/promo/tegoder-peel.png",
+        "image_alt": "TEGODER 量膚定制果酸",
+        "featured": true,
+        "for_men": false,
+        "sort_order": 0,
+        "details": {
+          "notes": [
+            "孕婦、活躍性疱疹或嚴重濕疹請先告知"
+          ],
+          "features": [
+            "西班牙 TEGODER 醫學級果酸，4 款配方量膚後建議",
+            "量膚定制濃度與停留時間，敏感肌亦可循序進行",
+            "改善角質代謝、提亮膚色、疏通毛孔",
+            "單次收費，不綁套票"
+          ],
+          "aftercare": [
+            "療程後 3–7 日加強防曬，避免高溫桑拿",
+            "暫停家用酸類與磨砂產品，按建議使用修復產品"
+          ],
+          "suitableFor": "油性暗瘡、敏感泛紅、暗沉蠟黃、熟齡鬆弛等膚況。首次建議先量膚分析，再選擇專屬果酸配方。",
+          "processSteps": [
+            "卸妝清潔與 TEGODER 量膚分析",
+            "依膚況選擇果酸配方並進行煥膚",
+            "中和、鎮靜修復與防曬提醒"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "microneedle-rf",
+        "name": "微針射頻膠原修復療程",
+        "name_en": null,
+        "tagline": "Mesoestetic m.pen 智能微針，垂直進針更精準，收毛孔去凹凸洞。",
+        "problems": [
+          "毛孔",
+          "凹凸洞",
+          "初老"
+        ],
+        "category": "微針射頻",
+        "price_type": "fixed",
+        "price": "$880",
+        "price_note": "單次（可加 $300 Bioskin 精華）",
+        "image": "/images/promo/collazen-triple.png",
+        "image_alt": "m.pen 微針煥膚",
+        "featured": true,
+        "for_men": false,
+        "sort_order": 2,
+        "details": {
+          "notes": [
+            "活躍性暗瘡發炎期需先評估"
+          ],
+          "features": [
+            "Mesoestetic m.pen 智能微針，垂直進針更精準",
+            "射頻能量直達真皮，收毛孔、撫平凹凸",
+            "可加配 Bioskin 精華加強修復",
+            "明碼單次 $880"
+          ],
+          "aftercare": [
+            "24–48 小時避免沾水、化妝與運動出汗",
+            "嚴格防曬，使用建議修復產品"
+          ],
+          "suitableFor": "毛孔粗大、凹凸洞、痘疤、初老鬆弛。希望以微針射頻促進膠原再生的客人。",
+          "processSteps": [
+            "清潔消毒，敷舒緩膏（視需要）",
+            "m.pen 微針射頻分區操作",
+            "修復面膜與居家護理建議"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "exosome",
+        "name": "外泌體細胞修復",
+        "name_en": null,
+        "tagline": "深層細胞修復，改善膚質、促進膠原再生。",
+        "problems": [
+          "初老",
+          "暗沉",
+          "敏感"
+        ],
+        "category": "細胞修復",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "/images/promo/exosome.png",
+        "image_alt": "BSK9 EXOSOMES 爆髮療程",
+        "featured": false,
+        "for_men": false,
+        "sort_order": 8,
+        "details": {
+          "features": [
+            "外泌體成分促進細胞溝通與修復",
+            "改善整體膚質與光澤",
+            "可配合其他儀器加強滲透",
+            "適合術後或倦肌急救"
+          ],
+          "aftercare": [
+            "加強保濕",
+            "避免即日刺激性護膚"
+          ],
+          "suitableFor": "初老、暗沉、敏感修復、膚質粗糙。想從細胞層面促進修復與再生。",
+          "processSteps": [
+            "清潔與膚況評估",
+            "外泌體導入（可配合微針或電導）",
+            "修復鎮靜收尾"
+          ]
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T10:10:46.80421+00:00"
+      },
+      {
+        "slug": "men-laser",
+        "name": "男賓激光護理",
+        "name_en": null,
+        "tagline": "激光脫墨、脫疣、嫩膚等，獨立男賓私密空間。",
+        "problems": [
+          "色斑",
+          "脫疣"
+        ],
+        "category": "男賓護理",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "https://xhixmbjtidzsibwpygxb.supabase.co/storage/v1/object/public/kz-cms/treatments/1781611588699-man-2.png",
+        "image_alt": "男賓激光護理",
+        "featured": true,
+        "for_men": true,
+        "sort_order": 10,
+        "details": {
+          "features": [
+            "男賓專屬空間，私隱度高",
+            "ITEC LV4 激光專業操作",
+            "脫墨、脫疣、嫩膚等按需求評估",
+            "單次收費，先諮詢後建議"
+          ],
+          "aftercare": [],
+          "suitableFor": "男士色斑、脫墨、脫疣、膚色不均。想在私密環境進行激光護理的男賓。",
+          "processSteps": []
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T12:06:41.411+00:00"
+      },
+      {
+        "slug": "men-facial",
+        "name": "男賓深層清潔護理",
+        "name_en": null,
+        "tagline": "針清、深層清潔，改善毛孔堵塞與油脂問題。",
+        "problems": [
+          "暗瘡",
+          "毛孔",
+          "油脂"
+        ],
+        "category": "男賓護理",
+        "price_type": "consult",
+        "price": null,
+        "price_note": "諮詢報價 · 單次收費",
+        "image": "https://xhixmbjtidzsibwpygxb.supabase.co/storage/v1/object/public/kz-cms/treatments/1781610989128-man-1.png",
+        "image_alt": "男賓深層清潔護理",
+        "featured": true,
+        "for_men": true,
+        "sort_order": 9,
+        "details": {
+          "features": [
+            "獨立男賓護理空間",
+            "針清 + 深層清潔，改善堵塞",
+            "單次收費，量膚後建議",
+            "可配合激光等進階護理"
+          ],
+          "aftercare": [],
+          "suitableFor": "男士毛孔堵塞、黑頭粉刺、油脂旺盛、背痘延伸面部問題。需要私密舒適環境的男賓。",
+          "processSteps": []
+        },
+        "status": "published",
+        "updated_at": "2026-06-16T11:56:45.565+00:00"
+      }
+    ],
+    "kz_cms_journal_posts": [
+      {
+        "slug": "2511-r2",
+        "title": "小知識",
+        "excerpt": "皮膚敏感、泛紅係皮膚薄弱？醫學煥膚點樣處理？",
+        "body": "皮膚敏感、泛紅係皮膚薄弱？醫學煥膚點樣處理？",
+        "category": "護膚知識",
+        "published_at": "2025-11-15",
+        "image": "/images/social/2511-小知識.webp",
+        "image_alt": "小知識",
+        "social_id": "2511-小知識",
+        "slug_aliases": [
+          "2511-小知識"
+        ],
+        "status": "published",
+        "sort_order": 36,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2511-r3",
+        "title": "產品介紹",
+        "excerpt": "產品介紹",
+        "body": "等離子微針射頻",
+        "category": "儀器療程",
+        "published_at": "2025-11-15",
+        "image": "/images/social/2511-產品介紹.webp",
+        "image_alt": "產品介紹",
+        "social_id": "2511-產品介紹",
+        "slug_aliases": [
+          "2511-產品介紹"
+        ],
+        "status": "published",
+        "sort_order": 37,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2511-r4",
+        "title": "品牌形象",
+        "excerpt": "收費清楚透明，做你信得過的facial。",
+        "body": "收費清楚透明，做你信得過的facial。",
+        "category": "醫美知識",
+        "published_at": "2025-11-15",
+        "image": "/images/social/2511-品牌形象.webp",
+        "image_alt": "品牌形象",
+        "social_id": "2511-品牌形象",
+        "slug_aliases": [
+          "2511-品牌形象"
+        ],
+        "status": "published",
+        "sort_order": 38,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2511-r5",
+        "title": "優惠",
+        "excerpt": "優惠",
+        "body": "介紹朋友",
+        "category": "醫美知識",
+        "published_at": "2025-11-15",
+        "image": "/images/social/2511-優惠.webp",
+        "image_alt": "優惠",
+        "social_id": "2511-優惠",
+        "slug_aliases": [
+          "2511-優惠"
+        ],
+        "status": "published",
+        "sort_order": 39,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2510-r2",
+        "title": "PLASER 隔空離子熱能針射頻再生儀",
+        "excerpt": "PLASER 離子射頻再生儀  膠原再生抗痘煥膚 2合1",
+        "body": "PLASER 離子射頻再生儀 🔬【 膠原再生＋抗痘煥膚 】2合1\n一個儀器結合兩大尖端技術，真真正正全方位解決肌膚問題 💕  適合任何膚質人士！無論抗老、修復、滅痘通通都可以 ✨\n🔹 等離子護理 PLASER AIR｜透過離子能量淨化殺菌、收緊毛孔、提亮膚色 \n🔹 微針射頻 PLASER RF｜刺激真皮層膠原再生，提升修復力，肌膚回復年輕有彈性\n\n✨ 從表皮到肌底，全層修復肌膚狀態 ✨\n無創、無痛、高效～ 真正做到「見得見、摸得出」嘅效果！",
+        "category": "儀器療程",
+        "published_at": "2025-10-15",
+        "image": "/images/social/2510-PLASER-隔空離子熱能針射頻再生儀.webp",
+        "image_alt": "PLASER 隔空離子熱能針射頻再生儀",
+        "social_id": "2510-PLASER-隔空離子熱能針射頻再生儀",
+        "slug_aliases": [
+          "2510-PLASER-隔空離子熱能針射頻再生儀"
+        ],
+        "status": "published",
+        "sort_order": 40,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2510-r4",
+        "title": "等離子抗痘煥膚療程",
+        "excerpt": "等離子科技  抗痘煥膚肌膚重生回復細緻透亮",
+        "body": "【💥等離子科技 × 抗痘煥膚】肌膚重生回復細緻透亮✨\n\n利用離子能量破壞細菌結構、抗菌抗炎、調理油脂分泌、同時改善毛孔粗大！\n🎯 適合：暗瘡肌、油脂分泌旺盛、毛孔粗大、粉刺或毛囊炎\n\n【等離子抗痘煥膚】療程｜只需$680\n＋＄300 升級 Bioskin 精華💧\n⭐️ 挑選專屬你膚質嘅配搭！對症下藥，功效倍增 ⭐️\n➤ BSK8 抗菌修復｜鎮靜舒緩，爆瘡炎症、術後修復都適用\n➤ BSK29 維他命激活｜即時提亮膚色，激活肌底重生\n➤ BSK14 煥白精華｜改善色斑＆即時提亮回復光澤\n➤ BSK7 提亮精華｜高效穀胱甘肽，想要光感透亮肌\n❌ 無香精・無酒精・無刺激・敏感肌都安心使用",
+        "category": "儀器療程",
+        "published_at": "2025-10-15",
+        "image": "/images/social/2510-等離子抗痘煥膚療程.webp",
+        "image_alt": "等離子抗痘煥膚療程",
+        "social_id": "2510-等離子抗痘煥膚療程",
+        "slug_aliases": [
+          "2510-等離子抗痘煥膚療程"
+        ],
+        "status": "published",
+        "sort_order": 42,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2510-r5",
+        "title": "Bioskin 品牌及產品",
+        "excerpt": " Bioskin 7 大精華搵出專屬你膚質嘅配搭！",
+        "body": "【 Bioskin 7️⃣ 大精華💧搵出專屬你膚質嘅配搭！】\n\nBioskin 係來自歐洲的「醫美級護膚品牌」！採用獨家醫學級專利成份，加上最頂級嘅用料，全方位改善肌膚問題！配合埋儀器導入，滲透力提升5️⃣ 倍！每滴精華直接滲透到肌底，保證效果最靚最有效 💕\n\n〔  7️⃣ 大精華 〕搵出專屬你膚質嘅配搭 ✨ \n ➤ BSK36 膠原賦活精華｜抗老補水、適合乾肌、鬆弛肌\n ➤ BSK3 抗皺精華｜放鬆動態紋、皺紋、頸紋\n ➤ BSK6 修復精華｜膠原重生，針對痘疤、初老肌\n ➤ BSK8 抗菌修復｜鎮靜舒緩，爆瘡炎症、術後修復都適用\n ➤ BSK29 維他命激活｜即時提亮膚色，激活肌底重生\n ➤ BSK14 煥白精華｜改善色斑＆即時提亮回復光澤\n ➤ BSK7 提亮精華｜高效穀胱甘肽，想要光感透亮肌\n❌ 無香精・無酒精・無刺激・敏感肌都安心使用 🫶🏻",
+        "category": "護膚知識",
+        "published_at": "2025-10-15",
+        "image": "/images/social/2510-Bioskin-品牌及產品.webp",
+        "image_alt": "Bioskin 品牌及產品",
+        "social_id": "2510-Bioskin-品牌及產品",
+        "slug_aliases": [
+          "2510-Bioskin-品牌及產品"
+        ],
+        "status": "published",
+        "sort_order": 43,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r2",
+        "title": "品牌形象",
+        "excerpt": "品牌形象",
+        "body": "效果至上，不硬銷",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-品牌形象.webp",
+        "image_alt": "品牌形象",
+        "social_id": "2508-09-品牌形象",
+        "slug_aliases": [
+          "2508-09-品牌形象"
+        ],
+        "status": "published",
+        "sort_order": 44,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r3",
+        "title": "產品介紹",
+        "excerpt": "產品介紹",
+        "body": "人手facial",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-產品介紹.webp",
+        "image_alt": "產品介紹",
+        "social_id": "2508-09-產品介紹",
+        "slug_aliases": [
+          "2508-09-產品介紹"
+        ],
+        "status": "published",
+        "sort_order": 45,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r12",
+        "title": "產品介紹",
+        "excerpt": "產品介紹",
+        "body": "等離子煥膚",
+        "category": "儀器療程",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-產品介紹-3.webp",
+        "image_alt": "產品介紹",
+        "social_id": "2508-09-產品介紹-3",
+        "slug_aliases": [
+          "2508-09-產品介紹-3"
+        ],
+        "status": "published",
+        "sort_order": 54,
+        "updated_at": "2026-06-16T10:15:56.048475+00:00"
+      },
+      {
+        "slug": "2603-r6",
+        "title": "【養生排毒篇】唔止流汗咁簡單！ 坐住瘦？訓住排毒？原來流汗都有分等級！",
+        "excerpt": "覺得身體好重、個人好攰，訓極都唔夠精神？ 這可能是「濕氣」和「毒素」積聚的警號！香港人常飲凍飲又長期吹冷氣，汗出唔到，毒素自然困住係身體裡面。",
+        "body": "覺得身體好重、個人好攰，訓極都唔夠精神？🥱 這可能是「濕氣」和「毒素」積聚的警號！香港人常飲凍飲又長期吹冷氣，汗出唔到，毒素自然困住係身體裡面。🌧️\n\n康姿健用 Dr. Rainbow 醫療級遠紅外線焗倉，排嘅係身體累積嘅廢物！\n\n🔥 真正「醫療級」遠紅外線 被稱為「生命之光」，可以產生 4-14微米的遠紅外線，深入皮下組織 50mm (5cm)，引發微血管擴張同細胞共振！ 唔係淨係熱表面，而係由內暖到外。\n\n✨ 做一次焗倉幫你： ✅ 深層排毒： 透過深層排汗，排出積存嘅重金屬、化妝品殘留物同體內毒素。 ✅ 祛濕去腫： 改善香港人最常見嘅濕重問題，減輕身體沉重感。 ✅ 美肌亮白： 排毒後氣色會變到紅潤透亮，連護膚品都吸收得好啲。\n\n🛡️ 信心保證： 獲 KFDA、美國 FDA、CE 等多國專利認證，安全高效。\n只需 30 分鐘，就可以幫身體做個大掃除！🧹 做完 Facial 再焗一焗，效果 Double Up！\n\n#康姿健 #DrRainbow #遠紅外線 #排毒 #去水腫 #懶人運動 #屯門美容 #養生 #KFDA認證 #祛濕",
+        "category": "養生排毒",
+        "published_at": "2026-03-15",
+        "image": "/images/social/2603-養生排毒篇-唔止流汗咁簡單-坐住瘦-訓住排毒-原來流汗都有分等級.webp",
+        "image_alt": "【養生排毒篇】唔止流汗咁簡單！ 坐住瘦？訓住排毒？原來流汗都有分等級！",
+        "social_id": "2603-養生排毒篇-唔止流汗咁簡單-坐住瘦-訓住排毒-原來流汗都有分等級",
+        "slug_aliases": [
+          "2603-養生排毒篇-唔止流汗咁簡單-坐住瘦-訓住排毒-原來流汗都有分等級"
+        ],
+        "status": "published",
+        "sort_order": 19,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2603-r7",
+        "title": "【素顏發光篇】自帶天然胭脂！唔洗化妝都面色紅潤？原來係靠「生命之光」",
+        "excerpt": "有無發現，平時就算訓夠覺，面色都係暗暗沉沉，無咩精神？ 其實係面部氣血循環唔夠好！",
+        "body": "有無發現，平時就算訓夠覺，面色都係暗暗沉沉，無咩精神？😩 其實係面部氣血循環唔夠好！\n康姿健推介 🇰🇷 韓國 Dr. Face 醫療級遠紅外線童顏機。 唔好以為佢只係普通照燈，佢釋放嘅遠紅外線能量，可以深入皮下 50mm (5cm)，比一般 HIFU 嘅 4.5mm 仲要深！\n\n✨ 30分鐘．喚醒沉睡肌膚： ✅ 激活細胞： 令微血管擴張，加速血液循環，做完塊面即刻有種做完運動嘅白裡透紅感。 ✅ 深層排毒： 透過汗水排出積存喺毛孔深處嘅化妝品殘餘物同重金屬，比洗面更乾淨。 ✅ 去水腫： 促進代謝，改善包包面同下垂輪廓，做到瘦面效果。\n\n🛡️ 韓國 KFDA 認證 安全、溫和、無痛。只需訓係度享受暖笠笠嘅護理，皮膚就由內到外靚返哂！\n想素顏都咁自信？Inbox 我哋預約試做啦！💖\n\n#康姿健 #DrFace #童顏機 #遠紅外線 #去黃 #美白 #氣血 #屯門美容 #素顏肌 #KFDA",
+        "category": "素顏發光",
+        "published_at": "2026-03-15",
+        "image": "/images/social/2603-素顏發光篇-自帶天然胭脂-唔洗化妝都面色紅潤-原來係靠-生命之光.webp",
+        "image_alt": "【素顏發光篇】自帶天然胭脂！唔洗化妝都面色紅潤？原來係靠「生命之光」",
+        "social_id": "2603-素顏發光篇-自帶天然胭脂-唔洗化妝都面色紅潤-原來係靠-生命之光",
+        "slug_aliases": [
+          "2603-素顏發光篇-自帶天然胭脂-唔洗化妝都面色紅潤-原來係靠-生命之光"
+        ],
+        "status": "published",
+        "sort_order": 20,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2508-09-r4",
+        "title": "優惠",
+        "excerpt": "優惠",
+        "body": "新客體驗價",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-優惠.webp",
+        "image_alt": "優惠",
+        "social_id": "2508-09-優惠",
+        "slug_aliases": [
+          "2508-09-優惠"
+        ],
+        "status": "published",
+        "sort_order": 46,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r5",
+        "title": "小知識",
+        "excerpt": "小知識",
+        "body": "天熱更易爆暗瘡？",
+        "category": "護膚知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-小知識.webp",
+        "image_alt": "小知識",
+        "social_id": "2508-09-小知識",
+        "slug_aliases": [
+          "2508-09-小知識"
+        ],
+        "status": "published",
+        "sort_order": 47,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r6",
+        "title": "品牌形象",
+        "excerpt": "品牌形象",
+        "body": "獎項回顧",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-品牌形象-2.webp",
+        "image_alt": "品牌形象",
+        "social_id": "2508-09-品牌形象-2",
+        "slug_aliases": [
+          "2508-09-品牌形象-2"
+        ],
+        "status": "published",
+        "sort_order": 48,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r7",
+        "title": "產品介紹",
+        "excerpt": "產品介紹",
+        "body": "激光袪斑",
+        "category": "儀器療程",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-產品介紹-2.webp",
+        "image_alt": "產品介紹",
+        "social_id": "2508-09-產品介紹-2",
+        "slug_aliases": [
+          "2508-09-產品介紹-2"
+        ],
+        "status": "published",
+        "sort_order": 49,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r8",
+        "title": "小知識",
+        "excerpt": "小知識",
+        "body": "斑點你識分嗎",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-小知識-2.webp",
+        "image_alt": "小知識",
+        "social_id": "2508-09-小知識-2",
+        "slug_aliases": [
+          "2508-09-小知識-2"
+        ],
+        "status": "published",
+        "sort_order": 50,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r9",
+        "title": "優惠",
+        "excerpt": "優惠",
+        "body": "激光袪斑",
+        "category": "儀器療程",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-優惠-2.webp",
+        "image_alt": "優惠",
+        "social_id": "2508-09-優惠-2",
+        "slug_aliases": [
+          "2508-09-優惠-2"
+        ],
+        "status": "published",
+        "sort_order": 51,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r10",
+        "title": "品牌形象",
+        "excerpt": "品牌形象",
+        "body": "品牌願景與目標",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-品牌形象-3.webp",
+        "image_alt": "品牌形象",
+        "social_id": "2508-09-品牌形象-3",
+        "slug_aliases": [
+          "2508-09-品牌形象-3"
+        ],
+        "status": "published",
+        "sort_order": 52,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2508-09-r11",
+        "title": "小知識",
+        "excerpt": "小知識",
+        "body": "可能係濕氣太重！",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2508-09-小知識-3.webp",
+        "image_alt": "小知識",
+        "social_id": "2508-09-小知識-3",
+        "slug_aliases": [
+          "2508-09-小知識-3"
+        ],
+        "status": "published",
+        "sort_order": 53,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      },
+      {
+        "slug": "2602-r2",
+        "title": "新春營業時間",
+        "excerpt": "  馬年迎春接福！康姿健同大家拜個早年！ ",
+        "body": "【 🧨🐴 馬年迎春接福！康姿健同大家拜個早年！🧧 】\n🐴 馬年將至！✨ 感謝各位靚靚過去一年嘅支持同信任，放心將肌膚交俾我哋照顧 🫶🏻 新一年，康姿健祝願大家： 🌸 顏值爆燈，肌膚逆齡生長！ 💰 荷包滿滿，想要嘅都有！ 最重要係身體健康，日日都容光煥發 Keep 住最佳狀態！💃🏻\n\n‼️ 新春營業時間安排 🔴 年廿九收爐 🟢 年初七啟市！唔好摸門釘呀 ～\n\n大家逗利是、食年糕之餘，記住唔好捱太夜，都要做足保濕呀！💦 約定大家馬年見，一齊開個靚年！🍊\n \n#康姿健 #HongChiKin #新春營業時間 #屯門美容 #懶人護膚",
+        "category": "護膚知識",
+        "published_at": "2026-02-15",
+        "image": "/images/social/2602-新春營業時間.webp",
+        "image_alt": "新春營業時間",
+        "social_id": "2602-新春營業時間",
+        "slug_aliases": [
+          "2602-新春營業時間"
+        ],
+        "status": "published",
+        "sort_order": 21,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2602-r4",
+        "title": "開工大吉",
+        "excerpt": "  年初七人日快樂！康姿健開工大吉！ ",
+        "body": "【 🧧 年初七人日快樂！康姿健開工大吉！🍊 】\n經過幾日連環拜年、食年糕、打牌通頂... 相信大家都過得好充實！😆 不過玩得盡興，都要照下鏡 Check 下有無「假期後遺症」找上門？😨\n\n❌ 熬夜肌膚暗沉無光 ❌ 食太多煎炸嘢爆暗瘡 ❌ 飲多咗水腫包包面\n\n放心！救星到啦！🫶🏻 康姿健今日正式啟市啦！🥳 美容師們已經叉足電⚡️隨時Ready幫你嘅肌膚做個徹底嘅「開年大掃除」！🧹 無論係想急救殘樣定深層補水，定係養生通淋巴，即刻幫你掃走倦容，以最佳狀態迎接新一年挑戰！✨\n\n📅 新年後預約比較緊張，想快啲搵返個靚樣開工？ 👉🏻「馬」上快啲 DM 我哋預約啦！\n\n#康姿健 #HongChiKin #急救肌膚 #新春啟市 #用心服務",
+        "category": "痛症理療",
+        "published_at": "2026-02-15",
+        "image": "/images/social/2602-開工大吉.webp",
+        "image_alt": "開工大吉",
+        "social_id": "2602-開工大吉",
+        "slug_aliases": [
+          "2602-開工大吉"
+        ],
+        "status": "published",
+        "sort_order": 23,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2602-r5",
+        "title": "膠原小旋風 \n黃金鐵三角",
+        "excerpt": "  護膚都要講效率！COLLAZEN 膠原美肌小旋風一打三」黑科技  ",
+        "body": "【 🚀 護膚都要講效率！COLLAZEN 膠原美肌小旋風一打三」黑科技 🌪️ 】\n做機仲要逐個頭換？Out 啦！👋🏻 「COLLAZEN 膠原美肌小旋風 」獨有 「3-Way 同步輸出」 技術，一次過針對不同皮層，慳時間之餘效果仲更全面！\n\n➡ 3-Way SONO 水滴超聲波提升｜同步輸出3個頻率！ 一次過滲透表皮層、真皮層、皮下脂肪深層。由內到外泵滿水，覆蓋99%肌膚問題！一機多效，打造真正「水滴肌」！\n✅緊緻抗皺、治療痤瘡、激活再生  ✅敏感肌、痘痘肌、乾燥受損肌、老化肌\n\n➡ 3-Way HIFU 全層逆齡提拉｜一槍打 3 層，唔洗換頭！ 突破性同時輸出能量直達 表皮層 (1.5mm) ➕ 真皮層 (3.0mm) ➕ 筋膜層 (4.5mm) 。 能量覆蓋更均勻，大大縮短療程時間，效果更全面！\n✅ 針對改善：輪廓下垂、眼紋、魚尾紋、頸紋、雙下巴 \n\n👉🏻 即刻 Inbox 預約，體驗「同步煥膚」威力！\n\n#康姿健 #COLLAZENTornado #水滴提拉 #高效護膚 #屯門美容",
+        "category": "儀器療程",
+        "published_at": "2026-02-15",
+        "image": "/images/social/2602-膠原小旋風-黃金鐵三角.webp",
+        "image_alt": "膠原小旋風 \n黃金鐵三角",
+        "social_id": "2602-膠原小旋風-黃金鐵三角",
+        "slug_aliases": [
+          "2602-膠原小旋風-黃金鐵三角"
+        ],
+        "status": "published",
+        "sort_order": 24,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2602-r6",
+        "title": "膠原小旋風 \n逆齡效果 Double Up",
+        "excerpt": "  一個完美嘅療程，前後功夫先係關鍵！ HIFU、RF 逆齡效果 Double Up 之秘密  ",
+        "body": "【 💎 一個完美嘅療程，前後功夫先係關鍵！⭐️ HIFU、RF 逆齡效果 Double Up 之秘密 🤫 】\n做機唔係能量大就得‼️如果角質厚、毛色塞滿污糟嘢、做完唔修復，效果大打折扣 ‼️「COLLAZEN 膠原美肌小旋風 」強就強在佢係一套 「有頭有尾」嘅完整護膚療程 💆🏻‍♀️ 幾個功能相輔相成令「主菜」 HIFU、RF 發揮 200% 嘅功效！\n\n1️⃣ 【SonoClean 毛孔大掃除】34KHz 超聲波無痛震走死皮、黑頭同油脂 ，打開皮膚通道令後續 HIFU/RF 能量精準直達深層，能量零浪費！\n2️⃣ 【 3-Way Sono 水滴提拉】同時輸出三個頻率，將水分穿透淺、中、深層肌膚，覆蓋99%肌膚問題，加乘修復，打造飲飽水嘅「水光肌」\n3️⃣ 【 3-Way HIFU 逆齡 V 面】突破性同時輸出能量直達表皮層 (1.5mm) ➕ 真皮層 (3.0mm) ➕ 筋膜層 (4.5mm)，全方位內到外重現輪廓線！\n4️⃣ 【RF 膠原再生】喚醒膠原蛋白再生，增加皮膚彈性、改善膚質\n5️⃣ 【Cryo 冰火修復 】冷暖交替 (-15°C~45°C) 配合離子滲透 ，將精華壓入肌底。 做完高熱能療程之後即時「鎮靜＋滋養」\n\n📣 想體驗事半功倍嘅完整護膚？快啲 Inbox 嚟康姿健體驗啦！\n\n#康姿健 #COLLAZENTornado #HIFU #毛孔大掃除 #屯門美容",
+        "category": "儀器療程",
+        "published_at": "2026-02-15",
+        "image": "/images/social/2602-膠原小旋風-逆齡效果-Double-Up.webp",
+        "image_alt": "膠原小旋風 \n逆齡效果 Double Up",
+        "social_id": "2602-膠原小旋風-逆齡效果-Double-Up",
+        "slug_aliases": [
+          "2602-膠原小旋風-逆齡效果-Double-Up"
+        ],
+        "status": "published",
+        "sort_order": 25,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2601-r3",
+        "title": "V-SANG 藍光煥膚療程",
+        "excerpt": " 咩話？28日更新週期縮短至 3日？拆解「藍光煥膚」黑科技！",
+        "body": "🧐 咩話？28日更新週期縮短至 3日？拆解「藍光煥膚」黑科技！🧬\n👩🏻‍🏫一般肌膚更新週期要 28 日，但隨住年紀大，代謝慢，啲死皮就賴死唔走...\n隆重介紹 💙 V-SANG 藍光奇蹟煥膚 💙 唔需要儀器就可以將能量滲透入毛孔深處！\n\n✅ 99% 高純度微針： 比傳統海藻矽針更幼細、更純淨，大大減低痛感同刺激 。 \n✅ SOS煥膚！將原本28日嘅更新週期縮短至最快 3日！\n\n簡單講：好似幫皮膚做咗次「Reboot」，重現初生肌膚咁滑！👶🏻 重點係—— 過程溫和，唔會成塊面紅晒出唔到街！\n👉🏻 想了解自己膚質啱唔啱做？DM 搵我哋傾下！\n\n#康姿健 #BluePeel #藍光煥膚 #去角質 #屯門美容",
+        "category": "儀器療程",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2601-V-SANG-藍光煥膚療程-2.jpeg",
+        "image_alt": "V-SANG 藍光煥膚療程",
+        "social_id": "2601-V-SANG-藍光煥膚療程-2",
+        "slug_aliases": [
+          "2601-V-SANG-藍光煥膚療程-2"
+        ],
+        "status": "published",
+        "sort_order": 27,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2601-r5",
+        "title": "過年準備",
+        "excerpt": " 溫馨提示  仲有唔夠一個月就過年啦！想要靚住過就要而家開始準備啦你嘅毛孔大掃除咗未？",
+        "body": "🫶🏻 溫馨提示 🧧 仲有唔夠一個月就過年啦！想要靚住過就要而家開始準備啦🧹你嘅毛孔大掃除咗未？\n\n諗下拜年時要見咁多親戚朋友，仲要影相打卡... 📸 如果滿面油光、黑頭粉刺，個妝幾厚都遮唔住！😩 新年前必做清單： \n1️⃣ 清走粉刺黑頭： 令皮膚平滑，上妝更貼服。 \n2️⃣ 提亮膚色： 趕走「黃面婆」氣色，利是都逗多兩封！🧧 \n3️⃣ 緊緻輪廓： 影相唔洗就角度，360度都咁靚。\n\n無論係想做個簡單 Facial，定係爆瘡、想改善黑眼圈等等等等...所有嘅皮膚問題我哋都會幫你安排最適合嘅方案！ 趁過年前，快啲嚟康姿健幫塊面Get Ready！✨\n👉🏻 年尾預約極度緊張，未 Book 嘅真係要快手啦！ 🏃🏻‍♀️\n\n#康姿健 #深層清潔 #新年必備 #拜年妝  #屯門美容",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2601-過年準備.jpeg",
+        "image_alt": "過年準備",
+        "social_id": "2601-過年準備",
+        "slug_aliases": [
+          "2601-過年準備"
+        ],
+        "status": "published",
+        "sort_order": 29,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2601-r6",
+        "title": "週末 Me Time",
+        "excerpt": "  星期日嘅約定：放低手機，享受 60 分鐘嘅寧靜平日返工衝衝衝，放假係咪應該要慢落嚟？ 喺康姿健，我哋最想俾你嘅，唔止係靚嘅皮膚，仲有一份放鬆",
+        "body": "【 🤙🏻 星期日嘅約定：放低手機，享受 60 分鐘嘅寧靜】平日返工衝衝衝，放假係咪應該要慢落嚟？🐢 喺康姿健，我哋最想俾你嘅，唔止係靚嘅皮膚，仲有一份\"放鬆\"～\n\n🚫 絕無疲勞轟炸 🚫 絕無硬銷 Course 🚫無隱瞞收費\n✅ 只有溫暖嘅美容床 ✅ 輕柔嘅純音樂 🎵 ✅ 美容師細心溫柔到位嘅手勢 💆🏻‍♀️\n\n合埋眼，暫時忘記工作煩惱，專注享受屬於你嘅 Me Time。 做完 Facial 飲杯茶，照下鏡，你會發現笑容都甜美啲～ 🥰\n👉🏻 下星期，約定你，好好善待自己。\n\n#康姿健 #用心服務 #絕不硬銷 #MeTime #身心放鬆",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2601-週末-Me-Time.jpeg",
+        "image_alt": "週末 Me Time",
+        "social_id": "2601-週末-Me-Time",
+        "slug_aliases": [
+          "2601-週末-Me-Time"
+        ],
+        "status": "published",
+        "sort_order": 30,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "acne-peel",
+        "title": "【暗瘡粉刺篇】油光滿面、黑頭死纏爛打？「淨化平衡皮脂果酸」幫毛孔大掃除！",
+        "excerpt": "天氣一笠，塊面就變「大油田」，黑頭粉刺唧完又生，仲要成日爆暗瘡？",
+        "body": "天氣一笠，塊面就變「大油田」，黑頭粉刺唧完又生，仲要成日爆暗瘡？😩\n\n係時候幫毛孔做個深度大掃除啦！康姿健推介 TEGODER 淨化平衡皮脂果酸 30 (Salipure Peeling)。呢款配方專為油性、暗瘡同粉刺肌膚而設！\n\n佢蘊含 30% 濃度嘅複合酸（水楊酸 + 杏仁酸），pH 值維持喺 2.0-2.2。點解揀佢？\n✨ 清毛孔最強： 脂溶性嘅水楊酸可以鑽入皮脂底層，深層清潔兼溶解阻塞毛孔嘅粉刺。\n✨ 溫和唔刺痛： 因為分子大、滲透慢，刺激感比一般果酸更低，但抗菌抗炎效果極佳！\n\n做完一次，即刻覺得毛孔識得呼吸，平滑度大提升！唔想再同石頭瘡搏鬥？快啲黎體驗下零壓力嘅淨化療程啦 🌱。\n\n#暗瘡護理 #去黑眼圈 #水楊酸 #深層清潔 #不硬銷",
+        "category": "暗瘡粉刺",
+        "published_at": "2026-06-15",
+        "image": "/images/social/2606-暗瘡粉刺篇-油光滿面-黑頭死纏爛打-淨化平衡皮脂果酸-幫毛孔大掃除.webp",
+        "image_alt": "【暗瘡粉刺篇】油光滿面、黑頭死纏爛打？「淨化平衡皮脂果酸」幫毛孔大掃除！",
+        "social_id": "2606-暗瘡粉刺篇-油光滿面-黑頭死纏爛打-淨化平衡皮脂果酸-幫毛孔大掃除",
+        "slug_aliases": [
+          "2606-暗瘡粉刺篇-油光滿面-黑頭死纏爛打-淨化平衡皮脂果酸-幫毛孔大掃除",
+          "2606-r3"
+        ],
+        "status": "published",
+        "sort_order": 1,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2512-r3",
+        "title": "新年優惠\n- 紅外線焗倉",
+        "excerpt": "新年開運 惠顧任何項目  即送 DrRainbow 遠紅外線焗倉面部 30分鐘 ",
+        "body": "🧧✨新年開運‼️ 惠顧任何項目 🆓 即送 Dr.Rainbow 遠紅外線焗倉｜面部 30分鐘 🔴\n錯過咗聖誕優惠唔緊要～ 🤭 好嘢陸續有嚟！新一年緊係要面色紅潤善洋洋 ✨ 面部同身體一樣要養生！\n\n「🌈 Dr Rainbow 醫療級遠紅外線童顏機有咩咁勁？」\n做 Facial 配合埋童顏儀，效果Double 咁靚！童顏儀可以促進面膜的修護精華滲進肌底，同時抗老化、提升輪廓、緊緻美肌～\n🔥 能量直達皮膚底層 5cm，喚醒細胞嘅再生能力！\n🔥 排走面部瘀滯＋毒素，促進代謝循環，膚色由內到外紅潤透亮！\n🔥 將 Facial 嘅精華推到肌膚深層，效果MAX！\n🔥 抗衰老、緊緻輪廓、提升蘋果肌、減淡浮腫\n‼️ 惠顧任何項目💥 即送 Dr Rainbow 醫療級遠紅外線童顏機｜面部照足30分鐘 ‼️\n\n\n⭐️ 韓國KFDA、美國FDA、CE等專利認證 ⭐️ 安全高效 ⭐️ \n快啲 Follow 我哋唔好再錯過優惠啦 ‼️",
+        "category": "痛症理療",
+        "published_at": "2025-12-15",
+        "image": "/images/social/2512-新年優惠-紅外線焗倉.webp",
+        "image_alt": "新年優惠\n- 紅外線焗倉",
+        "social_id": "2512-新年優惠-紅外線焗倉",
+        "slug_aliases": [
+          "2512-新年優惠-紅外線焗倉"
+        ],
+        "status": "published",
+        "sort_order": 32,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2512-r4",
+        "title": "年尾回顧 - 窩心小店",
+        "excerpt": " 轉眼又到年尾  2025 感恩有你哋  回望今年真心覺得好幸福好多客仔由嚟做 Facial 到後來變成熟客同朋友 ",
+        "body": "【 轉眼又到年尾 💜 2025 感恩有你哋 】 回望今年真心覺得好幸福🥹好多客仔由嚟做 Facial 到後來變成熟客同朋友 …\n好多都話：「嚟到康姿健放鬆嘅感覺，係外面搵唔到 」\n呢份信任，真係令我哋覺得做美容唔淨止係服務，而係一份陪伴 ✨\n\n💕 多謝新客嘅信任，亦多謝熟客仔們一直陪住我哋 💪🏻\n2026，我哋會繼續更努力，陪住大家變靚，更健康！",
+        "category": "醫美知識",
+        "published_at": "2025-12-15",
+        "image": "/images/social/2512-年尾回顧-窩心小店.webp",
+        "image_alt": "年尾回顧 - 窩心小店",
+        "social_id": "2512-年尾回顧-窩心小店",
+        "slug_aliases": [
+          "2512-年尾回顧-窩心小店"
+        ],
+        "status": "published",
+        "sort_order": 33,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2512-r5",
+        "title": "等離子微針射頻再生儀\n\n暗瘡凹凸洞",
+        "excerpt": " 新一年告別凹凸洞！等離子微針射頻再生儀可以做到減淡凹凸洞同埋暗瘡印，而且效果比你想像更明顯",
+        "body": "😠 新一年告別凹凸洞！【等離子微針射頻再生儀】可以做到減淡凹凸洞同埋暗瘡印，而且效果比你想像更明顯🔥\n\n✔ 暗瘡印明顯變淡\n✔ 凹凸洞由鬆散 → 變緊緻\n✔ 膚質平滑度大幅提升\n✔ 改善毛孔粗大\n🎯 適合：暗瘡肌、油脂分泌旺盛、毛孔粗大、粉刺或毛囊炎\n\n利用離子能量破壞細菌結構、抗菌抗炎，刺激膠原再生，重生回復平滑細緻✨\n⭐️ 加配埋 Bioskin 精華導入，多款唔同功效，按你肌膚對症下藥，功效倍增～\n\n2026都嚟啦！快啲預約，早做早享受 🫢",
+        "category": "儀器療程",
+        "published_at": "2025-12-15",
+        "image": "/images/social/2512-等離子微針射頻再生儀-暗瘡-凹凸洞.webp",
+        "image_alt": "等離子微針射頻再生儀\n\n暗瘡凹凸洞",
+        "social_id": "2512-等離子微針射頻再生儀-暗瘡-凹凸洞",
+        "slug_aliases": [
+          "2512-等離子微針射頻再生儀-暗瘡-凹凸洞"
+        ],
+        "status": "published",
+        "sort_order": 34,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2512-r6",
+        "title": "紅外線焗倉",
+        "excerpt": " 毛孔都要排毒   無錯！好多客人以為平時用洗面乳洗面就夠  但其實毛孔都會「塞毒素」！ ",
+        "body": "【 毛孔都要排毒 ⁉️ 】👩🏻‍⚕️ 無錯！好多客人以為平時用洗面乳洗面就夠  但其實…毛孔都會「塞毒素」😠！ 👾\n化妝品殘留、皮脂氧化、瘀滯、重金屬通通可以困喺毛孔裡面，令皮膚暗啞、粗糙、生暗粒、吸收力低！\n\n🌈 Dr.Rainbow 醫療級遠紅外線童顏機 ～ 就係專門用嚟做毛孔深層排毒＋喚醒細胞再生 🔥\n✔ 能量直達皮膚底層 5cm，配合精華滲到肌膚底層，加倍吸收\n✔ 加速代謝循環 → 經汗水排出毒素、化妝品殘留、油脂塵垢\n一部機就做到紅潤、透亮、收毛孔、緊緻輪廓、激活細胞再生同自癒力，幫皮膚真正由內到外變得更靚！\n⭐️ 韓國KFDA、美國FDA、CE等專利認證 ⭐️ 安全高效 ⭐️",
+        "category": "痛症理療",
+        "published_at": "2025-12-15",
+        "image": "/images/social/2512-紅外線焗倉.webp",
+        "image_alt": "紅外線焗倉",
+        "social_id": "2512-紅外線焗倉",
+        "slug_aliases": [
+          "2512-紅外線焗倉"
+        ],
+        "status": "published",
+        "sort_order": 35,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2606-r5",
+        "title": "【抗老去斑篇】歲月留痕？「真皮更新複合酸」直達肌底逆轉肌齡！",
+        "excerpt": "照鏡見到色斑越來越深，細紋又跑晒出黎，望落成個人老咗幾年？ 表面嘅保養已經滿足唔到你！",
+        "body": "照鏡見到色斑越來越深，細紋又跑晒出黎，望落成個人老咗幾年？🥀 表面嘅保養已經滿足唔到你！\n\n康姿健強勢推介 TEGODER 真皮更生複合酸 26 (PMP Peeling)，專治色素沉澱同光老化肌膚（皺紋、下垂）！\n呢款配方絕對係抗老天花板，蘊含 26% 濃度嘅三氯乙酸 (TCA)、AHA 及 BHA，能夠穿透表皮層，直達深層同步進行煥膚！\n\n🌟 強效細胞更新： 促進組織再生，緊緻提升，增加肌膚彈性。\n🌟 褪斑提亮： 配合傳明酸同維他命 B5，強力抑制黑色素，改善暗黃。\n❄️ 清涼舒適： 特別加入薄荷醇，大大減低療程中嘅不適感，舒緩鎮靜。\n\n即刻預約，重拾年輕輪廓啦！\n\n#抗衰老 #去斑美白 #真皮更新 #熟齡肌保養 #屯門美容店",
+        "category": "抗老去斑",
+        "published_at": "2026-06-15",
+        "image": "/images/social/2606-抗老去斑篇-歲月留痕-真皮更新複合酸-直達肌底-逆轉肌齡.webp",
+        "image_alt": "【抗老去斑篇】歲月留痕？「真皮更新複合酸」直達肌底逆轉肌齡！",
+        "social_id": "2606-抗老去斑篇-歲月留痕-真皮更新複合酸-直達肌底-逆轉肌齡",
+        "slug_aliases": [
+          "2606-抗老去斑篇-歲月留痕-真皮更新複合酸-直達肌底-逆轉肌齡"
+        ],
+        "status": "published",
+        "sort_order": 3,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2606-r7",
+        "title": "【量膚定制液態黃金篇】乾到甩皮定輪廓下垂？兩款西班牙頂級精油幫你對症下藥！",
+        "excerpt": "天氣同作息反覆，皮膚狀態好唔穩定？有時乾到嚡澀澀，有時又覺得塊面暗沉鬆弛 ？護膚唔可以一成不變，康姿健「面部精油撥筋療程」幫你量膚定制！",
+        "body": "天氣同作息反覆，皮膚狀態好唔穩定？有時乾到嚡澀澀，有時又覺得塊面暗沉鬆弛 😩？護膚唔可以一成不變，康姿健「面部精油撥筋療程」幫你量膚定制！\n\n我哋特選西班牙 TEGODER 嘅「肌膚液態黃金」精油系列，為肌膚帶嚟超越一般精華嘅深度滋養！美容師會根據你當日嘅膚況，為你挑選最合適嘅專屬護理：\n\n🌸 山茶花精油 (Glow Dry Oil) —— 補水發光神器：\n專拯救沙漠乾肌同粗糙肌！臨床實證能改善皮膚粗糙 +90%、改善膚乾 +90%。做完之後亮白光澤度即時提升 +45%，幫你趕走暗黃，還原滑溜溜水光肌 ✨！\n\n🌺 黑蘭花精油 (Orchid Essence) —— 逆齡緊緻天花板：\n蘊含珍貴嘅催眠紅門蘭花萃取，主打細胞長壽！配合維他命E同甜杏仁油，做到潤澤抗敏兼對抗氧化。有效令彈性緊緻度增加 +39%、抗氧化度高達 +51%，幫你重塑緊緻輪廓！\n\n配合美容師專業溫柔嘅提拉撥筋手勢，將滴滴精華完全滲透入肌底。康姿健堅持單次收費、絕不硬銷，放假一於嚟享受下專屬你嘅零壓力 Me Time 啦 🥰！\n\n#液態黃金 #面部撥筋 #山茶花精油 #抗老緊緻 #單次收費",
+        "category": "量膚定制・液態黃金",
+        "published_at": "2026-06-15",
+        "image": "/images/social/2606-量膚定制-液態黃金篇-乾到甩皮定輪廓下垂-兩款西班牙頂級精油幫你對症下藥.webp",
+        "image_alt": "【量膚定制液態黃金篇】乾到甩皮定輪廓下垂？兩款西班牙頂級精油幫你對症下藥！",
+        "social_id": "2606-量膚定制-液態黃金篇-乾到甩皮定輪廓下垂-兩款西班牙頂級精油幫你對症下藥",
+        "slug_aliases": [
+          "2606-量膚定制-液態黃金篇-乾到甩皮定輪廓下垂-兩款西班牙頂級精油幫你對症下藥"
+        ],
+        "status": "published",
+        "sort_order": 5,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r2",
+        "title": "【秋冬保養篇】塊面乾到「爆拆」？ 天氣急降皮膚又紅又痕必學3招轉季急救護膚秘笈！",
+        "excerpt": "天文台話氣溫急降，唔少客人都話塊面紅卜卜、那那地，甚至乾到甩皮！ 小編溫馨提提你幾個轉季護膚貼士：",
+        "body": "你塊面有冇發出「爆拆」警告？❄️\n天文台話氣溫急降，唔少客人都話塊面紅卜卜、那那地，甚至乾到甩皮！ 小編溫馨提提你幾個轉季護膚貼士：\n\n1️⃣ 切忌用太熱嘅水洗面：水溫太高會洗走天然油脂，令皮膚更乾！\n2️⃣ 加強保濕鎖水：精華唔好慳，面霜要搽厚少少 。\n3️⃣ 暫停磨砂：皮膚脆弱時，千祈唔好做強烈去角質 。\n\n如果覺得皮膚真係好乾、好痕，推介黎康姿健做個人手保濕導入 。幫皮膚起個防護罩，暖笠笠做 Facial 絕對係一種享受！🥰\n\n#康姿健 #護膚小貼士 #轉季保濕 #乾燥肌 #敏感肌",
+        "category": "秋冬保養",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-秋冬保養篇-塊面乾到-爆拆-天氣急降皮膚又紅又痕-必學3招轉季急救護膚秘笈.webp",
+        "image_alt": "【秋冬保養篇】塊面乾到「爆拆」？ 天氣急降皮膚又紅又痕必學3招轉季急救護膚秘笈！",
+        "social_id": "2604-秋冬保養篇-塊面乾到-爆拆-天氣急降皮膚又紅又痕-必學3招轉季急救護膚秘笈",
+        "slug_aliases": [
+          "2604-秋冬保養篇-塊面乾到-爆拆-天氣急降皮膚又紅又痕-必學3招轉季急救護膚秘笈"
+        ],
+        "status": "published",
+        "sort_order": 6,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r4",
+        "title": "【無壓力美容】做Facial好怕被瘋狂推銷？ 拒絕疲勞轟炸！明碼實價零硬銷靜靜地享受專屬你嘅60分鐘Me Time！",
+        "excerpt": "平日返工日忙夜忙，放假係咪應該要唞吓？好多女仔想做 Facial，但又好怕一入房就被疲勞轟炸、狂 Sell 套票 。喺康姿健，我哋最想俾你嘅，除咗係靚靚嘅皮膚，仲有一份真正嘅「放鬆」！",
+        "body": "平日返工日忙夜忙，放假係咪應該要唞吓？💆🏻‍♀️好多女仔想做 Facial，但又好怕一入房就被疲勞轟炸、狂 Sell 套票 😩。喺康姿健，我哋最想俾你嘅，除咗係靚靚嘅皮膚，仲有一份真正嘅「放鬆」！\n我哋堅持三大原則：\n❌ 絕無硬銷 (No Hard Sell) ❌ 絕無隱藏收費，明碼實價 ✅ 只有溫暖嘅美容床同溫柔到位嘅手勢 合埋眼，暫時忘記工作煩惱，專注享受屬於你嘅 60 分鐘 Me Time 啦 ☕。做完飲杯茶、照吓鏡，你會發現笑容都甜美啲！下星期，約定你，好好善待自己 ✨。\n\n#康姿健 #良心美容院 #單次收費 #屯門美容 #MeTime",
+        "category": "無壓力美容",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-無壓力美容-做Facial好怕被瘋狂推銷-拒絕疲勞轟炸-明碼實價零硬銷-靜靜地享受專屬你嘅60分鐘Me-Time.webp",
+        "image_alt": "【無壓力美容】做Facial好怕被瘋狂推銷？ 拒絕疲勞轟炸！明碼實價零硬銷靜靜地享受專屬你嘅60分鐘Me Time！",
+        "social_id": "2604-無壓力美容-做Facial好怕被瘋狂推銷-拒絕疲勞轟炸-明碼實價零硬銷-靜靜地享受專屬你嘅60分鐘Me-Time",
+        "slug_aliases": [
+          "2604-無壓力美容-做Facial好怕被瘋狂推銷-拒絕疲勞轟炸-明碼實價零硬銷-靜靜地享受專屬你嘅60分鐘Me-Time"
+        ],
+        "status": "published",
+        "sort_order": 8,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r5",
+        "title": "【養生排毒篇】 醫療級遠紅外線深層排毒！驅寒祛濕兼瘦身由內暖到外！",
+        "excerpt": "手腳成日似雪條 ？夜晚又訓得唔好？其實可能係你體內積聚咗太多濕氣同毒素！",
+        "body": "手腳成日似雪條 ❄️？夜晚又訓得唔好？其實可能係你體內積聚咗太多濕氣同毒素！\n\n唔想做劇烈運動又想排毒？康姿健推介【Dr. Rainbow 醫療級遠紅外線熱能養生儀】🔥！佢釋放嘅「生命之光」可以深入皮下 50mm，引發細胞共振！\n💦 排出嘅唔止係水份，仲會將體內嘅重金屬、化妝品殘留物同老廢物一併排走！\n\n只需躺平 30 分鐘，就可以幫身體做個大掃除，舒緩疲勞兼改善宮寒 🩸。做完出晒一身深層汗，氣色即刻紅潤返，成個人輕晒！快啲 Inbox 我哋幫身體「開個暖爐」啦！\n\n#康姿健 #遠紅外線焗倉 #排毒去水腫 #暖宮 #懶人瘦身",
+        "category": "養生排毒",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-養生排毒篇-醫療級遠紅外線深層排毒-驅寒祛濕兼瘦身-由內暖到外.webp",
+        "image_alt": "【養生排毒篇】 醫療級遠紅外線深層排毒！驅寒祛濕兼瘦身由內暖到外！",
+        "social_id": "2604-養生排毒篇-醫療級遠紅外線深層排毒-驅寒祛濕兼瘦身-由內暖到外",
+        "slug_aliases": [
+          "2604-養生排毒篇-醫療級遠紅外線深層排毒-驅寒祛濕兼瘦身-由內暖到外"
+        ],
+        "status": "published",
+        "sort_order": 9,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r6",
+        "title": "【敏弱肌自救篇】 小心角質層受損！拆解脆弱肌膚成因教你溫和重建天然屏障！",
+        "excerpt": "一轉季塊面就紅卜卜？一出街就覺得刺刺地？敷 Mask 又會痕癢起粒粒？",
+        "body": "一轉季塊面就紅卜卜？一出街就覺得刺刺地？敷 Mask 又會痕癢起粒粒？\n其實你可能屬於「皮膚薄 + 角質層弱」！🆘\n\n呢個時候千祈唔好再做過度清潔或者煥膚，要盡量減少刺激，改用低敏舒緩嘅療程 。皮膚生病咗，最需要嘅係休養生息。\n\n康姿健有針對脆弱肌嘅修護方案，用溫和嘅手法同精華，慢慢幫你重建皮膚屏障，連熟齡肌都非常啱做！ 皮膚唔聽話？快啲 Inbox 搵我哋幫手「對症下藥」啦！\n\n#康姿健 #皮膚敏感 #角質層薄 #低敏舒緩 #減敏修復",
+        "category": "敏弱肌自救",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-敏弱肌自救篇-小心角質層受損-拆解脆弱肌膚成因-教你溫和重建天然屏障.webp",
+        "image_alt": "【敏弱肌自救篇】 小心角質層受損！拆解脆弱肌膚成因教你溫和重建天然屏障！",
+        "social_id": "2604-敏弱肌自救篇-小心角質層受損-拆解脆弱肌膚成因-教你溫和重建天然屏障",
+        "slug_aliases": [
+          "2604-敏弱肌自救篇-小心角質層受損-拆解脆弱肌膚成因-教你溫和重建天然屏障"
+        ],
+        "status": "published",
+        "sort_order": 10,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r7",
+        "title": "【急救保養篇】滿面油光點打卡影相？ 約會前必做毛孔大掃除！趕走黃氣粉刺極速Get Ready完美貼服底妝！",
+        "excerpt": "溫馨提示：過大節或者有重要約會前，你嘅毛孔大掃除咗未？",
+        "body": "溫馨提示：過大節或者有重要約會前，你嘅毛孔大掃除咗未？🧹\n\n如果滿面油光、黑頭粉刺，個妝幾厚都遮唔住，影相打卡都無自信！ 重要日子前嘅必做清單：\n1️⃣ 清走粉刺黑頭：令皮膚平滑，上妝更貼服 。\n2️⃣ 提亮膚色：趕走黃氣，氣息好啲，人地望落都精神啲！\n\n無論係想做個簡單保濕 Facial，定係深層爆脂，我哋都會為你安排最適合嘅方案 。年尾或者大節日預約極度緊張，想靚住出街真係要快手 Book 啦！\n\n#康姿健 #重要約會 #毛孔大掃除 #深層清潔 #急救保養",
+        "category": "急救保養",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-急救保養篇-滿面油光點打卡影相-約會前必做毛孔大掃除-趕走黃氣粉刺-極速Get-Ready完美貼服底妝.webp",
+        "image_alt": "【急救保養篇】滿面油光點打卡影相？ 約會前必做毛孔大掃除！趕走黃氣粉刺極速Get Ready完美貼服底妝！",
+        "social_id": "2604-急救保養篇-滿面油光點打卡影相-約會前必做毛孔大掃除-趕走黃氣粉刺-極速Get-Ready完美貼服底妝",
+        "slug_aliases": [
+          "2604-急救保養篇-滿面油光點打卡影相-約會前必做毛孔大掃除-趕走黃氣粉刺-極速Get-Ready完美貼服底妝"
+        ],
+        "status": "published",
+        "sort_order": 11,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r9",
+        "title": "【擊退油脂粒篇】眼周生滿「小白點」？ 唧極都唔出兼留印？無痕氣化油脂粒還原平滑眼周！",
+        "excerpt": "眼底、顴骨位無啦啦生咗幾粒白色、硬硬地嘅「小白點」？以為係暗瘡或者粉刺，點知唧極都唧唔出，夾硬用手擠仲搞到發炎留紅印 ！其實呢啲好可能係「油脂粒」皮脂腺增生或粟粒腫！",
+        "body": "眼底、顴骨位無啦啦生咗幾粒白色、硬硬地嘅「小白點」？以為係暗瘡或者粉刺，點知唧極都唧唔出，夾硬用手擠仲搞到發炎留紅印 😩！其實呢啲好可能係「油脂粒」（皮脂腺增生或粟粒腫）！\n\n對付頑固油脂粒，千萬唔好自己亂挑！康姿健選用先進嘅【PLASER 等離子儀】，利用 1-PIN 單點模式產生熱等離子能量，可以精準咁將油脂粒瞬間氣化  ⚡！過程快、準確度極高，比起傳統用美容針死挑爛挑更安全衛生，大大減低破壞周邊健康皮膚嘅風險，復原得更快更靚 ✨！💰 \n\n康姿健承諾：明碼實價・絕不硬銷我哋堅持單次收費，絕無隱藏項目！收費會按粒數同大小老實報價，等你可以安心、無壓力咁變靚！\n\n唔想啲油脂粒卡住啲遮瑕膏？快啲 Inbox 我哋預約，還原白滑無瑕肌啦 💌！\n\n#脫油脂粒 #粟粒腫 #PLASER等離子 #眼周保養 #屯門美容",
+        "category": "擊退油脂粒",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-擊退油脂粒篇-眼周生滿-小白點-唧極都唔出兼留印-無痕氣化油脂粒還原平滑眼周.webp",
+        "image_alt": "【擊退油脂粒篇】眼周生滿「小白點」？ 唧極都唔出兼留印？無痕氣化油脂粒還原平滑眼周！",
+        "social_id": "2604-擊退油脂粒篇-眼周生滿-小白點-唧極都唔出兼留印-無痕氣化油脂粒還原平滑眼周",
+        "slug_aliases": [
+          "2604-擊退油脂粒篇-眼周生滿-小白點-唧極都唔出兼留印-無痕氣化油脂粒還原平滑眼周"
+        ],
+        "status": "published",
+        "sort_order": 13,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r10",
+        "title": "【無痛掃斑篇】雀斑、表皮斑點遮都遮唔住？ 試下「結焦式祛斑」1次見效還原透亮白滑肌！",
+        "excerpt": "每日出街又要搽防曬又要上厚厚嘅遮瑕膏，但面頰上嘅雀斑同表皮斑依然若隱若現？ 色斑問題真係好困擾！",
+        "body": "每日出街又要搽防曬又要上厚厚嘅遮瑕膏，但面頰上嘅雀斑同表皮斑依然若隱若現？😩 色斑問題真係好困擾！\n\n想徹底搞掂，康姿健推介【表皮斑雀斑護理療程】，真正做到 1 次見效 ！我哋選用先進嘅 PLASER 等離子儀，透過 1-PIN 單點模式釋放熱等離子 ，精準分解黑色素、代謝色斑 。療程仲會配合 20% 維 C 美白安瓶 ，幫你極速回復透亮嫩肌 ！\n\n👩‍⚕️ 療程後黃金貼士： 結痂後千祈唔好用手摳，要俾佢自然脫落，並做好補水保濕 ！期間記住要嚴格防曬、避開高溫 ，仲要暫停使用 AHA / BHA / PHA 等酸類煥膚產品 ，咁就復原得最靚啦！💰 \n\n我哋嘅結焦式祛表皮斑價目非常透明 ：\n✨ 半面祛表皮斑：$980 / 次 \n🔥 全面祛表皮斑：$1280 / 次 \n單次收費，無隱藏項目，等你靚得安心無壓力！\n\n唔想再同色斑糖黐豆？快啲 Inbox 我哋預約啦 💌！\n\n#結焦式祛斑 #雀斑 #去斑療程 #單次收費 #屯門美容院",
+        "category": "無痛掃斑",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-無痛掃斑篇-雀斑-表皮斑點遮都遮唔住-試下-結焦式祛斑-1次見效還原透亮白滑肌.webp",
+        "image_alt": "【無痛掃斑篇】雀斑、表皮斑點遮都遮唔住？ 試下「結焦式祛斑」1次見效還原透亮白滑肌！",
+        "social_id": "2604-無痛掃斑篇-雀斑-表皮斑點遮都遮唔住-試下-結焦式祛斑-1次見效還原透亮白滑肌",
+        "slug_aliases": [
+          "2604-無痛掃斑篇-雀斑-表皮斑點遮都遮唔住-試下-結焦式祛斑-1次見效還原透亮白滑肌"
+        ],
+        "status": "published",
+        "sort_order": 14,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2603-r2",
+        "title": "【 膠原小旋風登陸屯門！一部機幫你由 A to Z 「重啟」嫩肌 】",
+        "excerpt": "最近天氣忽冷忽熱又乾燥，照鏡係咪覺得皮膚好似「生鏽」咁？ 又乾、又黃、啲乾紋仲要靜雞雞走晒出嚟  想做 Facial 急救，但又怕痛？又怕要做幾部機先搞得掂？",
+        "body": "最近天氣忽冷忽熱又乾燥，照鏡係咪覺得皮膚好似「生鏽」咁？🍂 又乾、又黃、啲乾紋仲要靜雞雞走晒出嚟... 😩 想做 Facial 急救，但又怕痛？又怕要做幾部機先搞得掂？\n康姿健明白你想要簡單、舒服又有效嘅 Me Time！💆‍♀️ 隆重介紹我哋嘅新寵兒 —— COLLAZEN Tornado 膠原小旋風！\n點解叫 Tornado？因為佢真係好似旋風咁，幫你捲走晒啲死皮廢物，再將滿滿嘅膠原蛋白捲番入皮膚底層！由清潔到緊緻，由 A 到 Z 滿足你所有願望。\n\n想試吓個「小旋風」有幾勁？🌪️ 給自己一個放鬆變靚嘅機會，快啲 Inbox 我哋預約啦！❤️\n\n#康姿健 #HongChikin #屯門美容 #COLLAZENTornado #膠原小旋風 #膠原再生 #HIFU #RF射頻 #水滴提拉 #無針水光 #收毛孔 #去皺紋 #MeTime #屯門Facial #科學護膚 #水光肌",
+        "category": "🌪️ 膠原小旋風登陸屯門！一部機幫你由 A to Z 「重啟」嫩肌 ✨",
+        "published_at": "2026-03-15",
+        "image": "/images/social/2603-膠原小旋風登陸屯門-一部機幫你由-A-to-Z-重啟-嫩肌.webp",
+        "image_alt": "【 膠原小旋風登陸屯門！一部機幫你由 A to Z 「重啟」嫩肌 】",
+        "social_id": "2603-膠原小旋風登陸屯門-一部機幫你由-A-to-Z-重啟-嫩肌",
+        "slug_aliases": [
+          "2603-膠原小旋風登陸屯門-一部機幫你由-A-to-Z-重啟-嫩肌"
+        ],
+        "status": "published",
+        "sort_order": 15,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "tegoder-custom-peel",
+        "title": "美容唔止靠儀器！西班牙醫學級「量膚定制」果酸療程",
+        "excerpt": "好多客人以為黎康姿健淨係做儀器？其實我哋嘅人手護膚品療程一樣係皇牌！",
+        "body": "好多客人以為黎康姿健淨係做儀器？其實我哋嘅人手護膚品療程一樣係皇牌！💆🏻‍♀️\n\n每個人嘅膚質都唔同，點可以一條配方走天涯？我哋特別引入咗 🇪🇸 西班牙頂級醫學美容品牌 TEGODER，為大家帶黎 4 款針對唔同膚質嘅專屬果酸療程！\n\n無論你係：\n🧏🏻‍♀️ 油性/暗瘡肌 👉 需要深層清潔、溶解黑頭粉刺\n🥀 暗啞/色斑肌 👉 需要擊退黑色素、提亮去黃\n🍓 敏感/泛紅肌 👉 需要極溫和抗菌、修復微絲血管\n👵 熟齡/鬆弛肌 👉 需要真皮層更新、撫平深層皺紋\n\n我哋嘅專業美容師都會先幫你做詳細皮膚分析，再挑選最適合你嘅 TEGODER 果酸配方，真正做到「對症下藥」！配合埋美容師溫柔到位嘅人手按摩，將精華深層滲透，效果絕對唔輸比做機架 ✨！\n\n康姿健堅持單次收費，絕不硬銷。想知自己適合邊款酸？即刻 Inbox 我哋了解下啦 💌！\n\n#康姿健 #Tegoder #果酸煥膚 #量膚定制 #屯門美容",
+        "category": "護膚知識",
+        "published_at": "2026-06-15",
+        "image": "/images/social/2606-美容唔止靠儀器-西班牙醫學級-量膚定制-果酸療程.webp",
+        "image_alt": "美容唔止靠儀器！西班牙醫學級「量膚定制」果酸療程",
+        "social_id": "2606-美容唔止靠儀器-西班牙醫學級-量膚定制-果酸療程",
+        "slug_aliases": [
+          "2606-美容唔止靠儀器-西班牙醫學級-量膚定制-果酸療程",
+          "2606-r2"
+        ],
+        "status": "published",
+        "sort_order": 0,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "sensitive-peel",
+        "title": "【敏感泛紅篇】皮膚薄又易紅？最溫和嘅「玫瑰亮白果酸」打破敏感肌宿命！",
+        "excerpt": "好多客仔同小編講：「我皮膚好薄、好易敏感泛紅，係咪一世都唔做得果酸？」",
+        "body": "好多客仔同小編講：「我皮膚好薄、好易敏感泛紅，係咪一世都唔做得果酸？」🥺\n絕對唔係！只要揀啱配方，敏感肌都可以安全煥膚！\n\n為大家介紹 TEGODER 玫瑰亮白果酸 21 (Sensi Renover Peeling)。呢款係專門為敏感性、皮膚較薄，甚至有紅斑痤瘡煩惱嘅朋友而設！\n\n佢採用咗極溫和嘅 21% 複合酸配方，主要成分係分子較大嘅「杏仁酸」，被公認為最溫和嘅 AHA！\n💧 配合乳糖酸同乳酸，煥膚同時做到極致保濕潤澤。\n🛡️ 有效抗菌抗炎，減少淺層毛細血管引起嘅皮膚發紅，溫和去除死皮。\n\n喺康姿健做療程，美容師會全全程緊貼你嘅皮膚反應，確保你做得舒服又安心。還原均勻透亮膚色，其實好簡單 ✨！\n\n#敏感肌救星 #泛紅退散 #玫瑰果酸 #溫和煥膚 #單次收費",
+        "category": "敏感泛紅",
+        "published_at": "2026-06-15",
+        "image": "/images/social/2606-敏感泛紅篇-皮膚薄又易紅-最溫和嘅-玫瑰亮白果酸-打破敏感肌宿命.webp",
+        "image_alt": "【敏感泛紅篇】皮膚薄又易紅？最溫和嘅「玫瑰亮白果酸」打破敏感肌宿命！",
+        "social_id": "2606-敏感泛紅篇-皮膚薄又易紅-最溫和嘅-玫瑰亮白果酸-打破敏感肌宿命",
+        "slug_aliases": [
+          "2606-敏感泛紅篇-皮膚薄又易紅-最溫和嘅-玫瑰亮白果酸-打破敏感肌宿命",
+          "2606-r4"
+        ],
+        "status": "published",
+        "sort_order": 2,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2603-r4",
+        "title": "【西班牙醫學級微針】無痛無創激活膠原 BB",
+        "excerpt": "想做微針收毛孔、去凹凸洞，但又怕痛怕爛面？ 康姿健引入 Mesoestetic mpenpro 智能電動微針，徹底打破你對傳統微針嘅恐懼！",
+        "body": "想做微針收毛孔、去凹凸洞，但又怕痛怕爛面？😰 康姿健引入 Mesoestetic m.pen[pro] 智能電動微針，徹底打破你對傳統微針嘅恐懼！\n\n👉 點解揀佢？ 來自西班牙醫學大廠，採用 垂直進針技術 ，比起傳統滾輪更穩定、更精準，大大減低痛感同創傷！\n\n💎 皇牌賣點：\n100% 客製化： 擁有 5段變速 (最高每分鐘10,000轉！) ＋ 6種深度調節 ，無論你係皮薄定皮厚，美容師都能夠幫你調校最適合嘅模式 。\n雙重功效： 一邊刺激 膠原蛋白再生 ，一邊打開數千個微細管道 ，令精華真正滲透肌底，吸收力 Level Up！⬆️ \n解決多種問題： 毛孔粗大 、凹凸洞、細紋 、甚至妊娠紋都搞得掂 。\n\n❌ 拒絕 Hard Sell 康姿健堅持 單次收費、明碼實價 。我哋只會根據你嘅皮膚狀況建議療程，絕不強迫推銷。\n💬 想皮膚重生？ 立即 Inbox 我哋預約諮詢，感受下真正「有實效」嘅皮膚管理啦！\n#康姿健 #Mesoestetic #MpenPro #微針 #收毛孔 #凹凸洞 #膠原再生 #屯門美容 #單次收費 #不硬銷 #MeTime",
+        "category": "🇪🇸西班牙醫學級微針",
+        "published_at": "2026-03-15",
+        "image": "/images/social/2603-西班牙醫學級微針-無痛-無創-激活膠原-BB.webp",
+        "image_alt": "【西班牙醫學級微針】無痛無創激活膠原 BB",
+        "social_id": "2603-西班牙醫學級微針-無痛-無創-激活膠原-BB",
+        "slug_aliases": [
+          "2603-西班牙醫學級微針-無痛-無創-激活膠原-BB"
+        ],
+        "status": "published",
+        "sort_order": 17,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2601-r2",
+        "title": "V-SANG 藍光煥膚療程",
+        "excerpt": " Happy New Year 2026！新年新開始！傳說中韓妹打造「玻璃水光肌」嘅秘密武器    VSANG 藍光奇蹟煥膚 登陸啦！",
+        "body": "🎉 Happy New Year 2026！新年新開始！傳說中韓妹打造「玻璃水光肌」嘅秘密武器...  【 💙 V-SANG 藍光奇蹟煥膚✨】 登陸啦！\n\n新一年，係時候要有一個新開始（包括你已經「拖」咗好耐嘅皮膚護理 🤭）。\n【 💙 V-SANG 藍光奇蹟煥膚 】唔單止係做 Facial，更加係一次幫肌膚「大掃除」＋「重生」嘅旅程。 \n想知點解佢可以喺韓國美容界咁紅？ 密切留意我哋之後嘅介紹啦！🤫\n\n✨ 新一年願望： 願每一位嚟到康姿健嘅客人，都可以搵返自信發光嘅自己！\n👉🏻 想搶先體驗？Inbox 我哋查詢啦！ \n\n#康姿健 #屯門美容 #良心美容院 #藍光煥膚 #BluePeel",
+        "category": "醫美知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2601-V-SANG-藍光煥膚療程.jpeg",
+        "image_alt": "V-SANG 藍光煥膚療程",
+        "social_id": "2601-V-SANG-藍光煥膚療程",
+        "slug_aliases": [
+          "2601-V-SANG-藍光煥膚療程"
+        ],
+        "status": "published",
+        "sort_order": 26,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2606-r6",
+        "title": "【熬夜去黃急救篇】晚晚OT追劇變「黃面婆」？B3果酸幫你一秒掃黃！",
+        "excerpt": "日日捱夜，朝早起身照鏡見到自己面色暗沉、枯黃無光澤？加上啲頑固痘印同雀斑，真係望見都覺得頹 ！想極速還原透亮白滑肌？",
+        "body": "日日捱夜，朝早起身照鏡見到自己面色暗沉、枯黃無光澤？加上啲頑固痘印同雀斑，真係望見都覺得頹 😩！想極速還原透亮白滑肌？\n\n康姿健特選 TEGODER 淨白抗齡B3果酸 29 (White Renover Peeling)，專門拯救偏黃、暗啞、雀斑同色素沉澱嘅疲勞肌！\n呢款配方結合咗 4 大「WHITE」協同成分：\n🤍 乳酸 (軟化)： 軟化角質，滋潤保濕。\n🤍 乙醇酸 (脫落)： 溫和去除老化角質及積聚色素。\n🤍 維他命 B3 (阻止)： 阻止色素堆積，強力去黃氣。\n🤍 傳明酸 (抑制)： 從根源減少製造黑色素。\n\n美容師會配合專業人手護理，將精華滿滿送入肌底！做完一次，膚色即刻均勻提亮，好似自帶補光燈咁發光 😍！康姿健堅持單次收費，明碼實價，絕不硬銷。今個週末，俾自己一個重拾亮白嘅機會啦！\n\n#去黃美白 #熬夜肌急救 #B3果酸 #傳明酸 #單次收費",
+        "category": "熬夜去黃急救",
+        "published_at": "2026-06-15",
+        "image": "/images/social/2606-熬夜去黃急救篇-晚晚OT追劇變-黃面婆-B3果酸幫你一秒掃黃.webp",
+        "image_alt": "【熬夜去黃急救篇】晚晚OT追劇變「黃面婆」？B3果酸幫你一秒掃黃！",
+        "social_id": "2606-熬夜去黃急救篇-晚晚OT追劇變-黃面婆-B3果酸幫你一秒掃黃",
+        "slug_aliases": [
+          "2606-熬夜去黃急救篇-晚晚OT追劇變-黃面婆-B3果酸幫你一秒掃黃"
+        ],
+        "status": "published",
+        "sort_order": 4,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2604-r3",
+        "title": "【人氣推介篇】洗極面都覺得污糟？ 告別敏感肌膚！深層清潔極致補濕還原白滑水潤BB肌！",
+        "excerpt": "人氣療程推介！平日返工咁大壓力，放假最想就係舒舒服服做個人手 Facial 。",
+        "body": "人氣療程推介！平日返工咁大壓力，放假最想就係舒舒服服做個人手 Facial 💆🏻‍♀️。\n\n我哋嘅深層清潔補濕人手 Facial，選用西班牙頂級醫學護膚品牌\n由落妝、深層清潔、角質重建，到舒緩按摩同保濕面膜，每一步都係美容師溫柔細心嘅純熟手勢。有時機做雖然快，但人手按摩嗰種溫度同放鬆感，真係無可取代。\n\n無硬銷，無隱藏收費，俾你真正享受零壓力嘅護膚體驗！快啲 Inbox 預約啦 🌿。\n\n#康姿健 #深層清潔 #人手Facial #保濕護理 #單次收費",
+        "category": "人氣推介",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-人氣推介篇-洗極面都覺得污糟-告別敏感肌膚-深層清潔-極致補濕-還原白滑水潤BB肌.webp",
+        "image_alt": "【人氣推介篇】洗極面都覺得污糟？ 告別敏感肌膚！深層清潔極致補濕還原白滑水潤BB肌！",
+        "social_id": "2604-人氣推介篇-洗極面都覺得污糟-告別敏感肌膚-深層清潔-極致補濕-還原白滑水潤BB肌",
+        "slug_aliases": [
+          "2604-人氣推介篇-洗極面都覺得污糟-告別敏感肌膚-深層清潔-極致補濕-還原白滑水潤BB肌"
+        ],
+        "status": "published",
+        "sort_order": 7,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2603-r3",
+        "title": "【全方位美肌篇】針對色斑、毛孔、暗啞",
+        "excerpt": "照鏡見到啲斑斑點點又深咗？毛孔又好似越來越大？ 唔洗煩惱！康姿健引入  韓國 Ruikd Genelux Lite 納秒激光，一部機幫你做齊「去斑、嫩膚、美白」！",
+        "body": "照鏡見到啲斑斑點點又深咗？毛孔又好似越來越大？😩 唔洗煩惱！康姿健引入 🇰🇷 韓國 Ruikd Genelux Lite 納秒激光，一部機幫你做齊「去斑、嫩膚、美白」！\n🔥 點解佢咁勁？ ✅ 納秒技術．秒殺黑色素： 利用 Q-Switched Nd:YAG 納秒激光，直接擊碎底層黑色素，針對性極強，唔會傷到周邊皮膚。\n✅ 深淺層斑．一網打盡： 無論係淺層嘅曬斑，定係深層嘅荷爾蒙斑，佢都有專屬嘅波長同治療頭（包括蜂巢荷爾蒙斑頭）去處理。\n✅ 唔止去斑．仲係急救神器： 除咗打斑，佢仲可以 收細毛孔、去暗瘡印、撫平凹凸洞，甚至幫你 美白嫩膚。做完皮膚即刻光澤度 Up！✨\n\n🛡️ 安全認證．信心保證 獲 KFDA、CE、GMP 及 ISO 多項國際認證，加上係韓國醫護團隊推薦，絕對安全可靠。\n想皮膚白淨無瑕？Inbox 我哋預約試下啦！💖\n\n#康姿健 #GeneluxLite #納秒激光 #去斑 #收毛孔 #美白 #去暗瘡印 #凹凸洞 #屯門美容 #KFDA認證",
+        "category": "全方位美肌",
+        "published_at": "2026-03-15",
+        "image": "/images/social/2603-全方位美肌篇-針對色斑-毛孔-暗啞.webp",
+        "image_alt": "【全方位美肌篇】針對色斑、毛孔、暗啞",
+        "social_id": "2603-全方位美肌篇-針對色斑-毛孔-暗啞",
+        "slug_aliases": [
+          "2603-全方位美肌篇-針對色斑-毛孔-暗啞"
+        ],
+        "status": "published",
+        "sort_order": 16,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2602-r3",
+        "title": "COLLAZEN \n膠原小旋風 \n滿足 5 個願望",
+        "excerpt": " 選擇困難「COLLAZEN 膠原美肌小旋風 」滿足 5 個願望「清潔補水塑廓再生滋養」，由 A 到 Z 全方位照顧肌膚需求！",
+        "body": "【 選擇困難⁉️「COLLAZEN 膠原美肌小旋風 」滿足 5️⃣ 個願望「清潔．補水．塑廓．再生．滋養」，由 A 到 Z 全方位照顧肌膚需求！】\n每次去美容院都要諗今次做咩好... 做清潔就做唔到提拉？做完機又驚乾？🤔「COLLAZEN 膠原美肌小旋風 」5️⃣ 重護膚輕鬆一次過搞掂～\n\n1️⃣ 清潔｜SonoClean 毛孔大掃除｜34KHz 超聲波無痛震走死皮、黑頭、油脂\n2️⃣ 補水｜3-Way Sono 水滴提拉｜同時輸出三個頻率，將水分穿透淺、中、深層肌膚，覆蓋99%肌膚問題，加乘修復，打造飲飽水嘅「水光肌」\n3️⃣ 塑廓｜3-Way HIFU 逆齡 V 面｜突破性同時輸出能量直達表皮層 (1.5mm) ➕ 真皮層 (3.0mm) ➕ 筋膜層 (4.5mm)，全方位內到外重現輪廓線！\n4️⃣ 再生｜RF 膠原再生｜喚醒膠原蛋白再生，增加皮膚彈性、改善膚質\n5️⃣ 滋養｜Cryo 冰火修復｜冷暖交替＋離子滲透，強效鎮靜鎖水\n\n👉🏻 趕時間又想靚？想變靚又唔知做咩療程好？一部機搞掂！ 即刻 Inbox 預約體驗全能護膚旅程啦！\n\n#康姿健 #COLLAZENTornado #HIFU #懶人護膚 #屯門美容",
+        "category": "儀器療程",
+        "published_at": "2026-02-15",
+        "image": "/images/social/2602-COLLAZEN-膠原小旋風-滿足-5-個願望.webp",
+        "image_alt": "COLLAZEN \n膠原小旋風 \n滿足 5 個願望",
+        "social_id": "2602-COLLAZEN-膠原小旋風-滿足-5-個願望",
+        "slug_aliases": [
+          "2602-COLLAZEN-膠原小旋風-滿足-5-個願望"
+        ],
+        "status": "published",
+        "sort_order": 22,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2601-r4",
+        "title": "冬天寒流",
+        "excerpt": " 寒流襲港！你塊面有無「爆拆」警告？",
+        "body": "❄️ 寒流襲港！你塊面有無「爆拆」警告？🚨\n\n天文台話氣溫急降！🥶 大家有無著夠衫？ 除咗身要暖，面都要錫住呀！ 天氣又乾又凍，好多客人都話塊面紅卜卜、那那地，甚至乾到甩皮... 🍂 👩🏻‍⚕️ 小編溫馨提提你：\n\n＞ 切忌用熱水洗面 🚫：水溫太高會洗走油脂，令皮膚更乾！\n＞ 加強保濕鎖水 💧：唔好懶，面霜要搽厚少少。\n＞ 暫停磨砂 🛑：皮膚脆弱時，千祈唔好做強烈去角質。\n\n如果覺得皮膚真係好乾、好繃緊， 推介試下我哋嘅 Bioskin 精華導入療程， 針對性舒緩降紅，幫皮膚起返個「防護盾」🛡️！\n👉🏻 天氣凍，入嚟康姿健暖笠笠做 Facial 係一種享受～\n\n#康姿健 #護膚小貼士 #敏感肌 #保濕鎖水 #乾燥",
+        "category": "護膚知識",
+        "published_at": "2026-01-15",
+        "image": "/images/social/2601-冬天寒流.jpeg",
+        "image_alt": "冬天寒流",
+        "social_id": "2601-冬天寒流",
+        "slug_aliases": [
+          "2601-冬天寒流"
+        ],
+        "status": "published",
+        "sort_order": 28,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2604-r8",
+        "title": "【無痕脫疣篇】面上頸上生滿「細肉粒」？",
+        "excerpt": "照鏡發現面頰、眼周或者頸部無啦啦多咗啲細細粒嘅凸起物？以為係油脂粒或者粉刺，點知擠極都唔出？ 小心！呢啲好有可能係「疣」！如果抵抗力差或者忍唔住佢，仲會越生越多，甚至蔓延全塊面 ！對付疣唔洗驚，康姿健幫到你 ！",
+        "body": "照鏡發現面頰、眼周或者頸部無啦啦多咗啲細細粒嘅凸起物？以為係油脂粒或者粉刺，點知擠極都唔出？😰 小心！呢啲好有可能係「疣」！如果抵抗力差或者忍唔住𢯎佢，仲會越生越多，甚至蔓延全塊面 😨！對付疣唔洗驚，康姿健幫到你 🦸‍♀️！\n\n我哋嘅【疣、痣、扁平疣去除療程】選用先進嘅 PLASER 等離子儀，利用 1-PIN 單點模式產生嘅熱等離子 ，精準地將疣體氣化脫落。過程快、準，而且比起傳統方法更保護周邊健康皮膚，1次治療已經效果顯著 ✨ ！💰 康姿健堅持明碼實價，單次收費絕不硬銷：\n\n✨ 單粒精準脫：疣體小於 1mm 只需 $50/粒 (2mm $100/粒 , 3mm $300/粒 )\n🔥 超高性價比推介： 全面任脫 (疣體 < 1mm) 只需 $1280/次 ！一次過幫你清走全臉細疣，無隱藏收費 ！\n👩‍⚕️ 療程後貼士： 脫完疣記住喺凹陷位置貼返修復貼 ，嚴格做好防曬、避開高溫 ，同埋暫停使用 AHA/BHA/PHA 等酸類煥膚產品 ，咁就復原得靚靚啦！\n\n快啲 Inbox 我哋預約，還原白滑無瑕肌啦 💌！\n\n#脫疣 #扁平疣 #PLASER等離子 #明碼實價 #屯門美容院",
+        "category": "無痕脫疣",
+        "published_at": "2026-04-15",
+        "image": "/images/social/2604-無痕脫疣篇-面上頸上生滿-細肉粒.webp",
+        "image_alt": "【無痕脫疣篇】面上頸上生滿「細肉粒」？",
+        "social_id": "2604-無痕脫疣篇-面上頸上生滿-細肉粒",
+        "slug_aliases": [
+          "2604-無痕脫疣篇-面上頸上生滿-細肉粒"
+        ],
+        "status": "published",
+        "sort_order": 12,
+        "updated_at": "2026-06-16T10:19:43.695123+00:00"
+      },
+      {
+        "slug": "2603-r5",
+        "title": "黑科技登場！超越激光的修復力？一部「等離子」機做齊【殺菌美白緊緻】",
+        "excerpt": "成日聽人講做 Facial 要「先破壞後建設」，搞到塊面紅卜卜？ 康姿健引入全新概念 PLASER Air Plaser 等離子儀，話你知咩叫「無創修復」！",
+        "body": "成日聽人講做 Facial 要「先破壞後建設」，搞到塊面紅卜卜？😰 康姿健引入全新概念 PLASER (Air Plaser) 等離子儀，話你知咩叫「無創修復」！\n這部機擁有 德國專利 Flyzer 技術 ，結合咗兩大黑科技手柄，一次過滿足你 N 個願望：\n\n1️⃣ Air Plasma (空氣等離子)：打開肌膚隨意門 🚪 平時搽極精華都唔吸收？Air Plasma 可以暫時打開細胞黏附分子，令護膚品 吸收率激增 120 倍！ 同時仲有強勁殺菌、抗炎功效，係暗瘡肌同敏感肌嘅救星！\n2️⃣ RF Plasma (射頻等離子)：深層膠原炸彈 💣 利用高能離子深入真皮層，唔洗拮針都可以刺激 膠原蛋白 (Collagen) 同彈性蛋白 (Elastin) 再生！👉🏻 效果： 收細毛孔、撫平皺紋、提升輪廓，甚至改善凹凸洞！\n\n ✅ 無創傷、無痛感：舒舒服服就可以靚住走 。 ✅ 全方位管理：由表皮到真皮層都照顧到，真正的「由內到外」。\n想試下喚醒沉睡嘅細胞？快啲 Inbox 我哋預約「等離子」體驗啦！\n\n#康姿健 #PLASER #等離子 #無創水光 #膠原再生 #收毛孔 #暗瘡救星 #德國技術 #屯門美容",
+        "category": "殺菌．美白．緊緻",
+        "published_at": "2026-03-15",
+        "image": "/images/social/2603-黑科技登場-超越激光的修復力-一部-等離子-機做齊-殺菌-美白-緊緻.webp",
+        "image_alt": "黑科技登場！超越激光的修復力？一部「等離子」機做齊【殺菌美白緊緻】",
+        "social_id": "2603-黑科技登場-超越激光的修復力-一部-等離子-機做齊-殺菌-美白-緊緻",
+        "slug_aliases": [
+          "2603-黑科技登場-超越激光的修復力-一部-等離子-機做齊-殺菌-美白-緊緻"
+        ],
+        "status": "published",
+        "sort_order": 18,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2512-r2",
+        "title": "聖誕節優惠 \n- 紅外線焗倉",
+        "excerpt": "今年聖誕送你「由內靚到外」嘅健康美肌禮物！ 惠顧任何項目  即送 DrRainbow 遠紅外線焗倉 ",
+        "body": "🎅🏻✨今年聖誕送你「由內靚到外」嘅健康美肌禮物！‼️ 惠顧任何項目 🆓 即送 Dr.Rainbow 遠紅外線焗倉 🔴\n\n「🌈 Dr Rainbow 醫療級遠紅外線焗倉有咩咁勁？」\n並非一般汗蒸！佢係真正「醫療級」 遠紅外線可以直達皮膚底層 5cm，被全球認可為最能深入人體嘅「生命之光」。\n⭕ 活化細胞！促進血液循環，排走重金屬＋毒素＋化妝品殘留\n⭕ 女士恩物｜纖體燃脂、暖宮散寒、改善經痛、月經不調、宮寒\n⭕ 醫療級養生｜改善全身痛症、抗三高、改善失眠\n\n想靚？想瘦？想改善手腳冰冷？呢個儀器一定幫到你 🤭\n🎄 年尾就係要好好善待自己～ 做美容之餘，又可以順便做身體調理，由內暖到外，排汗排毒後成個人輕盈晒、精神咗、由內到外健康咗！\n\n‼️ 惠顧任何項目💥 即送 Dr Rainbow 醫療級遠紅外線焗倉｜全身照足 50分鐘 ‼️\n⭐️ 韓國KFDA、美國FDA、CE等專利認證 ⭐️ 安全高效 ⭐️",
+        "category": "痛症理療",
+        "published_at": "2025-12-15",
+        "image": "/images/social/2512-聖誕節優惠-紅外線焗倉.webp",
+        "image_alt": "聖誕節優惠 \n- 紅外線焗倉",
+        "social_id": "2512-聖誕節優惠-紅外線焗倉",
+        "slug_aliases": [
+          "2512-聖誕節優惠-紅外線焗倉"
+        ],
+        "status": "published",
+        "sort_order": 31,
+        "updated_at": "2026-06-16T10:18:55.469317+00:00"
+      },
+      {
+        "slug": "2510-r3",
+        "title": "微針射頻膠原修復療程",
+        "excerpt": "  微針射頻膠原修復術 「緊緻提拉逆齡」一機完成！",
+        "body": "【 🔬 微針射頻膠原修復術 💎】「緊緻・提拉・逆齡」一機完成！\n\n用 PLASER 微針能量深入真皮層，由肌底刺激膠原蛋白新生，即時回復緊緻有彈性！過程無創、無痛、無恢復期 ～\n🎯 適合：皮膚鬆弛、初老肌、有皺紋或動態紋、毛孔粗大\n\n【微針射頻膠原修復】療程｜只需$880 \n＋＄300 升級 Bioskin 精華💧\n⭐️ 挑選專屬你膚質嘅配搭！對症下藥，功效倍增 ⭐️\n ➤ BSK36 膠原賦活精華｜抗老補水、適合乾肌、鬆弛肌\n ➤ BSK3 抗皺精華｜放鬆動態紋、皺紋、頸紋\n ➤ BSK6 修復精華｜膠原重生，針對痘疤、初老肌\n❌ 無香精・無酒精・無刺激・敏感肌都安心使用",
+        "category": "儀器療程",
+        "published_at": "2025-10-15",
+        "image": "/images/social/2510-微針射頻膠原修復療程.webp",
+        "image_alt": "微針射頻膠原修復療程",
+        "social_id": "2510-微針射頻膠原修復療程",
+        "slug_aliases": [
+          "2510-微針射頻膠原修復療程"
+        ],
+        "status": "published",
+        "sort_order": 41,
+        "updated_at": "2026-06-16T10:16:39.042182+00:00"
+      }
+    ],
+    "kz_cms_faqs": [
+      {
+        "id": "5afb8e1b-740e-4e35-8901-c39c5cb99150",
+        "question": "會唔會硬銷療程套裝？",
+        "answer": "唔會。我哋堅持單次收費，量膚分析完先建議療程，做唔做由你決定。",
+        "sort_order": 0,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:49.600811+00:00"
+      },
+      {
+        "id": "1b803f8f-edb1-4989-8b0e-ed2c7771621c",
+        "question": "價錢點樣顯示？",
+        "answer": "有啲療程明碼單次價（例如微針射頻 $880、等離子抗痘 $680）。要量膚定制或組合嘅會寫「諮詢報價」，WhatsApp 或 IG 問我哋就得。",
+        "sort_order": 1,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:49.718105+00:00"
+      },
+      {
+        "id": "bc6f982a-fc90-4593-9c89-5676bb48930c",
+        "question": "點樣預約？",
+        "answer": "主要用 WhatsApp 或 Instagram DM，亦可以用官網引導式預約頁。",
+        "sort_order": 2,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:49.835626+00:00"
+      },
+      {
+        "id": "b904affc-0ca4-4f77-ac9f-4e9f6e4d8be1",
+        "question": "第一次應該預約咩？",
+        "answer": "建議先約「量膚分析」，了解膚質之後再揀啱嘅療程。",
+        "sort_order": 3,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:49.947698+00:00"
+      },
+      {
+        "id": "0a6471ac-7e78-442b-8812-6057555162d5",
+        "question": "有男賓服務嗎？",
+        "answer": "有。官網有獨立「男賓護理」專區，針清、激光護理等都有。",
+        "sort_order": 4,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.063712+00:00"
+      },
+      {
+        "id": "edfa43d2-2295-43ea-8192-10c532ae9462",
+        "question": "療程會唔會痛？",
+        "answer": "睇療程而定。微針射頻可能有少少感覺，等離子煥膚就溫和啲。預約時可以問清楚。",
+        "sort_order": 5,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.175148+00:00"
+      },
+      {
+        "id": "cb36d58f-f40c-4bea-a5dc-7dda25f29fea",
+        "question": "喺邊度？",
+        "answer": "屯門紅橋菁菱徑9號華利大廈12號（地舖）。",
+        "sort_order": 6,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.28991+00:00"
+      },
+      {
+        "id": "1e32e769-792b-4045-b280-5f35eddd0645",
+        "question": "營業時間？",
+        "answer": "每日 09:00 – 21:00。有時會因突發情況調整，預約前問吓小店最穩陣。",
+        "sort_order": 7,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.404676+00:00"
+      },
+      {
+        "id": "3bfcee4e-ea03-493a-be03-25c1c8d5f5ed",
+        "question": "可以直接上門嗎？",
+        "answer": "建議先預約。一人工作室，預約咗先有足夠時間幫你量膚同做療程，唔使白行一趟。",
+        "sort_order": 8,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.516898+00:00"
+      },
+      {
+        "id": "63e4bb75-f16d-4d08-8bf9-515bdb88b5d0",
+        "question": "療程大概要幾耐？",
+        "answer": "睇療程而定，一般面部護理大約 60–90 分鐘；遠紅外線焗倉大約 30 分鐘。預約時可以再問。",
+        "sort_order": 9,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.627242+00:00"
+      },
+      {
+        "id": "2606522b-ec88-4218-9338-5af12035dfdd",
+        "question": "孕婦可以做療程嗎？",
+        "answer": "有啲療程（如果酸、激光、HIFU）孕婦唔適合。預約時記得講聲，我哋會建議安全啲嘅選擇。",
+        "sort_order": 10,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.74738+00:00"
+      },
+      {
+        "id": "6a078b9a-fd19-46e6-9a26-236d0fbdbc5e",
+        "question": "痛症理療同美容可以同日做嗎？",
+        "answer": "可以。好多客人做完 Facial 再焗遠紅外線，由內到外一齊調理。次序同間隔 WhatsApp 問我哋就得。",
+        "sort_order": 11,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.859162+00:00"
+      },
+      {
+        "id": "2d2fba16-b0be-4b93-9618-2409c819e191",
+        "question": "有冇泊車位？",
+        "answer": "店喺屯門紅橋菁菱徑華利大廈地舖，附近有屋苑同路邊位，跟現場指示泊就得。",
+        "sort_order": 12,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:50.976261+00:00"
+      },
+      {
+        "id": "b2709c44-f673-4801-b0a6-63e0fc72dee5",
+        "question": "取消或改期點算？",
+        "answer": "盡早 WhatsApp 或 IG 通知改期，方便幫其他客人排時間。",
+        "sort_order": 13,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:51.087242+00:00"
+      },
+      {
+        "id": "d569e4f0-ce1c-4e44-a4f8-a75028a450f7",
+        "question": "第一次嚟要注意咩？",
+        "answer": "建議早 5 分鐘到；如果有敏感、食緊藥或者最近做過其他美容療程，記得話俾我哋知。第一次可以約量膚分析。",
+        "sort_order": 14,
+        "status": "published",
+        "updated_at": "2026-06-16T10:57:51.2028+00:00"
+      }
+    ],
+    "kz_cms_media": [
+      {
+        "id": "de6c245e-32ef-4a3c-aa1c-ed9750422084",
+        "storage_path": "treatments/1781610989128-man-1.png",
+        "public_url": "https://xhixmbjtidzsibwpygxb.supabase.co/storage/v1/object/public/kz-cms/treatments/1781610989128-man-1.png",
+        "filename": "man-1.png",
+        "alt": "男賓深層清潔護理",
+        "folder": "treatments",
+        "mime_type": "image/png",
+        "size_bytes": 1874376,
+        "created_at": "2026-06-16T11:56:32.29033+00:00"
+      },
+      {
+        "id": "99eba453-6472-4eb1-a82b-5ea5604ff3ce",
+        "storage_path": "treatments/1781611588699-man-2.png",
+        "public_url": "https://xhixmbjtidzsibwpygxb.supabase.co/storage/v1/object/public/kz-cms/treatments/1781611588699-man-2.png",
+        "filename": "man-2.png",
+        "alt": "男賓激光護理",
+        "folder": "treatments",
+        "mime_type": "image/png",
+        "size_bytes": 1876236,
+        "created_at": "2026-06-16T12:06:32.071075+00:00"
+      }
+    ],
+    "kz_cms_shop_videos": [
+      {
+        "id": 1,
+        "title": "09:05 AM 到店準備",
+        "excerpt": "開門整理儀器、檢查產品架，迎接新一天。",
+        "category": "開店",
+        "duration_sec": 15.4,
+        "poster": "/videos/reels/posters/1.jpg",
+        "src": "/videos/reels/1.mp4",
+        "related_href": "/about",
+        "sort_order": 0,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 2,
+        "title": "重頭戲「冰導」來了",
+        "excerpt": "冰導儀搭配精華，鎮靜收毛孔、加強滲透。",
+        "category": "療程",
+        "duration_sec": 45.6,
+        "poster": "/videos/reels/posters/2.jpg",
+        "src": "/videos/reels/2.mp4",
+        "related_href": "/skin-analysis",
+        "sort_order": 1,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 3,
+        "title": "客人平日喜愛化妝",
+        "excerpt": "愛化妝的客人，深層清潔與儀器護理更要到位。",
+        "category": "療程",
+        "duration_sec": 24.1,
+        "poster": "/videos/reels/posters/3.jpg",
+        "src": "/videos/reels/3.mp4",
+        "related_href": "/treatments/plasma-acne",
+        "sort_order": 2,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 4,
+        "title": "濕氣重、背部長痘",
+        "excerpt": "背痘與濕重體質，可配合退背與痛症理療。",
+        "category": "療程",
+        "duration_sec": 26.2,
+        "poster": "/videos/reels/posters/4.jpg",
+        "src": "/videos/reels/4.mp4",
+        "related_href": "/wellness",
+        "sort_order": 3,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 5,
+        "title": "COLLAZEN 膠原小旋風",
+        "excerpt": "門口海報 — 一打三黑科技，護膚講效率。",
+        "category": "療程",
+        "duration_sec": 22.1,
+        "poster": "/videos/reels/posters/5.jpg",
+        "src": "/videos/reels/5.mp4",
+        "related_href": "/treatments/collazen",
+        "sort_order": 4,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 6,
+        "title": "開始了 · 面部撥筋",
+        "excerpt": "療程正式開始，溫和撥筋放鬆面部。",
+        "category": "療程",
+        "duration_sec": 52.6,
+        "poster": "/videos/reels/posters/6.jpg",
+        "src": "/videos/reels/6.mp4",
+        "related_href": "/journal",
+        "sort_order": 5,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 7,
+        "title": "儀器藥劑準備",
+        "excerpt": "檢查療程用精華與探頭，確保每個細節。",
+        "category": "儀器",
+        "duration_sec": 30.7,
+        "poster": "/videos/reels/posters/7.jpg",
+        "src": "/videos/reels/7.mp4",
+        "related_href": "/treatments",
+        "sort_order": 6,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 8,
+        "title": "客人入店",
+        "excerpt": "陽光午後，客人推門入店。",
+        "category": "日常",
+        "duration_sec": 94.1,
+        "poster": "/videos/reels/posters/8.jpg",
+        "src": "/videos/reels/8.mp4",
+        "related_href": "/book",
+        "sort_order": 7,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 9,
+        "title": "Genelux Lite 激光嫩膚",
+        "excerpt": "醫療級激光儀，針對色斑與膚色均勻。",
+        "category": "儀器",
+        "duration_sec": 22.2,
+        "poster": "/videos/reels/posters/9.jpg",
+        "src": "/videos/reels/9.mp4",
+        "related_href": "/treatments/laser-spot",
+        "sort_order": 8,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 10,
+        "title": "療程進行中",
+        "excerpt": "專業儀器配合舒適環境，專注每一次護理。",
+        "category": "療程",
+        "duration_sec": 88.8,
+        "poster": "/videos/reels/posters/10.jpg",
+        "src": "/videos/reels/10.mp4",
+        "related_href": "/treatments/collazen",
+        "sort_order": 9,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 11,
+        "title": "屯門地舖 · 價目表",
+        "excerpt": "門口價目 — 果酸、痛症、膠原提升一覽。",
+        "category": "門店",
+        "duration_sec": 42.6,
+        "poster": "/videos/reels/posters/11.jpg",
+        "src": "/videos/reels/11.mp4",
+        "related_href": "/treatments",
+        "sort_order": 10,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 12,
+        "title": "歡迎光臨",
+        "excerpt": "親切迎客，讓每位客人都感到自在。",
+        "category": "日常",
+        "duration_sec": 84.6,
+        "poster": "/videos/reels/posters/12.jpg",
+        "src": "/videos/reels/12.mp4",
+        "related_href": "/book",
+        "sort_order": 11,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 13,
+        "title": "店內激光儀器",
+        "excerpt": "LASER 與 Ruikd 設備，專業環境一目了然。",
+        "category": "儀器",
+        "duration_sec": 15.9,
+        "poster": "/videos/reels/posters/13.jpg",
+        "src": "/videos/reels/13.mp4",
+        "related_href": "/treatments/laser-spot",
+        "sort_order": 12,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 14,
+        "title": "新客到訪",
+        "excerpt": "新客人帶著笑容入店，期待今天的療程。",
+        "category": "日常",
+        "duration_sec": 90.5,
+        "poster": "/videos/reels/posters/14.jpg",
+        "src": "/videos/reels/14.mp4",
+        "related_href": "/book",
+        "sort_order": 13,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 15,
+        "title": "抽空開個箱",
+        "excerpt": "新到貨品開箱，補充療程耗材與產品。",
+        "category": "產品",
+        "duration_sec": 36.1,
+        "poster": "/videos/reels/posters/15.jpg",
+        "src": "/videos/reels/15.mp4",
+        "related_href": "/skin-analysis",
+        "sort_order": 14,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 16,
+        "title": "1064 激光嫩膚",
+        "excerpt": "1064nm 激光嫩膚，擊退暗沉、提亮膚色。",
+        "category": "儀器",
+        "duration_sec": 20.6,
+        "poster": "/videos/reels/posters/16.jpg",
+        "src": "/videos/reels/16.mp4",
+        "related_href": "/treatments/laser-spot",
+        "sort_order": 15,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 17,
+        "title": "屯門90後美容師工作日常",
+        "excerpt": "整理門口、準備營業，真實的工作節奏。",
+        "category": "日常",
+        "duration_sec": 38.9,
+        "poster": "/videos/reels/posters/17.jpg",
+        "src": "/videos/reels/17.mp4",
+        "related_href": "/about",
+        "sort_order": 16,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 18,
+        "title": "沉浸式補貨的一天",
+        "excerpt": "屯門90後美容師補貨日常，產品陳列歸位。",
+        "category": "產品",
+        "duration_sec": 33.8,
+        "poster": "/videos/reels/posters/18.jpg",
+        "src": "/videos/reels/18.mp4",
+        "related_href": "/skin-analysis",
+        "sort_order": 17,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 19,
+        "title": "推門迎客",
+        "excerpt": "從店內望向門口，迎接預約客人。",
+        "category": "門店",
+        "duration_sec": 103.9,
+        "poster": "/videos/reels/posters/19.jpg",
+        "src": "/videos/reels/19.mp4",
+        "related_href": "/book",
+        "sort_order": 18,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 20,
+        "title": "我是屯門90後美容師",
+        "excerpt": "TEGODER、SOTHYS 專業產品，每日護理準備。",
+        "category": "日常",
+        "duration_sec": 47.5,
+        "poster": "/videos/reels/posters/20.jpg",
+        "src": "/videos/reels/20.mp4",
+        "related_href": "/about",
+        "sort_order": 19,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 21,
+        "title": "COLLAZEN Tornado 啟動",
+        "excerpt": "膠原小旋風五合一探頭，一機多效。",
+        "category": "儀器",
+        "duration_sec": 83.2,
+        "poster": "/videos/reels/posters/21.jpg",
+        "src": "/videos/reels/21.mp4",
+        "related_href": "/treatments/collazen",
+        "sort_order": 20,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 22,
+        "title": "康姿健地舖門面",
+        "excerpt": "屯門紅橋地舖 — 痛症、推拿、美容、祛斑。",
+        "category": "門店",
+        "duration_sec": 26.4,
+        "poster": "/videos/reels/posters/22.jpg",
+        "src": "/videos/reels/22.mp4",
+        "related_href": "/about",
+        "sort_order": 21,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 23,
+        "title": "PLASER 等離子設定",
+        "excerpt": "Multi-Point RF Plasma 參數調校。",
+        "category": "儀器",
+        "duration_sec": 29.4,
+        "poster": "/videos/reels/posters/23.jpg",
+        "src": "/videos/reels/23.mp4",
+        "related_href": "/treatments/plaser-rf",
+        "sort_order": 22,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 24,
+        "title": "療程凝膠準備",
+        "excerpt": "敷上導電凝膠，為儀器療程做好準備。",
+        "category": "療程",
+        "duration_sec": 40.1,
+        "poster": "/videos/reels/posters/24.jpg",
+        "src": "/videos/reels/24.mp4",
+        "related_href": "/treatments/plaser-rf",
+        "sort_order": 23,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 25,
+        "title": "新貨到店",
+        "excerpt": "快遞到貨，檢查包裝與品項。",
+        "category": "產品",
+        "duration_sec": 33.8,
+        "poster": "/videos/reels/posters/25.jpg",
+        "src": "/videos/reels/25.mp4",
+        "related_href": "/skin-analysis",
+        "sort_order": 24,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 26,
+        "title": "準備工作室",
+        "excerpt": "拉開布簾，整理獨立護理空間。",
+        "category": "開店",
+        "duration_sec": 29,
+        "poster": "/videos/reels/posters/26.jpg",
+        "src": "/videos/reels/26.mp4",
+        "related_href": "/about",
+        "sort_order": 25,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 27,
+        "title": "歡迎收看 · 療程室一瞥",
+        "excerpt": "第一視角睇療程室 — 儀器、手枕、專業環境一次過。",
+        "category": "日常",
+        "duration_sec": 25.1,
+        "poster": "/videos/reels/posters/27.jpg",
+        "src": "/videos/reels/27.mp4",
+        "related_href": "/treatments",
+        "sort_order": 26,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 28,
+        "title": "PLASER 等離子儀 · 辭舊迎新",
+        "excerpt": "Multi-Point RF Plasma 參數設定，迎接新一年護膚節奏。",
+        "category": "儀器",
+        "duration_sec": 28.6,
+        "poster": "/videos/reels/posters/28.jpg",
+        "src": "/videos/reels/28.mp4",
+        "related_href": "/treatments/plaser-rf",
+        "sort_order": 27,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 29,
+        "title": "歡迎收看 · 向日葵門簾",
+        "excerpt": "店門向日葵門簾與 Ruikd 儀器，屯門地舖的真實一角。",
+        "category": "門店",
+        "duration_sec": 24.3,
+        "poster": "/videos/reels/posters/29.jpg",
+        "src": "/videos/reels/29.mp4",
+        "related_href": "/book",
+        "sort_order": 28,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 30,
+        "title": "產品資料整理",
+        "excerpt": "翻閱品牌手冊，確認療程方案與成分。",
+        "category": "產品",
+        "duration_sec": 49.5,
+        "poster": "/videos/reels/posters/30.jpg",
+        "src": "/videos/reels/30.mp4",
+        "related_href": "/skin-analysis",
+        "sort_order": 29,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 31,
+        "title": "大家好，我是屯門90後美容師",
+        "excerpt": "ITEC LV4 激光資歷，量膚定制為本。",
+        "category": "日常",
+        "duration_sec": 61,
+        "poster": "/videos/reels/posters/31.jpg",
+        "src": "/videos/reels/31.mp4",
+        "related_href": "/about",
+        "sort_order": 30,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 32,
+        "title": "抽空補個貨",
+        "excerpt": "面膜與耗材補貨，陳列得整整齊齊。",
+        "category": "產品",
+        "duration_sec": 35.8,
+        "poster": "/videos/reels/posters/32.jpg",
+        "src": "/videos/reels/32.mp4",
+        "related_href": "/skin-analysis",
+        "sort_order": 31,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 33,
+        "title": "09:00 AM 客人快到了",
+        "excerpt": "陽光灑入店門，早上預約即將開始。",
+        "category": "開店",
+        "duration_sec": 31.7,
+        "poster": "/videos/reels/posters/33.jpg",
+        "src": "/videos/reels/33.mp4",
+        "related_href": "/book",
+        "sort_order": 32,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 34,
+        "title": "09:30 AM 客人快到了",
+        "excerpt": "屯門地舖早晨，準備迎接第一位客人。",
+        "category": "開店",
+        "duration_sec": 35,
+        "poster": "/videos/reels/posters/34.jpg",
+        "src": "/videos/reels/34.mp4",
+        "related_href": "/book",
+        "sort_order": 33,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      },
+      {
+        "id": 35,
+        "title": "面部按摩撥筋",
+        "excerpt": "很多客人好奇的撥筋手法，放鬆筋膜、改善循環。",
+        "category": "療程",
+        "duration_sec": 79.1,
+        "poster": "/videos/reels/posters/35.jpg",
+        "src": "/videos/reels/35.mp4",
+        "related_href": "/wellness",
+        "sort_order": 34,
+        "status": "published",
+        "updated_at": "2026-06-16T10:50:02.764866+00:00"
+      }
+    ],
+    "kz_cms_admins": [
+      {
+        "user_id": "c24ef7df-a782-4cbb-bd29-72904bb3702f",
+        "email": "pandabb0104@gmail.com",
+        "role": "owner",
+        "created_at": "2026-06-16T10:34:57.705431+00:00"
+      },
+      {
+        "user_id": "19c67134-7b74-48b0-aead-eeb2c6f08c1d",
+        "email": "super_baby@live.hk",
+        "role": "owner",
+        "created_at": "2026-06-25T18:17:55.846443+00:00"
+      }
+    ]
+  }
+}

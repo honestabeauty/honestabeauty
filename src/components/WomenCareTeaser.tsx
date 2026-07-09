@@ -3,7 +3,8 @@ import { EditorialImage } from "@/components/EditorialImage";
 import { SectionBodyText, resolveSectionContent, type SectionContentProps } from "@/components/home/section-content";
 import { IconArrowRight } from "@/components/icons/KzIconsServer";
 
-export function MenCareTeaser({ content }: SectionContentProps) {
+/** 首頁女賓護理 teaser（home-sections id: men-care，歷史 id 保留相容） */
+export function WomenCareTeaser({ content }: SectionContentProps) {
   const c = resolveSectionContent("men-care", content);
   return (
     <section className="moana-home__chapter moana-home__chapter--split">
@@ -30,7 +31,7 @@ export function MenCareTeaser({ content }: SectionContentProps) {
             <Link
               href={c.linkHref}
               className="moana-pill-btn moana-pill-btn--dark"
-              data-cta-id="cta_home_men_teaser"
+              data-cta-id="cta_home_women_teaser"
             >
               {c.linkLabel}
               <IconArrowRight size={14} />
@@ -41,3 +42,6 @@ export function MenCareTeaser({ content }: SectionContentProps) {
     </section>
   );
 }
+
+/** @deprecated 使用 WomenCareTeaser */
+export const MenCareTeaser = WomenCareTeaser;

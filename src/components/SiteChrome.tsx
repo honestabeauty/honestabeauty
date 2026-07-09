@@ -2,6 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
+import { CtaClickTracker } from "@/components/CtaClickTracker";
+import { PageEngagementTracker } from "@/components/PageEngagementTracker";
 
 /**
  * Conditionally renders the public site chrome (Header / Footer / mobile booking
@@ -31,6 +33,8 @@ export function SiteChrome({
 
   return (
     <>
+      {!isAdmin && <PageEngagementTracker />}
+      {!isAdmin && <CtaClickTracker />}
       {!isAdmin && header}
       <main id="main-content" className="flex-1">
         {children}

@@ -131,6 +131,23 @@ h4 {
     transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
 }
 
+/* Sticky nav chrome: keep glass look without breaking sticky / clipping the drawer */
+.header-editorial {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  overflow: visible;
+}
+
+.conversion-mobile-bar {
+  position: fixed;
+  overflow: visible;
+}
+
+#mobile-nav {
+  overflow: visible;
+}
+
 .liquid-glass::before,
 .moana-panel::before,
 .info-card::before,
@@ -1792,8 +1809,9 @@ h4 {
   margin-top: 0;
   font-family: var(--font-family-display);
   font-weight: 600;
-  line-height: 0.92;
+  line-height: 1.05;
   letter-spacing: -0.03em;
+  font-size: inherit;
 }
 
 .editorial-hero__title-line {
@@ -3010,9 +3028,19 @@ h4 {
   }
 }
 
-/* Header editorial */
+/* Header editorial — sticky must win over liquid-glass position:relative */
 .header-editorial {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  overflow: visible;
   border-bottom: 1px solid color-mix(in srgb, var(--color-border-primary) 70%, transparent);
+}
+
+/* Mobile drawer lives inside header; do not clip expanded nav */
+#mobile-nav {
+  overflow: visible;
+  position: relative;
 }
 
 .header-editorial .btn-primary {
@@ -3037,7 +3065,9 @@ h4 {
 .header-social {
   display: none;
   align-items: center;
-  gap: 0.35rem;
+  gap: 0.15rem;
+  flex-shrink: 0;
+  margin-inline: 0.15rem;
 }
 
 @media (min-width: 1024px) {
@@ -3046,29 +3076,138 @@ h4 {
   }
 }
 
+/* 手機抽屜內強制顯示（不受上方 display:none 限制） */
+.header-social.header-social--drawer {
+  display: inline-flex;
+  justify-content: flex-start;
+  margin-inline: 0;
+  gap: 0.35rem;
+}
+
 .header-social__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.85rem;
-  height: 1.85rem;
-  border: 1px solid color-mix(in srgb, var(--kz-brand-navy) 18%, transparent);
-  border-radius: 999px;
-  font-family: var(--font-family-ui);
-  font-size: 0.5625rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: color-mix(in srgb, var(--kz-color-deep-plum, #3d2a3a) 55%, transparent);
   text-decoration: none;
-  color: var(--kz-plum-muted);
-  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.header-social--drawer .header-social__link {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.header-social__link svg,
+.header-social__svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .header-social__link:hover,
 .header-social__link:focus-visible {
-  color: var(--kz-brand-navy);
-  border-color: color-mix(in srgb, var(--kz-brand-pink) 45%, transparent);
-  background: color-mix(in srgb, var(--kz-color-mist-lilac) 35%, transparent);
+  color: var(--kz-brand-navy, #1a3066);
+  background: transparent;
+  border-color: transparent;
+  outline: none;
+}
+
+.header-social__link:focus-visible {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--kz-brand-navy, #1a3066) 35%, transparent);
+}
+
+.social-links--footer {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.social-links__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.875rem;
+  color: var(--kz-color-deep-plum, #3d2a3a);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-links__item:hover,
+.social-links__item:focus-visible {
+  color: var(--kz-color-soft-rose, #c4788a);
+}
+
+.social-links__icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  color: color-mix(in srgb, var(--kz-color-deep-plum, #3d2a3a) 62%, transparent);
+  transition: color 0.2s ease;
+}
+
+.social-links__item:hover .social-links__icon-wrap,
+.social-links__item:focus-visible .social-links__icon-wrap {
+  color: inherit;
+}
+
+.social-links__svg {
+  display: block;
+}
+
+.header-editorial__nav {
+  gap: clamp(0.65rem, 1.2vw, 1.35rem);
+  min-width: 0;
+  flex-wrap: nowrap;
+}
+
+.header-editorial__link {
+  flex-shrink: 0;
+  font-size: 0.625rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  line-height: 1.2;
+  padding-bottom: 0.15rem;
+}
+
+@media (min-width: 1280px) {
+  .header-editorial__nav {
+    gap: 1.35rem;
+  }
+
+  .header-editorial__link {
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+.header-editorial__link--active {
+  color: var(--kz-color-deep-plum, #3d2a3a);
+  border-bottom: 1px solid var(--kz-brand-navy, #1a3066);
+}
+
+.header-editorial__link--muted {
+  color: color-mix(in srgb, var(--kz-color-deep-plum, #3d2a3a) 62%, transparent);
+}
+
+.header-editorial__link--muted:hover {
+  color: var(--kz-brand-navy, #1a3066);
+}
+
+.header-editorial__drawer {
+  max-height: min(70vh, 28rem);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: color-mix(in srgb, var(--color-bg-primary) 94%, transparent);
 }
 
 .brand-logo-link {

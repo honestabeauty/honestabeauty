@@ -29,7 +29,7 @@ export function AdminSaveNotice() {
   return (
     <div className="kz-admin__save-notice" role="status">
       <span>
-        <strong>已儲存。</strong>前台約 1 分鐘內更新；若未看到變更，可重新整理或稍候再試。
+        <strong>已儲存。</strong>前台約 1 分鐘內更新。若未見到變更，重新整理或稍候再試即可。
       </span>
       <Link href={previewPath} target="_blank" rel="noopener noreferrer">
         預覽前台 ↗

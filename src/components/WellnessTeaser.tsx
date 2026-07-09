@@ -34,7 +34,11 @@ export function WellnessTeaser({ content }: SectionContentProps) {
         ) : null}
         {c.linkHref && c.linkLabel ? (
           <p className="moana-home__link-row">
-            <Link href={c.linkHref} className="moana-pill-btn moana-pill-btn--dark">
+            <Link
+              href={c.linkHref}
+              className="moana-pill-btn moana-pill-btn--dark"
+              data-cta-id="cta_home_wellness_teaser"
+            >
               {c.linkLabel}
               <IconArrowRight size={14} />
             </Link>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { deleteShopVideoAction, saveShopVideo } from "@/app/admin/actions";
 import { AdminComboSelect } from "@/app/admin/components/AdminComboSelect";
 import { AdminDeleteButton } from "@/app/admin/components/AdminDeleteButton";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { MediaFieldPicker } from "@/app/admin/components/MediaFieldPicker";
 import { MediaSpecBox } from "@/app/admin/components/MediaSpecBox";
 import { getCmsPathOptions } from "@/lib/cms/admin-path-options";
@@ -22,12 +23,21 @@ export default async function AdminVideoEditPage({ params }: Props) {
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">編輯 Reels #{video.id}</h1>
+      <AdminPageHeader
+        title={`編輯短片 #${video.id}`}
+        lead={video.title}
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "店內短片", href: "/admin/videos" },
+          { label: "編輯短片" },
+        ]}
+        previewHref="/#shop-videos-title"
+        guideHref="/admin/guide#videos"
+      >
         <Link href="/admin/videos" className="text-sm text-kz-rose no-underline">
           ← 返回列表
         </Link>
-      </div>
+      </AdminPageHeader>
       <form action={saveShopVideo} className="kz-admin__card kz-admin__form">
         <input type="hidden" name="id" value={video.id} />
         <div className="kz-admin__field">

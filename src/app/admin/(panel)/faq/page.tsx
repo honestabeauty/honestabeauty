@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { reorderFaqAction } from "@/app/admin/actions";
 import { AdminListTable } from "@/app/admin/components/AdminListTable";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { faqToListRows } from "@/lib/cms/admin-list-mappers";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -21,12 +22,23 @@ export default async function AdminFaqListPage() {
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">常見問題</h1>
+      <AdminPageHeader
+        title="常見問題"
+        lead="管理 FAQ 問答與顯示順序。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "常見問題" },
+        ]}
+        relatedLinks={[
+          { label: "FAQ 頁標題與 SEO", href: "/admin/pages?page=faq" },
+        ]}
+        previewHref="/faq"
+        guideHref="/admin/guide#faq"
+      >
         <Link href="/admin/faq/new" className="moana-pill-btn moana-pill-btn--dark">
           新增
         </Link>
-      </div>
+      </AdminPageHeader>
       <div className="kz-admin__card kz-admin__card--list">
         <AdminListTable
           rows={rows}

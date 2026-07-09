@@ -21,7 +21,11 @@ import type { FaqItem } from "@/data/faq";
 import { shopVideos as staticShopVideos } from "@/data/shop-videos";
 import type { ShopVideo } from "@/data/shop-videos";
 import { isCmsConfigured } from "@/lib/supabase/env";
-import { createSupabasePublicClient } from "@/lib/supabase/server";
+import {
+  createSupabasePublicClient,
+  createSupabaseServerClient,
+} from "@/lib/supabase/server";
+import type { SiteSettingsData } from "@/lib/cms/site";
 import {
   bodyParagraphsFromText,
   mapFaqRow,
@@ -241,7 +245,17 @@ export async function getTreatmentDetail(
   slug: string,
 ): Promise<TreatmentDetailContent | undefined> {
   const details = await getTreatmentDetails();
-  return details[slug];
+  const fromCms = details[slug];
+  if (fromCms) {
+    const hasContent =
+      Boolean(fromCms.suitableFor?.trim()) ||
+      (fromCms.features?.length ?? 0) > 0 ||
+      (fromCms.processSteps?.length ?? 0) > 0 ||
+      (fromCms.aftercare?.length ?? 0) > 0;
+    if (hasContent) return fromCms;
+  }
+  // CMS 詳情為空時回退靜態預設，避免前台流程／術後區塊消失
+  return staticTreatmentDetails[slug];
 }
 
 export async function getFaqItems(): Promise<FaqItem[]> {
@@ -258,10 +272,9 @@ export async function getShopVideos(): Promise<ShopVideo[]> {
   return rows.map(mapShopVideoRow);
 }
 
-/** For admin: bypass cache */
+/** For admin: use session client so RLS admin policies apply (drafts visible). */
 export async function getAdminJournalPosts() {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return [];
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("kz_cms_journal_posts")
     .select("*")
@@ -271,8 +284,7 @@ export async function getAdminJournalPosts() {
 }
 
 export async function getAdminTreatments() {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return [];
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("kz_cms_treatments")
     .select("*")
@@ -281,8 +293,7 @@ export async function getAdminTreatments() {
 }
 
 export async function getAdminFaqs() {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return [];
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("kz_cms_faqs")
     .select("*")
@@ -291,8 +302,7 @@ export async function getAdminFaqs() {
 }
 
 export async function getAdminMediaList(folder?: string) {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return [];
+  const supabase = await createSupabaseServerClient();
   let query = supabase
     .from("kz_cms_media")
     .select("*")
@@ -303,8 +313,7 @@ export async function getAdminMediaList(folder?: string) {
 }
 
 export async function getAdminShopVideos() {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return [];
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("kz_cms_shop_videos")
     .select("*")
@@ -313,8 +322,7 @@ export async function getAdminShopVideos() {
 }
 
 export async function getAdminShopVideo(id: number) {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return null;
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("kz_cms_shop_videos")
     .select("*")
@@ -323,11 +331,8 @@ export async function getAdminShopVideo(id: number) {
   return (data ?? null) as CmsShopVideoRow | null;
 }
 
-import type { SiteSettingsData } from "@/lib/cms/site";
-
 export async function getAdminSiteSettings(): Promise<SiteSettingsData | null> {
-  const supabase = createSupabasePublicClient();
-  if (!supabase) return null;
+  const supabase = await createSupabaseServerClient();
   const { data } = await supabase
     .from("kz_cms_site_settings")
     .select("data")

@@ -3,6 +3,10 @@
 import { useEffect } from "react";
 import { trackCtaClick } from "@/lib/analytics";
 
+/**
+ * 全域 CTA 點擊追蹤。
+ * 漏斗完成按鈕已自行送 funnel_step，加上 data-cta-tracked 避免與 generate_lead 雙重計數。
+ */
 export function CtaClickTracker() {
   useEffect(() => {
     function onClick(event: MouseEvent) {

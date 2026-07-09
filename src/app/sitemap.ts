@@ -21,12 +21,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  const treatmentPages: MetadataRoute.Sitemap = treatments.map((t) => ({
-    url: `${base}/treatments/${t.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
+  // 女賓優先：男賓療程詳情不進 sitemap（仍可由 /men 進入）
+  const treatmentPages: MetadataRoute.Sitemap = treatments
+    .filter((t) => !t.forMen)
+    .map((t) => ({
+      url: `${base}/treatments/${t.slug}`,
+      lastModified: now,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    }));
 
   const journalPages: MetadataRoute.Sitemap = journalPosts.map((post) => ({
     url: `${base}/journal/${post.slug}`,

@@ -24,8 +24,15 @@ export default async function AdminInnerPagesPage() {
   return (
     <>
       <AdminPageHeader
-        title="內頁內容"
-        lead="編輯量膚、男賓、痛症、關於等內頁的 Hero、說明面板與 SEO meta。"
+        title="各頁標題與 SEO"
+        lead="編輯量膚、男賓、痛症、關於等內頁的標題區、說明面板與搜尋關鍵字。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "各頁標題與 SEO" },
+        ]}
+        relatedLinks={[
+          { label: "痛症服務圖文", href: "/admin/content#wellness" },
+        ]}
         guideHref="/admin/guide#inner-pages"
       />
       <Suspense fallback={<EditorFallback />}>

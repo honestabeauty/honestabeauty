@@ -23,12 +23,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const treatment = await getTreatment(slug);
   if (!treatment) return { title: "療程" };
-  return buildPageMetadata({
+  const meta = buildPageMetadata({
     title: treatment.name,
     description: treatment.tagline,
     path: `/treatments/${slug}`,
     image: treatment.image,
   });
+  // 男賓療程不主動 SEO 推廣（女賓優先）；仍可由 /men 進入
+  if (treatment.forMen) {
+    return { ...meta, robots: { index: false, follow: true } };
+  }
+  return meta;
 }
 
 export default async function TreatmentDetailPage({ params }: Props) {

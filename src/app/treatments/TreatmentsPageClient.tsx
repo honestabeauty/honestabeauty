@@ -84,14 +84,14 @@ export default function TreatmentsPageClient({
       if (problem !== "全部" && !t.problems.includes(problem)) return false;
       return true;
     });
-  }, [category, problem]);
+  }, [category, problem, treatments]);
 
   const sliderItems = useMemo(() => {
     if (category === "全部" && problem === "全部") {
       return featuredTreatments;
     }
     return filtered.slice(0, 6);
-  }, [category, problem, filtered]);
+  }, [category, problem, filtered, featuredTreatments]);
 
   const hasFilters = category !== "全部" || problem !== "全部";
 
@@ -114,7 +114,9 @@ export default function TreatmentsPageClient({
                 </p>
                 <h2 className="moana-catalog__title">
                   全部療程
-                  <span className="moana-catalog__count">{filtered.length}</span>
+                  <span className="moana-catalog__count" aria-label={`共 ${filtered.length} 項`}>
+                    {filtered.length}
+                  </span>
                 </h2>
               </div>
             </div>

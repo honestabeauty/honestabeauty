@@ -40,6 +40,7 @@ export function WhatsAppCta({
       rel="noopener noreferrer"
       className={className}
       data-cta-id={ctaId}
+      data-cta-tracked={funnelStep ? "funnel" : undefined}
       onClick={(e) => {
         if (funnelStep) {
           trackFunnelStep(funnelStep.index, funnelStep.name, { channel: "whatsapp" });
@@ -74,6 +75,7 @@ export function InstagramCta({
       rel="noopener noreferrer"
       className={className}
       data-cta-id={ctaId}
+      data-cta-tracked={funnelStep ? "funnel" : undefined}
       onClick={(e) => {
         if (funnelStep) {
           trackFunnelStep(funnelStep.index, funnelStep.name, {

@@ -11,12 +11,13 @@ import { handleRadioGroupKeyDown } from "@/lib/radiogroup-keyboard";
 import { whatsappMessages } from "@/lib/whatsapp-messages";
 import { site } from "@/data/site";
 
-type Intent = "first" | "treatment" | "other";
+type Intent = "first" | "treatment" | "men" | "other";
 type Channel = "whatsapp" | "instagram" | "phone";
 
 const intents: { id: Intent; label: string; desc: string }[] = [
   { id: "first", label: "首次量膚", desc: "想了解膚況與建議療程" },
   { id: "treatment", label: "預約療程", desc: "已心儀療程，想直接預約" },
+  { id: "men", label: "男賓護理（只限預約）", desc: "針清、激光、深層清潔等" },
   { id: "other", label: "其他查詢", desc: "價格、時間或其他問題" },
 ];
 
@@ -32,6 +33,8 @@ function messageForIntent(intent: Intent) {
       return whatsappMessages.firstVisit;
     case "treatment":
       return whatsappMessages.treatmentBooking;
+    case "men":
+      return whatsappMessages.menBooking;
     default:
       return whatsappMessages.other;
   }

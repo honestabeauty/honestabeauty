@@ -9,6 +9,7 @@
     "seed:cms": "tsx scripts/seed-kz-cms.ts",
     "seed:cms:sql": "tsx scripts/seed-kz-cms.ts --sql",
     "backup:cms": "tsx scripts/backup-cms.ts",
+    "restore:cms": "tsx scripts/restore-cms.ts",
     "create:admin": "tsx scripts/create-cms-admin.ts"
   },
   "dependencies": {

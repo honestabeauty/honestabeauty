@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { reorderJournalAction } from "@/app/admin/actions";
 import { AdminListTable } from "@/app/admin/components/AdminListTable";
+import { AdminPageHeader } from "@/app/admin/components/AdminPageHeader";
 import { journalToListRows } from "@/lib/cms/admin-list-mappers";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 
@@ -23,12 +24,20 @@ export default async function AdminJournalListPage() {
 
   return (
     <>
-      <div className="kz-admin__header">
-        <h1 className="kz-admin__title">醫美知識</h1>
+      <AdminPageHeader
+        title="醫美知識"
+        lead="管理文章標題、分類、封面與發布狀態。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "醫美知識" },
+        ]}
+        previewHref="/journal"
+        guideHref="/admin/guide#journal"
+      >
         <Link href="/admin/journal/new" className="moana-pill-btn moana-pill-btn--dark">
           新增文章
         </Link>
-      </div>
+      </AdminPageHeader>
       <div className="kz-admin__card kz-admin__card--list">
         <AdminListTable
           rows={rows}

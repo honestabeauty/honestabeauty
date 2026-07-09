@@ -14,6 +14,7 @@ import {
 } from "@/lib/cms/admin-field-options";
 import { getCmsPathOptions } from "@/lib/cms/admin-path-options";
 import { HERO_MAX_SLIDES, type HeroMarqueeCred } from "@/data/hero";
+import Link from "next/link";
 
 function credBadgeValue(highlight: HeroMarqueeCred["highlight"]) {
   if (!highlight) return "none";
@@ -34,10 +35,19 @@ export default async function AdminHeroPage() {
       <AdminPageHeader
         title={
           <>
-            首頁 Hero <AdminOverrideBadge overridden={hasHeroOverrides} />
+            首頁主視覺 <AdminOverrideBadge overridden={hasHeroOverrides} />
           </>
         }
-        lead="首頁最上方輪播主圖、標題、英文 tagline、CTA 與 marquee 認證列。"
+        lead="首頁最上方輪播主圖、標題、英文標語與按鈕。"
+        breadcrumbs={[
+          { label: "儀表板", href: "/admin" },
+          { label: "首頁主視覺" },
+        ]}
+        relatedLinks={[
+          { label: "首頁區塊", href: "/admin/home-sections" },
+          { label: "共用文案區塊", href: "/admin/content" },
+        ]}
+        relatedLabel="首頁其他可改"
         previewHref="/"
         guideHref="/admin/guide#hero"
       >
@@ -52,11 +62,26 @@ export default async function AdminHeroPage() {
       <form action={saveHeroSettings} className="kz-admin__card kz-admin__form max-w-2xl">
         <AdminTips
           items={[
-            "留空欄位會使用網站靜態預設值；標示「已自訂」代表已有覆寫。",
-            "每張輪播圖建議橫向 16:9 或依設計稿比例；Alt 文字有助無障礙與 SEO。",
+            "留空欄位會使用網站預設值；標示「已自訂」代表已改過。",
+            "每張輪播圖建議橫向；圖片說明文字有助無障礙與搜尋。",
             "儲存後頂部會出現綠色提示，可一鍵預覽前台。",
           ]}
         />
+
+        <p className="kz-admin__related kz-admin__related--block">
+          <span className="kz-admin__related-label">首頁其他可改：</span>
+          <Link href="/admin/home-sections" className="kz-admin__related-link">
+            首頁區塊
+          </Link>
+          <span className="kz-admin__related-sep">·</span>
+          <Link href="/admin/content" className="kz-admin__related-link">
+            共用文案區塊
+          </Link>
+          <span className="kz-admin__related-sep">·</span>
+          <Link href="/admin/videos" className="kz-admin__related-link">
+            店內短片
+          </Link>
+        </p>
 
         <fieldset className="kz-admin__fieldset">
           <legend className="kz-admin__legend">主視覺 · 輪播圖</legend>
@@ -70,7 +95,7 @@ export default async function AdminHeroPage() {
                 key={n}
                 urlName={`slide_${n}_image`}
                 altName={`slide_${n}_alt`}
-                label={`輪播圖 ${n}${n === 1 ? "（必填才顯示 Hero）" : "（選填）"}`}
+                label={`輪播圖 ${n}${n === 1 ? "（必填才顯示主視覺）" : "（選填）"}`}
                 defaultUrl={slide.src || undefined}
                 defaultAlt={slide.alt || undefined}
                 folder="hero"
@@ -80,7 +105,7 @@ export default async function AdminHeroPage() {
             );
           })}
           <div className="kz-admin__field">
-            <label htmlFor="watermark">背景 watermark 字</label>
+            <label htmlFor="watermark">背景裝飾大字</label>
             <input
               id="watermark"
               name="watermark"
@@ -93,7 +118,7 @@ export default async function AdminHeroPage() {
         <fieldset className="kz-admin__fieldset">
           <legend className="kz-admin__legend">標題文案</legend>
           <div className="kz-admin__field">
-            <label htmlFor="kicker">英文 kicker</label>
+            <label htmlFor="kicker">英文小標</label>
             <input
               id="kicker"
               name="kicker"
@@ -191,7 +216,7 @@ export default async function AdminHeroPage() {
         <fieldset className="kz-admin__fieldset">
           <legend className="kz-admin__legend">英文裝飾 tagline</legend>
           <p className="text-xs text-kz-plum-muted">
-            對應 Hero 右側藝術排版英文句；分段填寫以保留原有視覺層次。
+            對應主視覺右側藝術排版英文句；分段填寫以保留原有視覺層次。
           </p>
           <div className="kz-admin__field">
             <label htmlFor="tagline_aria">完整句子（螢幕報讀用 aria-label）</label>
@@ -294,7 +319,7 @@ export default async function AdminHeroPage() {
         <fieldset className="kz-admin__fieldset">
           <legend className="kz-admin__legend">底部 marquee · 快速導覽</legend>
           <p className="text-xs text-kz-plum-muted">
-            四個編號連結會在 Hero 底部跑馬燈循環顯示。
+            四個編號連結會在主視覺底部跑馬燈循環顯示。
           </p>
           {hero.marqueeLinks.map((link, index) => {
             const n = index + 1;
@@ -370,7 +395,7 @@ export default async function AdminHeroPage() {
         </fieldset>
 
         <button type="submit" className="moana-pill-btn moana-pill-btn--dark">
-          儲存 Hero 設定
+          儲存主視覺設定
         </button>
       </form>
     </>

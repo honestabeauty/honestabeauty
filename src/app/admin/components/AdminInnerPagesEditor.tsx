@@ -121,12 +121,19 @@ export function AdminInnerPagesEditor({ pages, pathOptions, pageOverrides }: Pro
       <div className="kz-admin__card kz-admin__form kz-admin__inner-pages kz-admin__inner-pages-picker">
         <AdminTips
           items={[
-            <>先選擇內頁，下方表單會<strong>立即切換</strong>為該頁欄位（含 Hero、面板、SEO）。</>,
-            <>各區塊附<strong>欄位對照圖</strong>；留空＝預設值，「已自訂」代表已有覆寫。</>,
-            <>痛症頁三項圖文服務在 <Link href="/admin/content">站點內容 · 痛症護理</Link> 編輯。</>,
-            <>詳見 <Link href="/admin/guide#inner-pages">使用說明 · 內頁內容</Link>。</>,
+            <>先選擇內頁，下方表單會<strong>立即切換</strong>為該頁欄位（含標題區、說明面板、SEO）。</>,
+            <>各區塊附<strong>欄位對照圖</strong>；留空＝預設值，「已自訂」代表已改過。</>,
+            <>痛症頁三項圖文服務在 <Link href="/admin/content#wellness">共用文案區塊 · 痛症護理</Link> 編輯。</>,
+            <>詳見 <Link href="/admin/guide#inner-pages">使用說明 · 各頁標題</Link>。</>,
           ]}
         />
+
+        <p className="kz-admin__related kz-admin__related--block">
+          <span className="kz-admin__related-label">痛症頁還要改：</span>
+          <Link href="/admin/content#wellness" className="kz-admin__related-link">
+            共用文案區塊 · 痛症服務圖文
+          </Link>
+        </p>
 
         <div className="kz-admin__field">
           <label htmlFor="inner-page-select">選擇內頁</label>
@@ -171,7 +178,7 @@ export function AdminInnerPagesEditor({ pages, pathOptions, pageOverrides }: Pro
 
         <fieldset className="kz-admin__fieldset">
           <legend className="kz-admin__legend">
-            Hero · {def.label}{" "}
+            頁首主視覺 · {def.label}{" "}
             <AdminOverrideBadge overridden={pageOverrides[pageId]} />
           </legend>
 
@@ -182,14 +189,14 @@ export function AdminInnerPagesEditor({ pages, pathOptions, pageOverrides }: Pro
           />
 
           <div className="kz-admin__field">
-            <label htmlFor="hero_watermark">① 背景 watermark 字</label>
+            <label htmlFor="hero_watermark">① 背景裝飾大字</label>
             <input
               id="hero_watermark"
               name="hero_watermark"
               defaultValue={page.hero.watermark}
               placeholder="例：Skin"
             />
-            <AdminFieldHint>Hero 右上方淡色大字裝飾，純視覺用途。</AdminFieldHint>
+            <AdminFieldHint>頁首右上方淡色大字裝飾，純視覺用途。</AdminFieldHint>
           </div>
           <div className="kz-admin__field">
             <label htmlFor="hero_eyebrow">② 英文小標</label>
@@ -259,7 +266,7 @@ export function AdminInnerPagesEditor({ pages, pathOptions, pageOverrides }: Pro
 
           {def.defaultHero.ctaKind === "logo" ? (
             <AdminFieldHint>
-              ⑤ 此頁 Hero 顯示品牌 Logo（關於頁），無文字按鈕可編輯。
+              ⑤ 此頁頁首顯示品牌 Logo（關於頁），無文字按鈕可編輯。
             </AdminFieldHint>
           ) : null}
 
@@ -272,7 +279,7 @@ export function AdminInnerPagesEditor({ pages, pathOptions, pageOverrides }: Pro
                 defaultValue={page.hero.ctaLabel ?? ""}
                 placeholder="例：預約量膚分析"
               />
-              <AdminFieldHint>Hero 底部深色 pill 按鈕文字。</AdminFieldHint>
+              <AdminFieldHint>頁首底部深色按鈕文字。</AdminFieldHint>
             </div>
           ) : null}
           {showCtaFields ? (
@@ -422,7 +429,7 @@ export function AdminInnerPagesEditor({ pages, pathOptions, pageOverrides }: Pro
             </button>
           </fieldset>
         ) : (
-          <p className="text-sm text-kz-plum-muted">此頁僅管理 Hero；FAQ 列表請至「常見問題」模組編輯。</p>
+          <p className="text-sm text-kz-plum-muted">此頁僅管理頁首標題與 SEO；FAQ 列表請至「常見問題」模組編輯。</p>
         )}
 
         <div className="kz-admin__form-actions">
