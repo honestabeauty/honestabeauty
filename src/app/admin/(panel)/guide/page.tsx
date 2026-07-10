@@ -157,6 +157,12 @@ export default function AdminGuidePage() {
             <li>前往 <Link href="/admin/login">/admin/login</Link>，使用 Supabase 註冊的電郵登入。</li>
             <li>帳號必須已加入 <code>kz_cms_admins</code> 表，否則會顯示「無權限」。</li>
             <li>角色：<code>owner</code>（擁有者）、<code>editor</code>（編輯者）。</li>
+            <li>
+              忘記密碼：於登入頁點「忘記密碼？」→{" "}
+              <Link href="/admin/forgot-password">/admin/forgot-password</Link>
+              ，信箱會收到連結並導向{" "}
+              <Link href="/admin/reset-password">/admin/reset-password</Link> 設定新密碼。
+            </li>
           </ol>
         </section>
 

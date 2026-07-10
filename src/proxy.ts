@@ -38,7 +38,11 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const isLogin = request.nextUrl.pathname === "/admin/login";
+  const pathname = request.nextUrl.pathname;
+  const isPublicAuthPage =
+    pathname === "/admin/login" ||
+    pathname === "/admin/forgot-password" ||
+    pathname === "/admin/reset-password";
 
   async function redirectToLoginUnauthorized() {
     await supabase.auth.signOut();
@@ -48,13 +52,19 @@ export async function proxy(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
-  if (!user && !isLogin) {
+  if (!user && !isPublicAuthPage) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin/login";
     return NextResponse.redirect(url);
   }
 
-  if (user && isLogin) {
+  // Recovery / invite links land on reset-password with a temporary session.
+  // Keep the page public so the client can finish setting a new password.
+  if (user && pathname === "/admin/reset-password") {
+    return response;
+  }
+
+  if (user && (pathname === "/admin/login" || pathname === "/admin/forgot-password")) {
     const isAdmin = await isCmsAdminUser(supabase, user.id);
 
     if (isAdmin) {
@@ -71,7 +81,7 @@ export async function proxy(request: NextRequest) {
     return response;
   }
 
-  if (user && !isLogin) {
+  if (user && !isPublicAuthPage) {
     const isAdmin = await isCmsAdminUser(supabase, user.id);
 
     if (!isAdmin) {
