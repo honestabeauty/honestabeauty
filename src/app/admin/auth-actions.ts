@@ -46,9 +46,12 @@ export async function requestPasswordReset(formData: FormData) {
   const redirectTo = `${getSiteUrl()}/admin/reset-password`;
   const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
 
-  // Always show the same success screen to avoid email enumeration.
   if (error) {
-    console.error("[cms] resetPasswordForEmail failed:", error.message);
+    console.error("[cms] resetPasswordForEmail failed:", error.message, error.status);
+    const msg = `${error.message} ${error.code ?? ""}`.toLowerCase();
+    if (msg.includes("rate") || error.status === 429) {
+      redirect("/admin/forgot-password?error=rate");
+    }
     redirect("/admin/forgot-password?error=send");
   }
 

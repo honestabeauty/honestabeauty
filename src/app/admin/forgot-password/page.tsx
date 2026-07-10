@@ -10,6 +10,7 @@ type Props = { searchParams: Promise<{ sent?: string; error?: string }> };
 const errors: Record<string, string> = {
   missing: "請輸入電郵。",
   send: "無法寄出重設信，請稍後再試或聯絡站長。",
+  rate: "重設信寄送次數已達上限，請約一小時後再試，或聯絡站長直接重設密碼。",
   config: "後台尚未完成連線設定，請聯絡協助建站的同事。",
 };
 
