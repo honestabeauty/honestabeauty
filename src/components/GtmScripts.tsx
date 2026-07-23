@@ -1,7 +1,7 @@
 import Script from "next/script";
 
 const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const gaId = process.env.NEXT_PUBLIC_GA_ID ?? "G-QD7KBRVNXG";
 
 export function GtmScripts() {
   if (gtmId) {
