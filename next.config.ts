@@ -41,6 +41,17 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    const verificationFile = process.env.GOOGLE_SITE_VERIFICATION_FILE?.trim();
+    if (!verificationFile) return [];
+
+    return [
+      {
+        source: `/${verificationFile}`,
+        destination: "/api/google-site-verification",
+      },
+    ];
+  },
   async headers() {
     return [
       {

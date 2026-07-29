@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/data/site";
+import { getGoogleSiteVerificationMeta } from "@/lib/google-site-verification";
 import { getSiteUrl } from "@/lib/site-url";
 
 /** Dedicated 1200×630 social share image */
@@ -75,8 +76,7 @@ export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
 
 const defaultSocial = buildPageMetadata({ path: "/" });
 
-const googleSiteVerification =
-  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const googleSiteVerification = getGoogleSiteVerificationMeta();
 
 export const rootMetadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
