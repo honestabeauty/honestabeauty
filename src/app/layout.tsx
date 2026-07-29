@@ -1,4 +1,3 @@
-import Script from "next/script";
 import {
   Cormorant_Garamond,
   DM_Sans,
@@ -65,9 +64,11 @@ export default async function RootLayout({
       className={`${notoSerif.variable} ${notoSans.variable} ${cormorant.variable} ${dmSans.variable} h-full antialiased`}
     >
       <head>
-        <Script id="kz-datalayer-init" strategy="beforeInteractive">
-          {`window.dataLayer=window.dataLayer||[];`}
-        </Script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "window.dataLayer=window.dataLayer||[];",
+          }}
+        />
         <Ga4HeadScripts />
       </head>
       <body className="min-h-full flex flex-col pb-[calc(4.25rem+env(safe-area-inset-bottom))] md:pb-0">
