@@ -6,6 +6,7 @@ import {
   Noto_Serif_TC,
 } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import { Ga4HeadScripts } from "@/components/Ga4HeadScripts";
 import { GtmScripts } from "@/components/GtmScripts";
 import { Header } from "@/components/Header";
 import { LocalBusinessJsonLd } from "@/components/LocalBusinessJsonLd";
@@ -63,10 +64,13 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${notoSerif.variable} ${notoSans.variable} ${cormorant.variable} ${dmSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col pb-[calc(4.25rem+env(safe-area-inset-bottom))] md:pb-0">
+      <head>
         <Script id="kz-datalayer-init" strategy="beforeInteractive">
           {`window.dataLayer=window.dataLayer||[];`}
         </Script>
+        <Ga4HeadScripts />
+      </head>
+      <body className="min-h-full flex flex-col pb-[calc(4.25rem+env(safe-area-inset-bottom))] md:pb-0">
         <GtmScripts />
         <LocalBusinessJsonLd />
         <WebSiteJsonLd />
