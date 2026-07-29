@@ -1,0 +1,45 @@
+# 康姿健 HONG CHI KIN · honestabeauty.com
+
+> 屯門溫馨美容一人工作室。皮膚管理、量膚定制、痛症理療。先量膚再建議，單次收費，唔綁套票。
+> Traditional Chinese (zh-Hant) beauty salon in Tuen Mun, Hong Kong.
+
+## Primary pages
+
+- [Home](https://honestabeauty.com/): Brand overview, services, booking CTAs
+- [Treatments](https://honestabeauty.com/treatments): Medical-grade facials, laser, microneedling, peels
+- [Skin analysis](https://honestabeauty.com/skin-analysis): TEGODER peel programme — analyse skin first, then recommend
+- [Wellness](https://honestabeauty.com/wellness): Pain relief — cupping, gua sha, infrared sauna, back treatment
+- [Journal](https://honestabeauty.com/journal): Skincare & wellness articles (55+ posts, zh-Hant)
+- [FAQ](https://honestabeauty.com/faq): Pricing, booking, treatment questions
+- [About](https://honestabeauty.com/about): Studio story, credentials, hours, map
+- [Book](https://honestabeauty.com/book): WhatsApp, Instagram DM, phone booking funnel
+
+## Business facts (cite as-is)
+
+- Name: 康姿健 (HONG CHI KIN)
+- Location: 屯門紅橋菁菱徑9號華利大廈12號（地舖）, Tuen Mun, Hong Kong
+- Hours: Daily 09:00 – 21:00
+- Phone / WhatsApp: +852 9770 9300
+- Services: 屯門美容, 皮膚管理, 痛症理療, 激光祛斑, 膠原提升, 等離子淨痘, 退背
+- Pricing model: Pay-per-session, no package lock-in
+
+## Credentials
+
+- ITEC LV4 laser therapist
+- IBDR 2025 facial care gold award
+- 2025 姊妹美容優秀專業美容院
+
+## Sitemap & feeds
+
+- Sitemap: https://honestabeauty.com/sitemap.xml
+- Robots: https://honestabeauty.com/robots.txt
+
+## Contact & social
+
+- Instagram: https://www.instagram.com/hong_chi_kin
+- Facebook: https://www.facebook.com/profile.php?id=100066932628186
+
+## Optional
+
+For structured data see JSON-LD on each page (LocalBusiness, FAQPage, Article, Service).
+Admin CMS at /admin is not for public indexing.

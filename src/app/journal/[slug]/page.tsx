@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { EditorialImage } from "@/components/EditorialImage";
 import { JsonLd } from "@/components/JsonLd";
 import {
@@ -11,6 +12,7 @@ import {
 } from "@/lib/cms/queries";
 import { site } from "@/data/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 import { getSiteUrl } from "@/lib/site-url";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -59,6 +61,12 @@ export default async function JournalDetailPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          ...pageBreadcrumbs("醫美知識", "/journal"),
+          { name: post.title, path: `/journal/${canonicalSlug}` },
+        ]}
+      />
       <JsonLd
         data={{
           "@context": "https://schema.org",

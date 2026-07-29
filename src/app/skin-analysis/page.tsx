@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { SkinPeelGrid } from "@/components/conversion/SkinPeelGrid";
 import { CmsPageHero } from "@/components/CmsPageHero";
 import { EditorialImage } from "@/components/EditorialImage";
@@ -11,6 +12,7 @@ import { images } from "@/data/images";
 import { getInnerPage, getInnerPageMetadata } from "@/lib/cms/inner-pages";
 import { getProcessStepsContent } from "@/lib/cms/site-content";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 import { whatsappMessages } from "@/lib/whatsapp-messages";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,6 +28,7 @@ export default async function SkinAnalysisPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd items={pageBreadcrumbs("量膚定制", "/skin-analysis")} />
       <section className="moana-page">
         <div className="container-kz">
           <CmsPageHero hero={page.hero} />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { CmsPageHero } from "@/components/CmsPageHero";
 import { JsonLd } from "@/components/JsonLd";
 import { RelatedPageLinks } from "@/components/RelatedPageLinks";
@@ -8,6 +9,7 @@ import { getFaqItems } from "@/lib/cms/queries";
 import { getInnerPage, getInnerPageMetadata } from "@/lib/cms/inner-pages";
 import { site } from "@/data/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export async function generateMetadata(): Promise<Metadata> {
   const meta = await getInnerPageMetadata("faq");
@@ -19,6 +21,7 @@ export default async function FAQPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd items={pageBreadcrumbs("常見問題", "/faq")} />
       <JsonLd
         data={{
           "@context": "https://schema.org",

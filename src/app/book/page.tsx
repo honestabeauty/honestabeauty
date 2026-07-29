@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { BookFunnel } from "@/components/conversion/BookFunnel";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { MoanaPageHero } from "@/components/MoanaPageHero";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = buildPageMetadata({
   title: "預約",
@@ -13,6 +15,7 @@ export const metadata: Metadata = buildPageMetadata({
 export default function BookPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={pageBreadcrumbs("預約", "/book")} />
       <section className="moana-page">
         <div className="container-kz moana-page__narrow">
           <MoanaPageHero

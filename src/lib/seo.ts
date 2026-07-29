@@ -75,6 +75,9 @@ export function buildPageMetadata(options: PageMetadataOptions = {}): Metadata {
 
 const defaultSocial = buildPageMetadata({ path: "/" });
 
+const googleSiteVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+
 export const rootMetadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
@@ -82,6 +85,9 @@ export const rootMetadata: Metadata = {
     template: `%s｜${site.name}`,
   },
   description: site.description,
+  ...(googleSiteVerification
+    ? { verification: { google: googleSiteVerification } }
+    : {}),
   icons: {
     icon: [
       { url: "/brand/kzj-icon.png", type: "image/png" },

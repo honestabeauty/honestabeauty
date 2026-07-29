@@ -1,10 +1,12 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { CmsPageHero } from "@/components/CmsPageHero";
 import { getInnerPage, getInnerPageMetadata } from "@/lib/cms/inner-pages";
 import { getJournalCategories, getJournalPosts } from "@/lib/cms/queries";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 import JournalPageClient from "./JournalPageClient";
 
 function JournalLoading() {
@@ -29,6 +31,7 @@ export default async function JournalPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd items={pageBreadcrumbs("醫美知識", "/journal")} />
       <section className="moana-page">
         <div className="container-kz">
           <CmsPageHero hero={page.hero} />

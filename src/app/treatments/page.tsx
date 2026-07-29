@@ -2,7 +2,9 @@ import { Suspense } from "react";
 import type { Metadata } from "next";
 import { getFeaturedTreatments, getTreatments } from "@/lib/cms/queries";
 import { getInnerPage, getInnerPageMetadata } from "@/lib/cms/inner-pages";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 import TreatmentsPageClient from "./TreatmentsPageClient";
 
 function TreatmentsLoading() {
@@ -29,6 +31,7 @@ export default async function TreatmentsPage() {
 
   return (
     <Suspense fallback={<TreatmentsLoading />}>
+      <BreadcrumbJsonLd items={pageBreadcrumbs("療程", "/treatments")} />
       <TreatmentsPageClient
         treatments={treatments}
         featuredTreatments={featuredTreatments}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { InstagramCta, WhatsAppCta } from "@/components/conversion/CtaLinks";
 import { EditorialImage } from "@/components/EditorialImage";
 import { JsonLd } from "@/components/JsonLd";
@@ -12,6 +13,7 @@ import {
 } from "@/lib/cms/queries";
 import { getSite } from "@/lib/cms/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 import { getSiteUrl } from "@/lib/site-url";
 import { whatsappMessages } from "@/lib/whatsapp-messages";
 
@@ -49,6 +51,12 @@ export default async function TreatmentDetailPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd
+        items={[
+          ...pageBreadcrumbs("療程", "/treatments"),
+          { name: treatment.name, path: `/treatments/${slug}` },
+        ]}
+      />
       <JsonLd
         data={{
           "@context": "https://schema.org",

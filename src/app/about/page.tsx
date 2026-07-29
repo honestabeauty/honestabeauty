@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 import { TelCta, WhatsAppCta } from "@/components/conversion/CtaLinks";
 import { BusinessHours } from "@/components/BusinessHours";
 import { CmsPageHero } from "@/components/CmsPageHero";
@@ -14,6 +15,7 @@ import { site } from "@/data/site";
 import { getInnerPage, getInnerPageMetadata } from "@/lib/cms/inner-pages";
 import { getAboutContactContent, getTrustContent } from "@/lib/cms/site-content";
 import { buildPageMetadata } from "@/lib/seo";
+import { pageBreadcrumbs } from "@/lib/breadcrumbs";
 
 export async function generateMetadata(): Promise<Metadata> {
   const meta = await getInnerPageMetadata("about");
@@ -33,6 +35,7 @@ export default async function AboutPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd items={pageBreadcrumbs("關於", "/about")} />
       <section className="moana-page">
         <div className="container-kz">
           <CmsPageHero hero={page.hero} />
