@@ -8,7 +8,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 const COLUMNS = [
   { key: "title", label: "標題", width: "lg" as const, truncate: true, sortable: true, sortType: "string" as const },
   { key: "category", label: "分類", width: "md" as const, sortable: true, sortType: "string" as const },
-  { key: "date", label: "發布日", width: "md" as const, sortable: true, sortType: "date" as const },
+  { key: "date", label: "發布／預定日", width: "md" as const, sortable: true, sortType: "date" as const },
   { key: "status", label: "狀態", width: "md" as const },
 ];
 
@@ -16,7 +16,7 @@ export default async function AdminJournalListPage() {
   const supabase = await createSupabaseServerClient();
   const { data: posts } = await supabase
     .from("kz_cms_journal_posts")
-    .select("slug, title, category, status, published_at, sort_order")
+    .select("slug, title, category, status, published_at, scheduled_at, sort_order")
     .order("sort_order", { ascending: true })
     .order("published_at", { ascending: false });
 

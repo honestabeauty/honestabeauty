@@ -217,19 +217,54 @@ export async function uploadMediaInlineAction(
 }
 
 
+type JournalPublicationStatus = "draft" | "scheduled" | "published";
+
+function parseJournalPublication(formData: FormData, defaultStatus: JournalPublicationStatus) {
+  const statusInput = String(formData.get("status") ?? defaultStatus).trim();
+  if (!["draft", "scheduled", "published"].includes(statusInput)) {
+    throw new Error("不支援的文章狀態");
+  }
+
+  const status = statusInput as JournalPublicationStatus;
+  const scheduledInput = String(formData.get("scheduled_at") ?? "").trim();
+  if (status !== "scheduled") {
+    return { status, scheduledAt: null, scheduledDate: null };
+  }
+
+  if (!scheduledInput) {
+    throw new Error("請設定預定發布時間");
+  }
+
+  // datetime-local does not include an offset. Treat editorial input as Hong Kong time.
+  const localDateTime = scheduledInput.length === 16 ? `${scheduledInput}:00` : scheduledInput;
+  const scheduledAt = new Date(`${localDateTime}+08:00`);
+  if (Number.isNaN(scheduledAt.getTime())) {
+    throw new Error("預定發布時間格式無效");
+  }
+  if (scheduledAt.getTime() <= Date.now()) {
+    throw new Error("預定發布時間必須在現在之後");
+  }
+
+  return {
+    status,
+    scheduledAt: scheduledAt.toISOString(),
+    scheduledDate: scheduledInput.slice(0, 10),
+  };
+}
+
 export async function saveJournalPost(formData: FormData) {
   const { supabase } = await requireAdmin();
   const slug = String(formData.get("slug") ?? "").trim();
   const title = String(formData.get("title") ?? "").trim();
+  if (!slug || !title) throw new Error("請填寫文章網址代碼與標題");
+
   const excerpt = String(formData.get("excerpt") ?? "").trim();
   const body = String(formData.get("body") ?? "");
   const category = String(formData.get("category") ?? "醫美知識").trim();
   const publishedAt = String(formData.get("published_at") ?? "").trim();
   const image = String(formData.get("image") ?? "").trim() || null;
   const imageAlt = String(formData.get("image_alt") ?? "").trim() || null;
-  const status = String(formData.get("status") ?? "published") as
-    | "draft"
-    | "published";
+  const publication = parseJournalPublication(formData, "published");
 
   const { error } = await supabase.from("kz_cms_journal_posts").upsert({
     slug,
@@ -237,10 +272,12 @@ export async function saveJournalPost(formData: FormData) {
     excerpt,
     body,
     category,
-    published_at: publishedAt || new Date().toISOString().slice(0, 10),
+    published_at:
+      publication.scheduledDate || publishedAt || new Date().toISOString().slice(0, 10),
+    scheduled_at: publication.scheduledAt,
     image,
     image_alt: imageAlt,
-    status,
+    status: publication.status,
     updated_at: new Date().toISOString(),
   });
 
@@ -262,9 +299,7 @@ export async function createJournalPost(formData: FormData) {
   const publishedAt = String(formData.get("published_at") ?? "").trim();
   const image = String(formData.get("image") ?? "").trim() || null;
   const imageAlt = String(formData.get("image_alt") ?? "").trim() || null;
-  const status = String(formData.get("status") ?? "draft") as
-    | "draft"
-    | "published";
+  const publication = parseJournalPublication(formData, "draft");
 
   const { error } = await supabase.from("kz_cms_journal_posts").insert({
     slug,
@@ -272,11 +307,13 @@ export async function createJournalPost(formData: FormData) {
     excerpt,
     body,
     category,
-    published_at: publishedAt || new Date().toISOString().slice(0, 10),
+    published_at:
+      publication.scheduledDate || publishedAt || new Date().toISOString().slice(0, 10),
+    scheduled_at: publication.scheduledAt,
     image,
     image_alt: imageAlt,
     slug_aliases: [],
-    status,
+    status: publication.status,
     sort_order: 0,
     updated_at: new Date().toISOString(),
   });

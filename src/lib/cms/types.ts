@@ -3,7 +3,7 @@ import type { PriceType, Treatment } from "@/data/treatments";
 import type { FaqItem } from "@/data/faq";
 import type { JournalPost } from "@/data/journal";
 
-export type ContentStatus = "draft" | "published";
+export type ContentStatus = "draft" | "scheduled" | "published";
 
 export type CmsJournalRow = {
   slug: string;
@@ -12,6 +12,7 @@ export type CmsJournalRow = {
   body: string;
   category: string;
   published_at: string;
+  scheduled_at: string | null;
   image: string | null;
   image_alt: string | null;
   social_id: string | null;
