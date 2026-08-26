@@ -14,24 +14,36 @@ export function journalToListRows(
     category: string | null;
     status: string;
     published_at?: string | null;
+    scheduled_at?: string | null;
   }[],
 ): AdminListRow[] {
   return posts.map((post) => ({
     id: post.slug,
     category: post.category,
-    status: post.status === "draft" ? "draft" : "published",
+    status:
+      post.status === "draft"
+        ? "draft"
+        : post.status === "scheduled"
+          ? "scheduled"
+          : "published",
     editHref: `/admin/journal/${post.slug}`,
     previewHref: `/journal/${post.slug}`,
-    searchText: buildSearchText([post.title, post.category, post.slug, post.published_at]),
+    searchText: buildSearchText([
+      post.title,
+      post.category,
+      post.slug,
+      post.published_at,
+      post.scheduled_at,
+    ]),
     sortValues: {
       title: post.title,
       category: post.category ?? "",
-      date: post.published_at ?? "",
+      date: post.scheduled_at ?? post.published_at ?? "",
     },
     values: {
       title: post.title,
       category: post.category ?? "—",
-      date: post.published_at ?? "—",
+      date: post.scheduled_at ? `預定 ${post.scheduled_at}` : post.published_at ?? "—",
       status: post.status,
     },
   }));

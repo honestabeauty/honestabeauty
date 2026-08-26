@@ -42,13 +42,20 @@ export default function AdminJournalNewPage() {
           />
         </div>
         <div className="kz-admin__field">
-          <label htmlFor="published_at">發布日期</label>
+          <label htmlFor="published_at">文章日期</label>
           <input
             id="published_at"
             name="published_at"
             type="date"
             defaultValue={new Date().toISOString().slice(0, 10)}
           />
+        </div>
+        <div className="kz-admin__field">
+          <label htmlFor="scheduled_at">預定發布時間（香港時間）</label>
+          <input id="scheduled_at" name="scheduled_at" type="datetime-local" />
+          <p className="kz-admin__field-hint">
+            選擇「預定發布」後必填；系統會在時間到達後自動公開文章。
+          </p>
         </div>
         <div className="kz-admin__field">
           <label htmlFor="excerpt">摘要</label>
@@ -63,6 +70,7 @@ export default function AdminJournalNewPage() {
           <label htmlFor="status">狀態</label>
           <select id="status" name="status" defaultValue="draft">
             <option value="draft">草稿</option>
+            <option value="scheduled">預定發布</option>
             <option value="published">已發布</option>
           </select>
         </div>

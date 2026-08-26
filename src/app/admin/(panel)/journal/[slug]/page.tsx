@@ -10,6 +10,23 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 
 type Props = { params: Promise<{ slug: string }> };
 
+function toHongKongDateTimeLocal(value: string | null) {
+  if (!value) return "";
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Hong_Kong",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hourCycle: "h23",
+  }).formatToParts(new Date(value));
+  const part = (type: Intl.DateTimeFormatPartTypes) =>
+    parts.find((item) => item.type === type)?.value ?? "";
+
+  return `${part("year")}-${part("month")}-${part("day")}T${part("hour")}:${part("minute")}`;
+}
+
 export default async function AdminJournalEditPage({ params }: Props) {
   const { slug } = await params;
   const supabase = await createSupabaseServerClient();
@@ -54,13 +71,25 @@ export default async function AdminJournalEditPage({ params }: Props) {
           />
         </div>
         <div className="kz-admin__field">
-          <label htmlFor="published_at">發布日期</label>
+          <label htmlFor="published_at">文章日期</label>
           <input
             id="published_at"
             name="published_at"
             type="date"
             defaultValue={post.published_at}
           />
+        </div>
+        <div className="kz-admin__field">
+          <label htmlFor="scheduled_at">預定發布時間（香港時間）</label>
+          <input
+            id="scheduled_at"
+            name="scheduled_at"
+            type="datetime-local"
+            defaultValue={toHongKongDateTimeLocal(post.scheduled_at)}
+          />
+          <p className="kz-admin__field-hint">
+            選擇「預定發布」後必填；系統會在時間到達後自動公開文章。
+          </p>
         </div>
         <div className="kz-admin__field">
           <label htmlFor="excerpt">摘要</label>
@@ -79,6 +108,7 @@ export default async function AdminJournalEditPage({ params }: Props) {
           <label htmlFor="status">狀態</label>
           <select id="status" name="status" defaultValue={post.status}>
             <option value="published">已發布</option>
+            <option value="scheduled">預定發布</option>
             <option value="draft">草稿</option>
           </select>
         </div>

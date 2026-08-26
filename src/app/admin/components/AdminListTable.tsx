@@ -20,7 +20,7 @@ export type AdminListRow = {
   id: string;
   values: Record<string, string | null | undefined>;
   sortValues?: Record<string, string | number>;
-  status?: "published" | "draft";
+  status?: "published" | "draft" | "scheduled";
   category?: string | null;
   editHref?: string;
   previewHref?: string;
@@ -43,14 +43,16 @@ type Props = {
 
 const PAGE_SIZES = [15, 25, 50] as const;
 
-function StatusBadge({ status }: { status: "published" | "draft" }) {
-  return (
-    <span
-      className={`kz-admin__badge ${status === "draft" ? "kz-admin__badge--draft" : ""}`}
-    >
-      {status === "draft" ? "草稿" : "已發布"}
-    </span>
-  );
+function StatusBadge({ status }: { status: "published" | "draft" | "scheduled" }) {
+  const label = status === "draft" ? "草稿" : status === "scheduled" ? "預定發布" : "已發布";
+  const modifier =
+    status === "draft"
+      ? "kz-admin__badge--draft"
+      : status === "scheduled"
+        ? "kz-admin__badge--scheduled"
+        : "";
+
+  return <span className={`kz-admin__badge ${modifier}`}>{label}</span>;
 }
 
 function cellSortValue(row: AdminListRow, key: string, sortType: SortType) {
@@ -101,7 +103,7 @@ export function AdminListTable({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [query, setQuery] = useState("");
-  const [statusFilter, setStatusFilter] = useState<"all" | "published" | "draft">("all");
+  const [statusFilter, setStatusFilter] = useState<"all" | "published" | "draft" | "scheduled">("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(defaultPageSize);
@@ -166,6 +168,7 @@ export function AdminListTable({
   }, [page, totalPages]);
 
   const publishedCount = rows.filter((r) => r.status === "published").length;
+  const scheduledCount = rows.filter((r) => r.status === "scheduled").length;
   const draftCount = rows.filter((r) => r.status === "draft").length;
 
   function resetPage() {
@@ -244,6 +247,7 @@ export function AdminListTable({
           >
             <option value="all">全部狀態（{rows.length}）</option>
             <option value="published">已發布（{publishedCount}）</option>
+            <option value="scheduled">預定發布（{scheduledCount}）</option>
             <option value="draft">草稿（{draftCount}）</option>
           </select>
           {categories.length > 1 ? (

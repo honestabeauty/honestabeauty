@@ -70,13 +70,17 @@ export default async function JournalDetailPage({ params }: Props) {
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "Article",
+          "@type": "BlogPosting",
           headline: post.title,
           description: post.excerpt,
           datePublished: post.date,
+          dateModified: post.date,
+          inLanguage: "zh-HK",
+          articleSection: post.category,
           author: {
             "@type": "Organization",
             name: site.name,
+            url: siteUrl,
           },
           publisher: {
             "@type": "Organization",
@@ -112,7 +116,7 @@ export default async function JournalDetailPage({ params }: Props) {
           <h1 className="mt-4 font-serif text-3xl font-semibold text-kz-plum">
             {post.title}
           </h1>
-          <time className="mt-4 block font-ui text-xs text-kz-plum-muted">
+          <time dateTime={post.date} className="mt-4 block font-ui text-xs text-kz-plum-muted">
             {post.date}
           </time>
           <div className="mt-8 space-y-4 text-sm leading-relaxed text-kz-plum-muted">

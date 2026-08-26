@@ -32,3 +32,21 @@ export function createSupabasePublicClient() {
 
   return createClient(getSupabaseUrl(), getSupabaseAnonKey());
 }
+
+/**
+ * Service-role client for server-only maintenance tasks such as scheduled publishing.
+ * Never expose SUPABASE_SERVICE_ROLE_KEY to browser code.
+ */
+export function createSupabaseAdminClient() {
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!isCmsConfigured() || !serviceRoleKey) {
+    return null;
+  }
+
+  return createClient(getSupabaseUrl(), serviceRoleKey, {
+    auth: {
+      autoRefreshToken: false,
+      persistSession: false,
+    },
+  });
+}
